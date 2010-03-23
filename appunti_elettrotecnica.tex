@@ -1,0 +1,2807 @@
+\documentclass[a4paper]{report}
+\usepackage[italian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\hypersetup{linkcolor=blue}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{dashrule}
+
+\hypersetup{ colorlinks,
+  linkcolor=blue,
+  filecolor=green,
+  urlcolor=blue,
+  citecolor=blue }
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\renewcommand{\arraystretch}{2}
+\newtheorem{definizione}{Teorema}
+\newtheorem{prop}{Propriet\`a}
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+\begin{titlepage}
+ 
+\begin{center}
+ 
+ 
+% Upper part of the page
+\includegraphics[width=0.15\textwidth]{logo.png}\\[1cm]
+ 
+\textsc{\LARGE Universit\`a degli Studi del Sannio}\\[1.5cm]
+ 
+\textsc{\Large Corso di Elettrotecnica}\\[0.5cm]
+ 
+ 
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Appunti}\\ [0.4cm]
+ 
+\HRule \\ [1.5cm]
+ 
+% Author
+\begin{minipage}{0.4\textwidth}
+\begin{center} \large
+\emph{Autore:}\\
+Luca \textsc{Pace}
+\end{center}
+\end{minipage}
+ 
+\vfill
+ 
+% Bottom of the page
+{\large \today}
+ 
+\end{center}
+ 
+\end{titlepage}
+
+\setlength{\unitlength}{2cm}
+\begin{picture}(1,1)
+  \put(0,0){\line(0,1){1}}
+  \put(0,0){\line(1,0){1}}
+  \put(0,0){\line(1,1){1}}
+  \put(0,0){\line(1,2){.5}}
+  \put(0,0){\line(1,3){.3333}}
+  \put(0,0){\line(1,4){.25}}
+  \put(0,0){\line(1,5){.2}}
+  \put(0,0){\line(1,6){.1667}}
+  \put(0,0){\line(2,1){1}}
+  \put(0,0){\line(2,3){.6667}}
+  \put(0,0){\line(2,5){.4}}
+  \put(0,0){\line(3,1){1}}
+  \put(0,0){\line(3,2){1}}
+  \put(0,0){\line(3,4){.75}}
+  \put(0,0){\line(3,5){.6}}
+  \put(0,0){\line(4,1){1}}
+  \put(0,0){\line(4,3){1}}
+  \put(0,0){\line(4,5){.8}}
+  \put(0,0){\line(5,1){1}}
+  \put(0,0){\line(5,2){1}}
+  \put(0,0){\line(5,3){1}}
+  \put(0,0){\line(5,4){1}}
+  \put(0,0){\line(5,6){.8333}}
+  \put(0,0){\line(6,1){1}}
+  \put(0,0){\line(6,5){1}}
+\end{picture}
+
+\section*{Prefazione}
+\emph{Il presente documento \`e stato scritto con lo scopo di aiutare
+  lo studente che deve affrontare l'esame di Elettrotecnica a ripetere
+  gli argomenti trattati durante il corso, riassumendo i concetti
+  fondamentali del programma. Tale documento NON deve assolutamente
+  essere usato in sostituzione dei libri di testo.}
+\tableofcontents
+
+%CAPITOLO 5 DEL LIBRO
+\chapter{Regime Sinusiodale}
+\section{Metodo Simbolico}
+Per fissata pulsazione $\omega$ ad ogni funzione sinusoidale \`e
+possibile associare un numero complesso $\bar{A}$ secondo la regola
+\[
+a(t) = A_mcos(\omega t+\alpha)\iff \bar{A} = A_me^{j\alpha}
+\]
+
+Essa produce una corrispondenza biunivoca tra l'insieme delle funzioni
+sinusoidali di pulsazione assegnata $\omega$ , $\{
+a(t)=A_mcos(\omega t+\alpha )\}$ e l'insieme dei fasori $\{ \bar{A} =
+A_me^{j\alpha} \}$.
+Utilizzando le formule di \emph{Eulero} possiamo riscrivere
+\[
+\bar{A} = A_mcos(\alpha)+ A_mjsin(\alpha)
+\]
+
+Considerazioni:
+\begin{itemize}
+\item $\alpha = 0$; $\alpha=\pm 2\pi \implies e^{j\alpha} = 1$
+\item $\alpha = \pm \pi \implies e^{j\alpha} = -1$
+\item $\alpha = \pm \dfrac{\pi}{2} \implies e^{j\alpha} = \pm j$
+\item $\alpha = \pm \dfrac{2}{3}\pi \implies e^{j\alpha} = \mp j$
+\end{itemize}
+Per gli altri valori di $\alpha$, sia la parte reale che la parte
+immaginara di $e^{j\alpha}$, sono diverse da $0$.
+Quindi la funzione sinusoidale $a(t)$ pu\`o essere espressa in termini
+di fasore rappresentativo
+
+\[
+a(t)=\Re e\{\bar{A}e^{j\omega t}\}
+\]
+
+La corrispondenza biunivoca gode delle seguenti propriet\`a
+\begin{itemize}
+\item {\bf Unicit\`a}
+\item {\bf Linearit\`a}
+\item {\bf Derivazione}
+\end{itemize}
+
+\subsection{Propriet\`a di Unicit\`a}
+Consideriamo le funzioni sinusoidali $a(t) = A_m(\omega t+\alpha)$ e
+$b(t) = B_m(\omega t+\beta)$, esse sono uguali se e solo se sono
+uguali i corrispondenti fasori rappresentativi $\bar{A} =
+A_me^{j\alpha}$ e $\bar{B} = B_me^{j\beta}$ quindi
+
+\[
+a(t)=b(t) \Longleftrightarrow \bar{A}=\bar{B}
+\]
+
+Ci\`o \`e una diretta conseguenza del fatto che
+
+\[
+c(t)=\Re e \{ \bar{C}e^{j\omega t} \}\; \forall\; t \Longleftrightarrow
+\bar{C}=0
+\]
+
+\subsection{Propriet\`a di Linearit\`a}
+Prendiamo in esame la funione sinusoidale
+
+\[
+c(t) = k_1a(t)+k_2b(t)
+\]
+
+Combinazione lineare delle funzioni sinusoidali $a(t) = A_mcos(\omega
+t + \alpha)$ e \\$b(t) = B_mcos(\omega t + \beta)$ dove $k_1$ e $k_2$
+sono costanti reali.
+Il fasore $\bar{C}$ rappresentativo della funzione sinusoidale $c(t)$
+\`e uguale alla stessa combinazione lineare dei fasori $\bar{A} =
+A_me^{j\omega}$ e $\bar{B} = B_me^{j\beta}$ rappresentazioni delle
+funzioni sinusoidali $a(t)$ e $b(t)$.
+
+\[
+\bar{C} = k_1\bar{A}+k_2\bar{B} \implies c(t)=k_1a(t)+k_2b(t)
+\Longleftrightarrow \bar{C}=k_1\bar{A}+k_2\bar{B}
+\]
+
+\[
+\Re e\{(k_1\bar{A}+k_2\bar{B})e^{j\omega t}\} = k_1\cdot \Re e\{\bar{A}e^{j\omega
+  t}\}+k_2\cdot \Re e\{\bar{B}e^{j\omega t}\}
+\]
+
+\subsection{Propriet\`a di Derivazione}
+La derivata prima della funzione sinusoidale
+
+\[
+a(t)=A_mcos(\omega t+\alpha)
+\]
+
+con pulsazione $\omega$ \`e
+
+\[
+\dfrac{d\;a(t)}{dt}=\dfrac{d}{dt}[A_mcos(\omega t+\alpha)]\ = \omega
+A_m cos\left(\omega t+\alpha+ \dfrac{\pi}{2}\right)
+\]
+
+Sia $\bar{A} = A_me^{j\omega}$ il fasore rappresentativo della
+funzione sinusoidale $a(t)$, allora il fasore rappresentativo della
+derivata prima di $a(t)$, che indicheremo con $D_a$, \`e dato da $D_a
+= \omega A_m e^{j \left(\alpha+ \frac{\pi}{2}\right)} = j\omega
+\bar{A}$, quindi
+
+\[
+\dfrac {d\;a(t)}{dt}=\dfrac{d}{dt}[A_mcos(\omega
+  t+\alpha)]\ \Longleftrightarrow D_a=j\omega \bar{A}
+\]
+
+\section{Potenza ed Energia in Regime Sinusoidale}
+
+Siano
+\begin{itemize}
+\item $v(t)=V_mcos(\omega t+\alpha)$
+\item $i(t)=I_mcos(\omega t+\beta)$
+\end{itemize}
+
+Tenendo presente le due relazioni sopra citate,la potenza elettrica
+istantanea assorbita da un generico bipolo del circuito \`e
+
+\[
+p(t)=v(t)i(t)=V_mI_mcos(\omega t+\alpha)cos(\omega t+\beta)
+\]
+
+Applichiamo l'identit\`a trigonometrica, che afferma
+
+\[
+2\cdot cosxcosy = cos(x+y)+cos(x-y)
+\]
+
+Abbiamo che
+
+\[
+p(t)=\dfrac{1}{2}V_mI_m[cos(\alpha-\beta)+cos(\underbrace{2\omega}_\text
+  {pulsazione} t+\alpha+\beta)]\
+\]
+
+\subsection{Potenza Media}
+\`E definita a valor medio sul periodo $T$ della potenza istantanea
+assorbita
+
+\[
+P=\int_0^T p(\tau) d(\tau)
+\]
+
+Sostituendo
+
+\[
+P=\dfrac{V_mI_m}{2}cos(\alpha -\beta)
+\]
+La potenza quindi non dipende solo dalle ampiezze massime della
+tensione e dell'intensit\`a di corrente, ma anche dalla differenza
+delle loro fasi [$cos(\alpha -\beta)$]\ .
+
+
+\subsection{Potenza Complessa}
+La potenza media pu\`o essere espressa direttamente in termini dei
+fasori della tensione $\bar V=V_me^{j\alpha}$ e dell'intesit\`a di
+corrente $\bar I=I_me^{j\beta}$, infatti:
+
+\[
+P=\Re e\left\{\dfrac{1}{2}\bar{V}\bar{I}^*\right\}
+\]
+
+\[
+\widehat P=\dfrac{1}{2} \bar{V}\bar{I}^* \longrightarrow \mathsf{potenza\;
+  complessa\; assorbita}
+\]
+
+Poniamo
+
+\[
+Q=Im \{\widehat P \} \implies \widehat P=P+jQ
+\]
+
+Abbiamo
+
+\[
+Q=\dfrac{1}{2}V_mI_m sin (\alpha-\beta)
+\]
+
+\subsection{Energia in Regime Sinusoidale}
+L'energia assorbita dal bipolo in regime sinusoidale nell'intevallo $[0,
+  \widehat {t}]$ \`e data da
+
+\[
+\omega (0, \widehat t)=\int_0^{\widehat t} p(\tau)d(\tau)=(nT)P+
+\int_{nT}^{nT+\Delta t} pt(\tau)d(\tau)
+\]
+
+
+$n$ \`e un numero intero tale che $\widehat{t}=nT+\Delta t$ con $\Delta t<
+T$. $n$ \`e il numero di periodi $T$ contenuti nell'intervallo $[0,
+  \widehat t]$.
+Se $n>>1$ il contributo dovuto all'energia assorbita nell'intervallo
+di tempo $(nT, nt+\Delta t)$ \`e trascurabile rispetto a $(nT)P$,
+quindi
+
+\[
+\omega(0,\widehat t) \cong (nT)P \cong {\widehat t} P
+\]
+
+%CAPITOLO 3 DEL LIBRO
+
+\chapter{Propriet\`a dei Circuiti}
+
+\section{Grafo di un Circuito e sue Propriet\`a}
+
+Un generico circuito pu\`o essere rappresentato tramite il metodo dei
+\emph{grafi}, ossia uno schema geometrico del circuito in cui sono
+presenti solo i nodi e i collegamenti tra essi (sono assenti i bipoli
+che lo caratterizzano). Prendiamo ad esempio il circuito in {\bf
+  Figura 2.1} costituito da $4$ \emph{nodi} e $5$ \emph{lati}. Per
+convenzione lo indicheremo con $G$.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(91,81)(15,15)
+\linethickness{0.3mm}
+\put(50,40){\line(0,1){36}}
+\put(50,40){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(50,40){\line(1,0){36}}
+\linethickness{0.3mm}
+\put(86,40){\line(0,1){36}}
+\put(86,40){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(50,76){\line(1,0){36}}
+\linethickness{0.3mm}
+\multiput(50,76)(0.12,-0.12){300}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49,59)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(50,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(85,59)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(86,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(68,58){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(67,58){\line(1,0){1}}
+\linethickness{0.3mm}
+\multiput(67,41)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,39)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,77)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,75)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(89,37){\circle{4}}
+
+\linethickness{0.3mm}
+\put(89,79){\circle{4}}
+
+\linethickness{0.3mm}
+\put(47,79){\circle{4}}
+
+\linethickness{0.3mm}
+\put(47,37){\circle{4}}
+
+\put(50,76){\circle*{1.5}}
+\put(86,76){\circle*{1.5}}
+\put(47,79){\makebox(0,0)[cc]{$1$}}
+
+\put(88.92,79){\makebox(0,0)[cc]{$4$}}
+
+\put(47,37){\makebox(0,0)[cc]{$2$}}
+
+\put(89,37){\makebox(0,0)[cc]{$3$}}
+
+\put(46,58){\makebox(0,0)[cc]{$1$}}
+
+\put(67,37){\makebox(0,0)[cc]{$2$}}
+
+\put(90,58){\makebox(0,0)[cc]{$3$}}
+
+\put(67,79){\makebox(0,0)[cc]{$4$}}
+
+\put(69,61){\makebox(0,0)[cc]{$5$}}
+
+\put(68,25){\makebox(0,0)[cc]{{\bf Figura 2.1} Grafo $G$}}
+\end{picture}
+
+Di seguito sono enunciate le propriet\`a annesse alla teoria dei \emph{grafi}.
+\subsection{Grafo, Grafo Orientato, Sottografo}
+Prendiamo in considerazione il grafo in {\bf Figura 2.1}.
+
+\begin{itemize}
+  \item Un grafo $G(N, L)$ \`e costituito dall'insieme di $n$ nodi, che
+    indicheremo con $N=\{1, 2,..., l\}$, dall'insieme di lati $l$
+    \emph{lati}, che indicheremo con \\$L=\{1, 2,..., l\}$, e dalla
+    \emph{relazione di incidenza} che ogni lato (bipolo) fa
+    corrispondere la coppia di nodi nei quali quel lato incide.
+  \item Se ogni lato (bipolo) del grafo \`e orientato, il grafo allora
+    si dice {\bf orientato}. Per ciascun lato del grafo di un circuito
+    \`e orientato con la fraccia che indica il verso di riferimento
+    dell'intensit\`a della corrente del corrispondente bipolo.
+  \item Si consideri un grafo $G(N, L)$. Il grafo $G_1(N, L)$ si dice
+    sottografo di $G(N, L)$, se $N_1$ \`e un sottoinsieme di $N$,
+    $L_1$ \`e un sottoinsieme di $L$ e la realzine di incidenza tra i
+    nodi di $N_1$ ed i lati di $L_1$ \`e la stessa relazione che si ha
+    nel grafo $G(N, L)$
+\end{itemize}
+
+\subsection{Grafo Connesso}
+
+Un grafo si dice connesso se ogni nodo \`e collegato ad un qualsiasi
+altro nodo attraverso uno o pi\`u lati.
+Un grafo connesso contiene sottografi connessi. Circuiti di interesse
+con grafi non connessi sono io circuiti che contengono elementi con
+pi\`u di due terminali, come, ad esempio, i doppi bipoli.
+
+\subsection{Maglia}
+\begin{itemize}
+\item Sia un dato grafo connesso $G$. Una maglia di $G$ \`e un sottografo
+  connesso in un ciascun nodo incidano due e solo due lati.
+\item Se alla maglia viene associato un verso di percorrenza essa \`e
+  detta \emph{orientata}.
+\end{itemize}
+
+Ogni maglia forma un percorso chiuso, perch\`e essa deve costituire un
+sottografo connesso in cui in ogni nodo coincidono due e due soli
+lati: percorrendo interamente la maglia ciascun lato e ciascun nodo
+vengono incontrati una ed una sola volta.
+
+\subsection{Albero, coalbero}
+
+\begin{itemize}
+\item Sia dato un grafo connesso $G$. Un \emph{albero} $A$ di $G$ \`e
+  un suo sottografo connesso che comprende tutti i nodi e non
+  contiene alcuna maglia.
+\item Il \emph{coalbero} $C$ di $G$, corrisponde all'albero $A$, \`e
+  l'insieme dei dati complementare a quelli dell'albero: l'unione dei
+  lati dell'albero e del coalbero coincide con l'insieme di tutti i
+  lati di $G$.
+\end{itemize}
+
+Per l'albero di un qualsiasi grafo connesso vale la seguente
+propriet\`a
+
+\begin{prop}
+  Si consideri un grafo connesso $G$ con $n$ nodi ed $l$ lati. Ciascun
+  albero del grafo $G$ \`e costituito da $(n-1)$ lati
+  (indipendentemente dal numero dei lati del grafo e della realzione
+  di incidenza).
+\end{prop}
+
+Una diretta conseguenza della {\bf Propriet\`a 1} \`e relativa al
+coalbero. Difatti, essendo sempre $(n-1)$ il numero di lati
+dell'albero, e del fatto che il coalbero \`e il componente all'albero,
+si ha:
+
+\begin{prop}
+  Si consideri un grafo connesso $G$ con $n$ nodi ed $l$ lati. Ciascun
+  coalbero del grafo \`e costituito da $[l-(n-1)]$ lati
+  (indipendentemente dalla relazione di incidenza del grafo).
+\end{prop}
+
+Una maglia {\bf fondamentale} \`e descritta dalla seguente relazione:
+
+\begin{prop}
+  Si consideri un sottografo che si ottiene aggiungendo all'albero $A$
+  un solo lato di coalbero $C$: esso contiene una e una soloa maglia,
+  che si ottiene eliminando tutti quei lati che non appartengono al
+  percorso chiuso. Una maglia ottenuta in questo modo prende il nome
+  di {\bf maglia fondamentale} del coalbero $C$.
+\end{prop}
+
+\`E evidente, allora, che aggiungendo un lato di coalbero per volta
+\`e possibile costruire $[l-(n-1)]$ maglie fondamentali
+distinte. Questo insieme di maglie prende il nome di \emph{insieme di
+  maglie fondamentali} del coalbero $C$ del grafo $G$.
+
+\subsection{Grafo Planare}
+
+Un grafo si dice planare se pu\`o essere tracciato su un piano senza
+che nessuna coppia di lati si intersechi in un punto che non sia un
+nodo.
+Ogni grafo planare gode della seguente propriet\`a:
+
+\begin{prop}
+Ogni maglia partiziona il piano in due regioni, quella interna al
+cammino chiuso e quella esterna. Tra tutte le possibili maglie di un
+grafo planare, rivestono particolare interesse quelle che non
+contengono nessun lato al loro interno.  
+\end{prop}
+
+\subsection{Anello}
+
+Un anello \`e una maglia di un grafo planare che non contiene lati al
+suo interno.
+
+\begin{prop}
+  Si consideri un grafo planare connesso $G$ con $n$ nodi e $l$
+  lati. Il grafo $G$ ha $[l-(n-1)]$ anelli.
+\end{prop}
+\subsection{Insieme di Taglio}
+Si consideri un grafo connesso $G(N, L)$. Un sottoinsieme $T$ dei lati
+$L$ del grafo, si dice insieme di taglio se, contemporaneamente:
+\begin{itemize}
+\item la rimozione del grafo di tutti i lati dell'insieme di taglio
+  conduce a due sottografi non connessi;
+\item il ripristino si uno qualsiasi dei lati dell'insieme di taglio
+  connette nuovamente i due sottografi.
+\end{itemize}
+Se il grafo \`e orientato, l'insieme di taglio si dice orientato.
+
+\subsubsection{Legge di Kirchhoff per gli Insiemi di Taglio}
+  La somma algebrica delle intensit\`a di corrente dei bipoli che
+  formano un qualsiasi insieme di taglio \`e uguale a zero istante per
+  istante.
+
+
+\section{Equazioni di Kirchhoff Indipendenti}
+le equazioni circuitali sono costituite dalle equazioni di kirchhoff e
+dalle equazioni caratteristiche degli elementi circuitali. le
+equazioni di kirchhoff sono algebriche lineari ed omogenee. invece le
+equazioni di caratteristiche possono essere, in generale, algebriche o
+differenziali, lineari o non lineari, tempo-invarianti o
+tempo-varianti, omogenee o non omogenee, a seconda della natura degli
+elementi circuitali.
+
+\subsection{Indipendenza delle Equazioni di Kirchhoff per le Correnti}
+Prendiamo in esame le equazioni di Kirchhoff per le correnti
+analizzando un circuito avente un grafo come di seguito.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(91,81)(15,15)
+\linethickness{0.3mm}
+\put(50,40){\line(0,1){36}}
+\put(50,40){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(50,40){\line(1,0){36}}
+\linethickness{0.3mm}
+\put(86,40){\line(0,1){36}}
+\put(86,40){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(50,76){\line(1,0){36}}
+\linethickness{0.3mm}
+\multiput(50,76)(0.12,-0.12){300}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49,59)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(50,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(85,59)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(86,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(62,63){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(62,64){\line(1,0){1}}
+\linethickness{0.3mm}
+\multiput(67,41)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,39)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,77)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,75)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(89,37){\circle{4}}
+
+\linethickness{0.3mm}
+\put(89,79){\circle{4}}
+
+\linethickness{0.3mm}
+\put(47,79){\circle{4}}
+
+\linethickness{0.3mm}
+\put(47,37){\circle{4}}
+
+\put(50,76){\circle*{1.5}}
+\put(86,76){\circle*{1.5}}
+\put(47,79){\makebox(0,0)[cc]{$1$}}
+
+\put(88.92,79){\makebox(0,0)[cc]{$4$}}
+
+\put(47,37){\makebox(0,0)[cc]{$2$}}
+
+\put(89,37){\makebox(0,0)[cc]{$3$}}
+
+\put(46,58){\makebox(0,0)[cc]{$1$}}
+
+\put(67,37){\makebox(0,0)[cc]{$2$}}
+
+\put(90,58){\makebox(0,0)[cc]{$3$}}
+
+\put(67,79){\makebox(0,0)[cc]{$4$}}
+
+\put(65,65){\makebox(0,0)[cc]{$5$}}
+
+\put(68,25){\makebox(0,0)[cc]{{\bf Figura 2.2} Grafo}}
+\end{picture}
+
+Applichiamo le LKC ai nodi e abbiamo:
+
+\[
+\begin{array}{l l l l}
+\text{{\bf nodo 1. }} i_1+i_2-i_5 = 0\\
+\text{{\bf nodo 2. }} -i_1+i_4 = 0 \\
+\text{{\bf nodo 3. }} -i_3-i_4+i_5 = 0\\
+\text{{\bf nodo 4. }} i_2+i_3=0
+\end{array}
+\]
+
+Esse sono linearmente dipendenti. Infatti sommando membro a membro le
+$4$ equazioni del sistema si ottiene l'identit\`a $0=0$. Per tanto la
+$4^a$ \`e combinazione lineare delle altre $3$. Dunque tutte le
+\emph{informazioni} contenute nella $4^a$ equazione del sistema sono
+gi\`a presenti nlle altre $3$ e, quindi essa \`e ridondante.
+Questo risultato \`e del tutto generale. Le $n$ equazioni di Kirchhoff
+per le correnti ($n$ \`e il numero i nodi):
+
+\[
+A_a{\mathbf i}=0
+\]
+
+di un circuito sono linearmenti dipendenti, qualunque sia il grafo del
+circuito. Questo \`e una diretta conseguenza del il fatto che la somma di tutte le
+righe della matrice di incidenza \`e la riga identicamente
+nulla. Questo \`e in accordo con il fatto che il rango della matrice
+di incidenza $A_a$ \`e minore di $n$. Quindi, a conclusione delle
+nostre tesi, qualsiasi equazione del sistema pu\`o essere eliminata,
+senza che l'informazione contenuta nel sistema ne risenta in alcun
+modo.
+
+\begin{prop}
+  Per un circuito con grafo connesso con $n$ nodi, $n-1$ equazioni di
+  Kirchhoff per le correnti, scelte in maniera arbitraria tra le
+  possibili $n$, sono linearmente indipendenti.
+\end{prop}
+
+\subsubsection{Equazioni Indipendenti per gli Insiemi di Taglio}
+Fissato un albero, un insieme ti taglio fondamentale contiene un unico
+lato dell'albero assieme ad alcuni lati di coalbero. Scrivendo le
+equazioni di Kirchhoff per gli insiemi di taglio fondamentali
+associati ad un qualisiasi albero si perviene ad un insieme di
+equazioni che sono coerentemente indipendenti fra loro inquanto
+ciascuna contiene (in esclusiva) l'intensi\`a cirrente relativa ad un
+lato dell'albero. Essendo proprio $n-1$ il numero dei lati
+dell'albero, abbiamo cos\`i costruito un insieme di $n-1$ equazioni
+per gli insieme di taglio indipendenti. Siccome gli altri insiemi di
+taglio possono essere sempre espressi come un'opportuna unione di
+insiemi di taglio fondamentali, le corrisponenti equazioni sono
+esprimibili come combinazione lineare di quelle corrispondenti ad
+insieme di taglio fondamentali. In conclusione, le equazioni
+indipendenti per gli insiemi di taglio sono $n-1$. Da questo risultato
+segue che imporre $n-1$ equazioni indipendenti agli insiemi di taglio
+equivale ad imporre le equazioni di Kirchhoff per i nodi
+
+\subsection{Indipendenza delle Equazioni di Kirchhoff per le Tensioni}
+
+Ora consideriamo le leggi di Kirchhoff per le tensioni. Analizziamo
+quindi le equazioni ottenute applicando la legge di Kirchhoff per le
+tensioni al circuito in {\bf Figura 2.2}:
+
+\[
+\begin{array}{l l l}
+  \mathbf{M_1}\longrightarrow -v_1+v_2+v_3+v_4=0\\
+  \mathbf{M_2}\longrightarrow v_3+v_4-v_5=0\\
+  \mathbf{M_3}\longrightarrow -v_1+v_2+v_5=0  
+\end{array}  
+\]
+
+Queste equazioni non sono tra loro linearmente indipendenti. Ad
+esempio la terza equazione \`e combinazione lineare delle restanti due
+equazioni. Infatti piu\`o essere ottenuta sottraendo membro a membro
+le prime due.
+Ora consideriamo un generico circuito e sia $m$ il numero di
+maglie. Le $m$ maglie equazioni di Kirchhoff per le tensioni
+corrispondenti
+
+\[
+B_a\mathbf{v}=0
+\]
+
+non sono linearmente indipendenti. Quindi per stabilire quante sono le
+equazioni linearmente indipendenti ricorriamo alla seguente
+propriet\`a che esprime l'\emph{indipendenza delle equazioni di
+  Kirchhoff per le tensioni}:
+
+\begin{prop}
+  Per un circuito con grafo connesso con $n$ nodi e $l$ lati, le
+  $l-(n-1)$ equazioni di Kirchhoff per le tensioni relative ad un
+  insieme di maglie fondamentali sono linearmente indipendenti. Le
+  equazioni di Kirchhoff per le maglie del circuito possono essere
+  espresse come combinazioni lineari delle equazioni delle maglie fondamentali.
+\end{prop}
+
+La propriet\`a di indipendenza pu\`o essere dimostrata semplicemente,
+anche nel caso generale, ricordando che ogni maglia di un insieme di
+maglie fondamentali ha almeno un lato in esclusiva. Di conseguenza,
+ogni equazione dell'insieme delle equazioni di Kirchhoff per un
+insieme di maglie fondamentali ha almeno una tensione incognita in
+esclusiva, e quindi le $l-(n-1)$ equazioni per le maglie fondamentali
+sono linearmente indipendenti.
+
+\section{Conservazione delle Potenze Elettriche e Teorema di Tellegen}
+L'espressione della potenza elettrica assorbita dal $k-esimo$ bipolo
+$k=(1, 2,..., l)$ del circuito \`e data da
+
+\[
+p_k(t)=i_k(t)v_k(t)
+\]
+
+\newtheorem{mydef}{Propriet\`a}
+\begin{mydef}
+  La somma delle potenze elettriche assorbite da tutti i bipoli di
+  un circuito \`e, istante per istante, uguale a $0$.
+\end{mydef}
+
+\[
+\sum_{k=1}^{l} p_k(t) = \sum_{k=1}^{l} i_k(t)v_k(t)=0
+\]
+
+A questo punto introduciamo il vettore {\bf i} = $(i_1, i_2,..., i_l)^T$
+delle correnti, il vettore {\bf v} = $(v_1, v_2,..., v_l)^T$ delle
+tensioni ed il vettore {\bf u} = $(u_1, u_2,..., u_l)^T$ dei
+potenziali di nodo del circuito. Quindi:
+
+\[
+\sum_{k=1}^l v_ki_k=v_1i_1+v_2i_2+...+v_li_l = \mathbf{v^Ti}
+\]
+
+Le tensioni del circuito possono essere scritte come
+
+\[
+\mathbf{v= A_a^Tu} \quad \quad \quad \mathsf{\;A_a= \; matrice\; d'\; incidenza}
+\]
+
+Quindi sostituendo
+
+\[
+\mathbf{v^Ti=(A_a^Tu)i}
+\]
+
+Per la propriet\`a di identit\`a possiamo scrivere
+
+\[
+\mathbf{(A_a^Tu)^T=u^TA_a}
+\]
+
+Quindi
+
+\[
+\sum_{k=1}^l v_ki_k=\mathbf{(u^TA_ai) = u^T(A_ai)}
+\]
+
+Dalle leggi di {\bf Kirchhoff} sappiamo che $\mathbf{A_ai=0}$ quindi
+possiamo scrivere
+
+\[
+\sum_{k=1}^{l}v_ki_k=0
+\]
+
+1
+\subsection{Teorema di Tellegen}
+
+La sommatoria delle potenze virtuali assorbite da ciascun lato del
+grafo \`e uguale a $0$.
+
+\[
+\sum_{k=1}^li'_k v''_k = 0\; \mathsf {o}\; \left(\sum_{k=1}^li''_k v'_k=0\right)
+\]
+
+Consideriamo due bipoli come in figura
+
+\vspace{1.5cm}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(83.06,86.38)(10,0)
+  \linethickness{0.3mm}
+  \multiput(45.17,58.63)(0.12,0.12){47}{\line(1,0){0.12}}
+  \multiput(45.17,58.63)(0.12,-0.12){118}{\line(0,-1){0.12}}
+  \multiput(50.83,64.28)(0.12,-0.12){118}{\line(0,-1){0.12}}
+  \multiput(59.31,44.49)(0.12,0.12){47}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(57.9,71.36)(0.12,0.12){47}{\line(1,0){0.12}}
+  \multiput(57.9,71.36)(0.12,-0.12){118}{\line(0,-1){0.12}}
+  \multiput(63.56,77.01)(0.12,-0.12){118}{\line(0,-1){0.12}}
+  \multiput(72.04,57.21)(0.12,0.12){47}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(43.76,64.28){\line(1,0){1.41}}
+  \linethickness{0.3mm}
+  \put(45.17,64.28){\line(0,1){1.41}}
+  \linethickness{0.3mm}
+  \put(56.49,77.01){\line(1,0){1.41}}
+  \linethickness{0.3mm}
+  \put(57.9,77.01){\line(0,1){1.41}}
+  \linethickness{0.3mm}
+  \multiput(53.66,81.25)(0.12,-0.12){59}{\line(0,-1){0.12}}
+  \put(53.66,81.25){\line(-1,1){0.12}}
+  \put(53.66,81.25){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(40.93,68.53)(0.12,-0.12){59}{\line(1,0){0.12}}
+  \put(40.93,68.53){\line(-1,1){0.12}}
+  \put(40.93,68.53){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(62.14,47.31)(0.12,-0.12){53}{\line(0,-1){0.12}}
+  \put(68.51,40.95){\line(1,-1){0.12}}
+  \put(68.51,40.95){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(74.87,60.04)(0.12,-0.12){53}{\line(0,-1){0.12}}
+  \put(81.23,53.68){\line(1,-1){0.12}}
+  \put(81.23,53.68){\circle*{1.5}}
+  \put(43.05,70.65){\makebox(0,0)[cc]{$+$}}
+
+  \put(55.78,83.38){\makebox(0,0)[cc]{$+$}}
+
+  \put(71.33,42.36){\makebox(0,0)[cc]{$-$}}
+
+  \put(84.06,55.09){\makebox(0,0)[cc]{$-$}}
+
+  \put(47.29,66.41){\makebox(0,0)[cc]{$i'_k$}}
+
+  \put(60.02,79.13){\makebox(0,0)[cc]{$i''_k$}}
+
+  \put(50.12,48.02){\makebox(0,0)[cc]{$v'_k$}}
+
+  \put(73.46,71.36){\makebox(0,0)[cc]{$v''_k$}}
+
+  \put(65.23,20.65){\makebox(0,0)[cc]{{\bf Figura 2.3} Due bipoli generici}}
+\end{picture}
+
+
+Abbiamo che $\widehat{p}=i'_kv''_k$
+
+\[
+\widehat{p}_k^{(e)}=-\widehat{p}_k
+\]
+
+\section{Propriet\`a Di Non Amplificazione}
+\subsection{Non Amplificazione delle Tensioni}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(90,69)(15,15)
+  \linethickness{0.3mm}
+  \put(60,68){\line(1,0){30}}
+  \put(60,40){\line(0,1){28}}
+  \put(90,40){\line(0,1){28}}
+  \put(60,40){\line(1,0){30}}
+  \linethickness{0.3mm}
+  \put(50,64){\line(1,0){10}}
+  \put(50,64){\line(-1,0){0.12}}
+  \put(50,64){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(50,44){\line(1,0){10}}
+  \put(50,44){\line(-1,0){0.12}}
+  \put(50,44){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(47,60){\line(1,0){6}}
+  \put(47,48){\line(0,1){12}}
+  \put(53,48){\line(0,1){12}}
+  \put(47,48){\line(1,0){6}}
+  \linethickness{0.3mm}
+  \put(50,60){\line(0,1){4}}
+  \linethickness{0.3mm}
+  \put(50,44){\line(0,1){4}}
+  \linethickness{0.3mm}
+  \put(50,68){\circle{4}}
+
+  \linethickness{0.3mm}
+  \put(50,40){\circle{4}}
+
+  \put(50,68){\makebox(0,0)[cc]{$1$}}
+
+  \put(50,40){\makebox(0,0)[cc]{$n$}}
+
+  \put(42,54){\makebox(0,0)[cc]{$v_a$}}
+
+  \put(46,64){\makebox(0,0)[cc]{$+$}}
+
+  \put(46,44){\makebox(0,0)[cc]{$-$}}
+
+  \linethickness{0.3mm}
+  \multiput(68.25,52)(0.12,0.14){19}{\line(0,1){0.14}}
+  \linethickness{0.3mm}
+  \multiput(70.5,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+  \linethickness{0.3mm}
+  \multiput(72.75,52)(0.12,0.14){19}{\line(0,1){0.14}}
+  \linethickness{0.3mm}
+  \multiput(75,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+  \linethickness{0.3mm}
+  \multiput(77.25,52)(0.12,0.14){19}{\line(0,1){0.14}}
+  \linethickness{0.3mm}
+  \multiput(79.5,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+  \linethickness{0.3mm}
+  \put(81.75,52){\line(1,0){2.25}}
+
+  \linethickness{0.15mm}
+  \put(66,52){\line(1,0){2.25}}
+  \linethickness{0.3mm}
+  \put(82,52){\line(1,0){4}}
+  \put(86,52){\line(1,0){0.12}}
+  \put(86,52){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(64,52){\line(1,0){4}}
+  \put(64,52){\line(-1,0){0.12}}
+  \put(64,52){\circle*{1.5}}
+
+  \put(69.23,20.65){\makebox(0,0)[cc]{{\bf Figura 2.4} Circuito generico}}
+\end{picture}
+\\
+\\
+Si consideri un circuito costituito da resistori strettamente passivi
+(i resistori possono essere anche non lineari) e un solo bipolo
+attivo.
+\begin{definizione}
+  La tensione del genrico bipolo strettamente passivo non pu\`o
+  superare, in valore assoluto, quella dell'unico bipolo attivo.
+\end{definizione}
+
+Per dimostrare il teorema prendiamo in considerazione 4 bipoli
+collegati al nodo $o$, come in figura.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(101,85)(10,3)
+  \linethickness{0.3mm}
+  \put(60,74){\line(1,0){6}}
+  \put(60,60){\line(0,1){14}}
+  \put(66,60){\line(0,1){14}}
+  \put(60,60){\line(1,0){6}}
+  \linethickness{0.3mm}
+  \put(60,34){\line(1,0){6}}
+  \put(60,20){\line(0,1){14}}
+  \put(66,20){\line(0,1){14}}
+  \put(60,20){\line(1,0){6}}
+  \linethickness{0.3mm}
+  \put(90,44){\line(0,1){6}}
+  \put(76,50){\line(1,0){14}}
+  \put(76,44){\line(1,0){14}}
+  \put(76,44){\line(0,1){6}}
+  \linethickness{0.3mm}
+  \put(50,44){\line(0,1){6}}
+  \put(36,50){\line(1,0){14}}
+  \put(36,44){\line(1,0){14}}
+  \put(36,44){\line(0,1){6}}
+  \linethickness{0.3mm}
+  \put(63,34){\line(0,1){26}}
+  \linethickness{0.3mm}
+  \put(63,47){\line(1,0){13}}
+  \linethickness{0.3mm}
+  \put(50,47){\line(1,0){13}}
+  \linethickness{0.3mm}
+  \multiput(68,47)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(68,47)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(57,48)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(57,46)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(62,53)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(63,52)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(62,41)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(63,42)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(63,74){\line(0,1){8}}
+  \put(63,82){\line(0,1){0.12}}
+  \put(63,82){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(90,47){\line(1,0){8}}
+  \put(98,47){\line(1,0){0.12}}
+  \put(98,47){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(63,12){\line(0,1){8}}
+  \put(63,12){\line(0,-1){0.12}}
+  \put(63,12){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(29,47){\line(1,0){7}}
+  \put(29,47){\line(-1,0){0.12}}
+  \put(29,47){\circle*{1.5}}
+  \put(63,47){\circle*{1.5}}
+  \put(66,44){\makebox(0,0)[cc]{$o$}}
+
+  \put(26,47){\makebox(0,0)[cc]{$p$}}
+
+  \put(63,9){\makebox(0,0)[cc]{$s$}}
+
+  \put(63,85){\makebox(0,0)[cc]{$q$}}
+
+  \put(101,47){\makebox(0,0)[cc]{$r$}}
+
+  \put(60,53){\makebox(0,0)[cc]{$i_q$}}
+
+  \put(55,50){\makebox(0,0)[cc]{$i_p$}}
+
+  \put(60,41){\makebox(0,0)[cc]{$i_s$}}
+
+  \put(70,50){\makebox(0,0)[cc]{$i_r$}}
+
+  \put(68.23,0.65){\makebox(0,0)[cc]{{\bf Figura 2.5} Bipoli casuali
+      estratti dal generico circuito in \emph {Figura 2.4}}}
+\end{picture}
+
+Applichiamo la LKC al nodo $o$
+\[
+i_p+i_q+i_r+i_s=0
+\]
+
+Data questa relazione possiamo avere due possibili alternative.
+
+\begin{itemize}
+\item Le correnti sono tutte nulle
+\item Abbiamo delle correnti nulle, altre negative altre positive.
+\end{itemize}
+
+Prendiamo in esame la seconda possibilit\`a. Quindi
+
+\[
+i_q>0 \quad i_r<0
+\]
+
+\[
+p_p=v_qi_q>0 \quad p_r=v_ri_r>0
+\]
+
+Applichiamo il metodo dei potenziali nodali
+
+\[
+v_q=u_q-u_o>0 \quad v_r=u_r-u_o<0
+\]
+
+Ne consegue la seguente relazione verificando il {\bf Teorema 1}
+
+\[
+u_r<u_o<u_q
+\]
+
+\subsection{Non Amplificazione Delle Correnti}
+Si consideri un circuito costituito da resitori strettamente passivi e
+da un solo bipolo attivo.
+\begin{definizione}
+  L'intensit\`a di corrente del generico bipolo strettamente passivo
+  non pu\`o superare, in valore assoluto, quella dell'unico bipolo attivo.
+\end{definizione}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(139,77)(15,6)
+  \linethickness{0.3mm}
+  \put(74,76){\circle*{1.5}}
+
+  \linethickness{0.3mm}
+  \put(74,58){\circle*{1.5}}
+
+  \linethickness{0.3mm}
+  \put(74,40){\circle*{1.5}}
+
+  \linethickness{0.3mm}
+  \put(74,20){\circle*{1.5}}
+
+  \linethickness{0.3mm}
+  \qbezier(74,58)(68.09,49.98)(70.62,45.06)
+  \qbezier(70.62,45.06)(73.16,40.14)(74,40)
+  \linethickness{0.3mm}
+  \qbezier(74,58)(82.86,50.8)(79.06,45.53)
+  \qbezier(79.06,45.53)(75.27,40.26)(74,40)
+  \linethickness{0.3mm}
+  \qbezier(74,40)(66.45,31.37)(69.69,25.78)
+  \qbezier(69.69,25.78)(72.92,20.2)(74,20)
+  \linethickness{0.3mm}
+  \qbezier(74,40)(82.04,30.14)(78.59,25.08)
+  \qbezier(78.59,25.08)(75.15,20.02)(74,20)
+  \linethickness{0.3mm}
+  \qbezier(74,76)(65.81,69.62)(68.75,64)
+  \qbezier(68.75,64)(72.69,58.38)(74,58)
+  \linethickness{0.3mm}
+  \qbezier(74,76)(81.63,66.84)(78.36,62.41)
+  \qbezier(78.36,62.41)(75.09,57.98)(74,58)
+  \linethickness{0.3mm}
+  \qbezier(74,76)(88.42,68.48)(82.81,63.34)
+  \qbezier(82.81,63.34)(76.2,58.21)(74,58)
+  \linethickness{0.3mm}
+  \qbezier(74,58)(56.8,44.22)(63.83,32.48)
+  \qbezier(63.83,32.48)(71.46,20.75)(74,20)
+  \linethickness{0.3mm}
+  \qbezier(74,20)(41.38,46.06)(54.22,60.89)
+  \qbezier(54.22,60.89)(69.05,75.72)(74,76)
+  \linethickness{0.3mm}
+  \multiput(83.38,67.38)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(84.38,66.38)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(69,49)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(70,48)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(61,42)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(62,41)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(79,50)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(80,49)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(67,67)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(68,66)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,68)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(79,67)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78.5,30.12)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(79.5,29.12)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(67.88,30.75)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(68.88,29.75)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(49.62,49)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(50.62,50)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(65,64.38){\makebox(0,0)[cc]{$i_1$}}
+
+  \put(76,68){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(87,67){\makebox(0,0)[cc]{$i_3$}}
+
+  \put(72,48){\makebox(0,0)[cc]{$i_5$}}
+
+  \put(82,49){\makebox(0,0)[cc]{$i_6$}}
+
+  \put(64,41){\makebox(0,0)[cc]{$i_4$}}
+
+  \put(46,49){\makebox(0,0)[cc]{$i_a$}}
+
+  \put(71,30){\makebox(0,0)[cc]{$i_7$}}
+
+  \put(82,29){\makebox(0,0)[cc]{$i_8$}}
+
+  \linethickness{0.3mm}
+  \qbezier(58,77)(71.09,68.47)(79.88,72.12)
+  \qbezier(79.88,72.12)(88.66,75.78)(89,77)
+  \linethickness{0.3mm}
+  \qbezier(46,60)(67.25,50.03)(79.5,53.38)
+  \qbezier(79.5,53.38)(91.75,56.72)(92,58)
+  \linethickness{0.3mm}
+  \qbezier(45,42)(67.16,31.44)(80.88,35.5)
+  \qbezier(80.88,35.5)(94.59,39.56)(95,41)
+  \linethickness{0.3mm}
+  \multiput(90,77)(0.16,-0.12){125}{\line(1,0){0.16}}
+  \put(90,77){\vector(-4,3){0.12}}
+  \linethickness{0.3mm}
+  \multiput(94,58)(0.48,0.12){33}{\line(1,0){0.48}}
+  \put(94,58){\vector(-4,-1){0.12}}
+  \linethickness{0.3mm}
+  \multiput(96,42)(0.12,0.17){117}{\line(0,1){0.17}}
+  \put(96,42){\vector(-2,-3){0.12}}
+  \put(124,62){\makebox(0,0)[cc]{Insiemi di Taglio}}
+
+  \linethickness{0.3mm}
+  \put(110,65){\line(1,0){29}}
+  \put(110,59){\line(0,1){6}}
+  \put(139,59){\line(0,1){6}}
+  \put(110,59){\line(1,0){29}}
+  \put(75,0){\makebox(0,0)[cc]{{\bf Figura 2.6} Grafo ordinato per
+      potenziali di nodi decrescenti}}
+
+\end{picture}
+\\
+\\
+Prendendo in considerazione gli insiemi di taglio sui tre nodi e
+applicando la $LKC$ abbiamo
+\vspace{1cm}
+\[
+\left\{
+\begin{array}{l l l}
+  i_1+i_2+i_3=i_a \\
+  i_4+i_5+i_6=i_a \\
+  i_4+i_7+i_8=i_a \\
+\end{array} \right.
+\]
+
+\[
+|i_a|\ \leq 0 \quad i_k\geq 0 \longrightarrow k=1, 2,..., 8
+\]
+
+Ne consegue che
+\[
+i_a\geq i_k
+\]
+
+\section{Potenziali di Nodo}
+Il metodo dei potenziali di nodo consiste nell'esprimere le tensioni
+di ciascun lato attraverso delle opportune grandezze ausiliari, in
+maniera tale da imporre che la legge di Kirchhoff per le tensioni sia
+verificata automaticamente per ogni maglia del circuito.
+
+Consideriamo ancora una volta un generico circuito, con $n$ nodi e $l$
+bipoli, assegnamo i versi di riferimento per le intensit\`a di
+corrente e fissiamo una volta per tutte le convenzioni
+dell'utilizzatore per tutti i bipoli.
+
+Il metodo dei potenziali di nodo consiste nell'associare, a ciascun
+nodo, una variabile aleatoria, detta \emph{potenziale di nodo}: al
+generico nodo $i\;(i=1, 2,...,n)$ associamo dunque il potenziale di nodo
+$u_i$.
+
+Facendo riferimento alla seguente figura.
+
+%Prima o poi l'aggiungero`, sono da solo a fare sto lavoraccio. Maledizione.
+
+Assumiamo che sia possibile esprimere la tensione di ciascun bipolo
+del circuito in funzione dei potenziali dei due nodi nei quali il lato
+incide secondo la seguente regola: la tensione $v_s$ del generico
+bipolo $s\;(s=1, 2,...,l)$ \`e espressa come differenza tra il
+potenziale del nodo contrassegnato con il $"+"$ ed il potenziale del
+nodo contrassegnato con il $"-"$:
+
+\begin{equation}\label{eq:potenzialiNodo}
+v_s=u_p-u_q \quad \text{per} \quad s=1, 2,...,l
+\end{equation}
+
+Le tensioni espresse da questa relazione verificano automaticamente la
+$LKT$ qualunque siano i valori dei potenziali di nodo $u_1, u_2,...,
+u_n$.
+Prendendo sempre in considerazione la {\bf Figura 2.7} e la maglia
+costituita dai lati $1, 2, 3, 4, 7$, la $LKT$ \`e:
+
+\[
+v_1+v_2-v_3-v_4-v_7=0
+\]
+
+Esprimendola attraverso i potenziali di nodo abbiamo:
+
+\begin{equation}\label{eq:potenzialiNodoLKT}
+  \begin{array}{l l l l l}
+    v_1=u_5-u_1\\
+    v_2=u_1-u_2\\
+    v_3=u_3-u_2\\
+    v_4=u_4-u_3\\
+    v_7=u_5-u_4
+  \end{array}
+\end{equation}
+
+Sostituendo nella $LKT$ abbiamo:
+
+\[
+(u_5-u_1)+(u_1-u_2)+(u-3-u_2)+(u_4-u_3)+(u_5-u_4)=0
+\]
+
+Questa equazione \`e sempre verificata, indipendentemente da valori
+dei potenziali di nodo $u_1, u_2,..., u_5$, dunque \`e
+un'identit\`a. Quindi la \ref{eq:potenzialiNodoLKT} verificano la $LKT$.
+
+Quindi possiamo affermare che
+
+\begin{definizione}
+  Se le tensioni di un circuito sono sempre espresse attraverso i
+  potenziali di nodo secondo la \ref{eq:potenzialiNodo}
+\end{definizione}
+%CAPITOLO 6 DEL LIBRO
+\chapter{Doppi Bipoli}
+\section{Generatori Controllati Lineari}
+I \emph{generatori controllati lineari} sono dei particolari tipi di
+doppi-bipoli a-dinamici lineari: una delle due grandezze - tensione o
+intensit\`a di corrente - ad una delle due porte \`e direttamente
+proporzionale al una delle due grandezze all'altra porta. Esistono
+diversi tipi, qui di seguito sono descritti 4 possibili
+configurazioni.
+
+\subsection{Generatore di Tensione Controllato in Tensione}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(111,83)(15,15)
+  \linethickness{0.3mm}
+  \put(30,80){\line(1,0){30}}
+  \put(30,80){\line(-1,0){0.12}}
+  \put(30,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(30,48){\line(1,0){30}}
+  \put(30,48){\line(-1,0){0.12}}
+  \put(30,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,58)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,70)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(78,70){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(78,80){\line(1,0){30}}
+  \put(108,80){\line(1,0){0.12}}
+  \put(108,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(1,0){30}}
+  \put(108,48){\line(1,0){0.12}}
+  \put(108,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(0,1){10}}
+  \put(78,67){\makebox(0,0)[cc]{$+$}}
+
+  \put(78,62){\makebox(0,0)[cc]{$-$}}
+
+  \put(27,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(27,48){\makebox(0,0)[cc]{$-$}}
+
+  \linethickness{0.3mm}
+  \multiput(43,81)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(43,79)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(27,63){\makebox(0,0)[cc]{$v_1$}}
+
+  \put(108,62){\makebox(0,0)[cc]{$v_2$}}
+
+  \put(111,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(111,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(92,83){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(42,83){\makebox(0,0)[cc]{$i_1=0$}}
+
+  \put(85,59){\makebox(0,0)[cc]{$\alpha v_1$}}
+
+  \put(74,30){\makebox(0,0)[cc]{{\bf Figura 3.1} Rappresentazione
+      di un Generatore di Tensione Controllato in Tensione}}
+
+\end{picture}
+\\
+\\
+\\
+\\
+\\
+
+Le realzioni caratteristiche sono
+
+\[
+\begin{array}{l l}
+  i_1=0 \\
+  v_2=\alpha v_1\\
+\end{array}
+\]
+
+Le relazioni caratteristiche possono essere epresse anche sotto forma
+di notazione vettoriale. In questo caso abbiamo una notazione su base
+ibrida.
+
+\[
+\left(
+\begin{array}{c}
+  i_1\\
+  v_2
+\end{array}
+\right)=
+\begin{pmatrix}
+  0 & 0\\
+  \alpha & 0
+\end{pmatrix}
+\left(
+\begin{array}{c}
+  v_1\\
+  i_2
+\end{array}
+\right)
+\]
+
+\subsection{Generatore di Tensione Controllato in Corrente}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(111,83)(10,15)
+  \linethickness{0.3mm}
+  \put(30,80){\line(1,0){30}}
+  \put(30,80){\line(-1,0){0.12}}
+  \put(30,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(30,48){\line(1,0){30}}
+  \put(30,48){\line(-1,0){0.12}}
+  \put(30,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,58)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,70)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(78,70){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(78,80){\line(1,0){30}}
+  \put(108,80){\line(1,0){0.12}}
+  \put(108,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(1,0){30}}
+  \put(108,48){\line(1,0){0.12}}
+  \put(108,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(0,1){10}}
+  \put(78,67){\makebox(0,0)[cc]{$+$}}
+
+  \put(78,62){\makebox(0,0)[cc]{$-$}}
+
+  \put(27,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(27,48){\makebox(0,0)[cc]{$-$}}
+
+  \linethickness{0.3mm}
+  \multiput(43,81)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(43,79)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(27,63){\makebox(0,0)[cc]{$v_1=0$}}
+
+  \put(108,62){\makebox(0,0)[cc]{$v_2$}}
+
+  \put(111,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(111,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(92,83){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(42,83){\makebox(0,0)[cc]{$i_1$}}
+
+  \put(83,59){\makebox(0,0)[cc]{$r i_1$}}
+
+  \linethickness{0.3mm}
+  \put(60,48){\line(0,1){32}}
+
+  \put(74,30){\makebox(0,0)[cc]{{\bf Figura 3.2} Rappresentazione
+      di un Generatore di Tensione Controllato in Corrente}}
+\end{picture}
+
+Le realzioni caratteristiche sono
+
+\[
+\begin{array}{l l}
+  v_1=0\\
+  v_2=\gamma v_1
+\end{array}
+\]
+
+Le relazioni caratteristiche possono essere epresse anche sotto forma
+di notazione vettoriale. In questo caso abbiamo una notazione su base
+tensione.
+
+\[
+\left(
+\begin{array}{c}
+  v_1\\
+  v_2
+\end{array}
+\right)=
+\begin{pmatrix}
+  0 & 0\\
+  \gamma & 0
+\end{pmatrix}
+\left(
+\begin{array}{c}
+  i_1\\
+  i_2
+\end{array}
+\right)
+\]
+
+\subsection{Generatore di Corrente Controllato in Tensione}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(112,83)(15,15)
+  \linethickness{0.3mm}
+  \put(30,80){\line(1,0){30}}
+  \put(30,80){\line(-1,0){0.12}}
+  \put(30,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(30,48){\line(1,0){30}}
+  \put(30,48){\line(-1,0){0.12}}
+  \put(30,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,58)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,70)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(78,70){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(78,80){\line(1,0){30}}
+  \put(108,80){\line(1,0){0.12}}
+  \put(108,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(1,0){30}}
+  \put(108,48){\line(1,0){0.12}}
+  \put(108,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(0,1){10}}
+  \put(27,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(27,48){\makebox(0,0)[cc]{$-$}}
+
+  \linethickness{0.3mm}
+  \multiput(43,81)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(43,79)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(27,63){\makebox(0,0)[cc]{$v_1$}}
+
+  \put(108,62){\makebox(0,0)[cc]{$v_2$}}
+
+  \put(111,80){\makebox(0,0)[cc]{$+$}}
+
+  \put(112,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(92,83){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(42,83){\makebox(0,0)[cc]{$i_1=0$}}
+
+  \put(84,59){\makebox(0,0)[cc]{$g v_1$}}
+
+  \linethickness{0.3mm}
+  \put(78,61){\line(0,1){6}}
+  \put(78,61){\vector(0,-1){0.12}}
+
+  \put(74,30){\makebox(0,0)[cc]{{\bf Figura 3.3} Rappresentazione
+      di un Generatore di Corrente Controllato in Tensione}}
+\end{picture}
+
+Le relazioni caratteristiche sono
+\[
+\begin{array}{l l}
+  i_1=0\\
+  i_2=gv_1
+\end{array}
+\]
+
+Le relazioni caratteristiche possono essere epresse anche sotto forma
+di notazione vettoriale. In questo caso abbiamo una notazione su base
+corrente.
+
+\[
+\left(
+\begin{array}{c}
+  i_1\\
+  i_2
+\end{array}
+\right)=
+\begin{pmatrix}
+  0 & 0\\
+  g & 0
+\end{pmatrix}
+\left(
+\begin{array}{c}
+  v_1\\
+  v_2
+\end{array}
+\right)
+\]
+
+\subsection{Generatore di Corrente Controllato in Corrente}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(112,83)(15,15)
+  \linethickness{0.3mm}
+  \put(30,80){\line(1,0){30}}
+  \put(30,80){\line(-1,0){0.12}}
+  \put(30,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(30,48){\line(1,0){30}}
+  \put(30,48){\line(-1,0){0.12}}
+  \put(30,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(72,64)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,58)(0.12,0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(78,70)(0.12,-0.12){50}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(78,70){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(78,80){\line(1,0){30}}
+  \put(108,80){\line(1,0){0.12}}
+  \put(108,80){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(1,0){30}}
+  \put(108,48){\line(1,0){0.12}}
+  \put(108,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,48){\line(0,1){10}}
+  \put(27,80){\makebox(0,0)[cc]{$+$}}
+  
+  \put(27,48){\makebox(0,0)[cc]{$-$}}
+  
+  \linethickness{0.3mm}
+  \multiput(43,81)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(43,79)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(91,80)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(27,63){\makebox(0,0)[cc]{$v_1=0$}}
+  
+  \put(108,62){\makebox(0,0)[cc]{$v_2$}}
+  
+  \put(111,80){\makebox(0,0)[cc]{$+$}}
+  
+  \put(112,48){\makebox(0,0)[cc]{$-$}}
+  
+  \put(92,83){\makebox(0,0)[cc]{$i_2$}}
+  
+  \put(42,83){\makebox(0,0)[cc]{$i_1$}}
+  
+  \put(84,59){\makebox(0,0)[cc]{$\beta v_1$}}
+  
+  \linethickness{0.3mm}
+  \put(78,61){\line(0,1){6}}
+  \put(78,61){\vector(0,-1){0.12}}
+  \linethickness{0.3mm}
+  \put(60,48){\line(0,1){32}}
+  
+  \put(74,30){\makebox(0,0)[cc]{{\bf Figura 3.4} Rappresentazione
+      di un Generatore di Corrente Controllato in Corrente}}
+  
+\end{picture}
+
+Le realzioni caratteristiche sono
+
+\[
+\begin{array}{l l}
+  v_1=0\\
+  i_2=\beta i_1
+\end{array}
+\]
+
+Le relazioni caratteristiche possono essere epresse anche sotto forma
+di notazione vettoriale. In questo caso abbiamo una notazione su base
+ibrida.
+
+\[
+\left(
+\begin{array}{c}
+  v_1\\
+  i_2
+\end{array}
+\right)=
+\begin{pmatrix}
+  0 & 0\\
+  \beta & 0
+\end{pmatrix}
+\left(
+\begin{array}{c}
+  i_1\\
+  v_2
+\end{array}
+\right)
+\]
+
+\section{Trasformatore}
+Il trasformatore pu\`o essere realizzato con due circuiti mutuamente
+accoppiati. I due circuiti, \emph{primario} e \emph{secondario}, sono
+realizzati avvolgendo del filo conduttore, smaltato con della vernice
+isolante,su un supporto di materiale, fatto di ferrite o lamine
+sottili di acciaio speciale.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(103,52)(35,15)
+  \linethickness{0.3mm}
+  \multiput(88,46)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(88.48,45.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(88.93,45.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(89.33,45.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(89.65,45.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(89.87,44.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(89.99,43.76){\line(0,1){0.48}}
+  \multiput(89.87,43.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(89.65,42.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(89.33,42.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(88.93,42.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(88.48,42.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(88,42)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(88,42)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(88.48,41.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(88.93,41.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(89.33,41.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(89.65,41.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(89.87,40.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(89.99,39.76){\line(0,1){0.48}}
+  \multiput(89.87,39.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(89.65,38.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(89.33,38.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(88.93,38.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(88.48,38.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(88,38)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(88,34)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(88.48,33.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(88.93,33.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(89.33,33.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(89.65,33.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(89.87,32.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(89.99,31.76){\line(0,1){0.48}}
+  \multiput(89.87,31.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(89.65,30.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(89.33,30.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(88.93,30.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(88.48,30.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(88,30)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(88,38)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(88.48,37.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(88.93,37.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(89.33,37.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(89.65,37.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(89.87,36.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(89.99,35.76){\line(0,1){0.48}}
+  \multiput(89.87,35.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(89.65,34.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(89.33,34.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(88.93,34.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(88.48,34.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(88,34)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(93.52,41.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(93.07,41.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(92.67,41.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(92.35,41.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(92.13,40.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(92.01,40.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(92.01,39.76){\line(0,1){0.48}}
+  \multiput(92.01,39.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(92.13,39.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(92.35,38.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(92.67,38.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(93.07,38.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(93.52,38.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(93.52,45.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(93.07,45.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(92.67,45.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(92.35,45.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(92.13,44.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(92.01,44.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(92.01,43.76){\line(0,1){0.48}}
+  \multiput(92.01,43.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(92.13,43.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(92.35,42.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(92.67,42.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(93.07,42.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(93.52,42.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(93.52,37.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(93.07,37.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(92.67,37.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(92.35,37.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(92.13,36.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(92.01,36.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(92.01,35.76){\line(0,1){0.48}}
+  \multiput(92.01,35.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(92.13,35.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(92.35,34.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(92.67,34.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(93.07,34.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(93.52,34.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(93.52,33.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(93.07,33.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(92.67,33.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(92.35,33.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(92.13,32.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(92.01,32.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(92.01,31.76){\line(0,1){0.48}}
+  \multiput(92.01,31.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(92.13,31.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(92.35,30.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(92.67,30.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(93.07,30.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(93.52,30.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \put(94,46){\line(1,0){20}}
+  \put(114,46){\line(1,0){0.12}}
+  \put(114,46){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(68,30){\line(1,0){20}}
+  \put(88,30){\line(1,0){0.12}}
+  \put(68,30){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(68,46){\line(1,0){20}}
+  \put(88,46){\line(1,0){0.12}}
+  \put(68,46){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(94,30){\line(1,0){20}}
+  \put(114,30){\line(1,0){0.12}}
+  \put(114,30){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(78,24){\line(0,1){28}}
+  \linethickness{0.3mm}
+  \put(78,24){\line(1,0){26}}
+  \linethickness{0.3mm}
+  \put(104,24){\line(0,1){28}}
+  \linethickness{0.3mm}
+  \put(78,52){\line(1,0){26}}
+  \put(86,49){\makebox(0,0)[cc]{$L_1$$L_2$$M$}}
+
+  \put(90.23,15.65){\makebox(0,0)[cc]{{\bf Figura 3.5} Rappresentazione simbolica di un trasformatore}}
+\end{picture}
+
+\vspace{1cm}
+
+\subsection{Mutuo Accoppiamento}
+
+%Da inserire l'immagine del mutuo accoppiamento, prima o poi lo faro`
+
+Le equazioni caratteristiche del \emph{mutuo accoppiamento} sono
+
+\[
+\left\{
+\begin{array}{l l}
+  v_1=L_1\dfrac{d\;i_1}{dt}+M\dfrac{d\;i_2}{dt} \\
+  v_2=L_2\dfrac{d\;i_2}{dt}+M\dfrac{d\;i_1}{dt} \\
+\end{array} \right.
+\]
+
+\vspace{0.5cm}
+
+\fbox{{\bf \emph {N.B.}}\hspace{10mm}
+  \begin{minipage}[c]{94mm}
+    \emph{In caso di mutuo accoppiamento perfetto abbiamo}
+    \[
+    k=\dfrac{M}{\sqrt{L_1L_2}}=1 
+    \]
+    \[
+    M^2=L_1L_2\implies \dfrac{M}{L_1}=\dfrac{L_2}{M}
+    \]
+\end{minipage}}
+
+\vspace{0.5cm}
+\[
+\left\{
+\begin{array}{l l}
+  v_1=L_1\left(\dfrac{d\;i_1}{dt}+\dfrac{M}{L_1}\cdot \dfrac{d\;i_2}{dt}\right) \\
+  v_2=M\left(\dfrac{d\;i_1}{dt}+\dfrac{L_2}{M}\cdot \dfrac{d\;i_2}{dt}\right) \\
+\end{array} \right.
+\]
+
+\vspace{0.5cm}
+Facendo il rapporto membro a membro abbiamo
+\[
+\dfrac{v_1}{v_2}=\dfrac{L_1}{M}\implies n \quad \text{$n$: Rapporto di Trasformazione}
+\]
+
+Simbolicamente il trasformatore ideale si pu\`o rappresentare in
+questo modo
+
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(103,75)(15,15)
+  \linethickness{0.3mm}
+  \put(70,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(70,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \multiput(70,62)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(70.48,61.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(70.93,61.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.33,61.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(71.65,61.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(71.87,60.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(71.99,59.76){\line(0,1){0.48}}
+  \multiput(71.87,59.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(71.65,58.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(71.33,58.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.93,58.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.48,58.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70,58)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(71.52,61.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(71.07,61.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70.67,61.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.35,61.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.13,60.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(70.01,60.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(70.01,59.76){\line(0,1){0.48}}
+  \multiput(70.01,59.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(70.13,59.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(70.35,58.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(70.67,58.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.07,58.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(71.52,58.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \put(72,72){\line(1,0){29}}
+  \put(101,72){\line(1,0){0.12}}
+  \put(101,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(1,0){29}}
+  \put(101,48){\line(1,0){0.12}}
+  \put(101,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(42,72){\line(1,0){28}}
+  \put(42,72){\line(-1,0){0.12}}
+  \put(42,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(42,48){\line(1,0){28}}
+  \put(42,48){\line(-1,0){0.12}}
+  \put(42,48){\circle*{1.5}}
+  \put(71,75){\makebox(0,0)[cc]{n:1}}
+
+  \put(73,75){\makebox(0,0)[cc]{}}
+
+  \linethickness{0.3mm}
+  \multiput(55,73)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(55,71)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(86,72)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(86,72)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(39,72){\makebox(0,0)[cc]{+}}
+
+  \put(104,72){\makebox(0,0)[cc]{$+$}}
+
+  \put(104,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(39,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(40,59){\makebox(0,0)[cc]{$v_1$}}
+
+  \put(103,59){\makebox(0,0)[cc]{$v_2$}}
+
+  \put(56,75){\makebox(0,0)[cc]{$i_1$}}
+
+  \put(87,75){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(70.23,30.65){\makebox(0,0)[cc]{{\bf Figura 3.6} Trasformatore
+      ideale con doppio bipolo generico sul primario}}
+\end{picture}
+
+Continuando ad agire con delle semplici manipolazioni algebriche
+abbiamo le seguenti relazioni.
+\[
+v_1 = L_1\left(\dfrac{d\;i_1}{dt}+\dfrac{M}{L_1}\cdot
+\dfrac{d\;i_2}{dt}\right) = L_1 \dfrac{d}{dt}
+\underbrace{\left(i_1+\dfrac{1}{n}\;i_2\right)}_\text{$i^*$} = L_1\dfrac{d\;i^*}{dt}
+\]
+
+Aggiungiamo al circuito un bipolo generico
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(103,75)(15,15)
+  \linethickness{0.3mm}
+  \put(70,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(70,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \multiput(70,62)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(70.48,61.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(70.93,61.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.33,61.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(71.65,61.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(71.87,60.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(71.99,59.76){\line(0,1){0.48}}
+  \multiput(71.87,59.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(71.65,58.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(71.33,58.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.93,58.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.48,58.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70,58)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(71.52,61.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(71.07,61.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70.67,61.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.35,61.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.13,60.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(70.01,60.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(70.01,59.76){\line(0,1){0.48}}
+  \multiput(70.01,59.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(70.13,59.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(70.35,58.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(70.67,58.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.07,58.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(71.52,58.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \put(72,72){\line(1,0){29}}
+  \put(101,72){\line(1,0){0.12}}
+  \put(101,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(1,0){29}}
+  \put(101,48){\line(1,0){0.12}}
+  \put(101,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(42,72){\line(1,0){28}}
+  \put(42,72){\line(-1,0){0.12}}
+  \put(42,72){\circle*{1.5}}
+  \put(51,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(42,48){\line(1,0){28}}
+  \put(42,48){\line(-1,0){0.12}}
+  \put(42,48){\circle*{1.5}}
+  \put(55.98,48){\circle*{1.5}}
+  \put(71,75){\makebox(0,0)[cc]{n:1}}
+
+  \put(73,75){\makebox(0,0)[cc]{}}
+
+  \linethickness{0.3mm}
+  \multiput(55,73)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(55,71)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(86,72)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(86,72)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \put(39,72){\makebox(0,0)[cc]{+}}
+
+  \put(104,72){\makebox(0,0)[cc]{$+$}}
+
+  \put(104,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(39,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(40,59){\makebox(0,0)[cc]{$v_1$}}
+
+  \put(103,59){\makebox(0,0)[cc]{$v_2$}}
+
+  \linethickness{0.3mm}
+  \put(51,65){\line(0,1){7}}
+  \linethickness{0.3mm}
+  \put(48,65){\line(1,0){6}}
+  \linethickness{0.3mm}
+  \put(54,55){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(48,55){\line(1,0){6}}
+  \linethickness{0.3mm}
+  \linethickness{0.3mm}
+  \put(48,55){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(51,52){\line(0,1){3}}
+  \linethickness{0.3mm}
+  \put(51,52){\line(1,0){5}}
+  \linethickness{0.3mm}
+  \put(56,48){\line(0,1){4}}
+  \linethickness{0.3mm}
+  \multiput(47,73)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(47,71)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(50,68)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(51,67)(0.12,0.12){8}{\line(1,0){0.12}}
+  \put(55,75){\makebox(0,0)[cc]{$i'$}}
+
+  \put(46,75){\makebox(0,0)[cc]{$i_1$}}
+
+  \put(54,67){\makebox(0,0)[cc]{$i^*$}}
+
+  \put(88,75){\makebox(0,0)[cc]{$i_2$}}
+
+  \put(70.23,30.65){\makebox(0,0)[cc]{{\bf Figura 3.7} Trasformatore
+      ideale con doppio bipolo generico sul primario}}
+\end{picture}
+
+\[
+i'=-\dfrac{1}{n}\; i_2 \quad \text{in quanto} \quad i_1=i^*+i'
+\]
+
+\[
+i^*=i_1-i'=i_1+\dfrac{1}{n}\; i_2
+\]
+
+\subsection{Trasformatore Reale}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(103,76)(0,15)
+  \linethickness{0.3mm}
+  \put(70,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(70,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,62){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(0,1){10}}
+  \linethickness{0.3mm}
+  \multiput(70,62)(0.48,-0.06){1}{\line(1,0){0.48}}
+  \multiput(70.48,61.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(70.93,61.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.33,61.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(71.65,61.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(71.87,60.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \put(71.99,59.76){\line(0,1){0.48}}
+  \multiput(71.87,59.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \multiput(71.65,58.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(71.33,58.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.93,58.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.48,58.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70,58)(0.48,0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(71.52,61.94)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(71.07,61.77)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(70.67,61.5)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(70.35,61.14)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(70.13,60.71)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(70.01,60.24)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(70.01,59.76){\line(0,1){0.48}}
+  \multiput(70.01,59.76)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(70.13,59.29)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(70.35,58.86)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(70.67,58.5)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(71.07,58.23)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(71.52,58.06)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \put(72,72){\line(1,0){29}}
+  \put(101,72){\line(1,0){0.12}}
+  \put(101,72){\circle*{1.5}}
+  \put(58,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(72,48){\line(1,0){29}}
+  \put(101,48){\line(1,0){0.12}}
+  \put(101,48){\circle*{1.5}}
+  \put(58,48){\circle*{1.5}}
+  \put(71,75){\makebox(0,0)[cc]{n:1}}
+
+  \put(26,72){\makebox(0,0)[cc]{$+$}}
+
+  \put(105,72){\makebox(0,0)[cc]{$+$}}
+
+  \put(105,48){\makebox(0,0)[cc]{$-$}}
+
+  \put(26,48){\makebox(0,0)[cc]{$-$}}
+
+  \linethickness{0.3mm}
+  \put(30,72){\line(1,0){8}}
+  \put(30,72){\line(-1,0){0.12}}
+  \put(30,72){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(30,48){\line(1,0){40}}
+  \put(30,48){\line(-1,0){0.12}}
+  \put(30,48){\circle*{1.5}}
+  \linethickness{0.3mm}
+  \put(54,72){\line(1,0){16}}
+  \linethickness{0.3mm}
+  \multiput(38,72)(0.06,0.48){1}{\line(0,1){0.48}}
+  \multiput(38.06,72.48)(0.17,0.45){1}{\line(0,1){0.45}}
+  \multiput(38.23,72.93)(0.14,0.2){2}{\line(0,1){0.2}}
+  \multiput(38.5,73.33)(0.12,0.11){3}{\line(1,0){0.12}}
+  \multiput(38.86,73.65)(0.21,0.11){2}{\line(1,0){0.21}}
+  \multiput(39.29,73.87)(0.47,0.12){1}{\line(1,0){0.47}}
+  \put(39.76,73.99){\line(1,0){0.48}}
+  \multiput(40.24,73.99)(0.47,-0.12){1}{\line(1,0){0.47}}
+  \multiput(40.71,73.87)(0.21,-0.11){2}{\line(1,0){0.21}}
+  \multiput(41.14,73.65)(0.12,-0.11){3}{\line(1,0){0.12}}
+  \multiput(41.5,73.33)(0.14,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(41.77,72.93)(0.17,-0.45){1}{\line(0,-1){0.45}}
+  \multiput(41.94,72.48)(0.06,-0.48){1}{\line(0,-1){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(46,72)(0.06,0.48){1}{\line(0,1){0.48}}
+  \multiput(46.06,72.48)(0.17,0.45){1}{\line(0,1){0.45}}
+  \multiput(46.23,72.93)(0.14,0.2){2}{\line(0,1){0.2}}
+  \multiput(46.5,73.33)(0.12,0.11){3}{\line(1,0){0.12}}
+  \multiput(46.86,73.65)(0.21,0.11){2}{\line(1,0){0.21}}
+  \multiput(47.29,73.87)(0.47,0.12){1}{\line(1,0){0.47}}
+  \put(47.76,73.99){\line(1,0){0.48}}
+  \multiput(48.24,73.99)(0.47,-0.12){1}{\line(1,0){0.47}}
+  \multiput(48.71,73.87)(0.21,-0.11){2}{\line(1,0){0.21}}
+  \multiput(49.14,73.65)(0.12,-0.11){3}{\line(1,0){0.12}}
+  \multiput(49.5,73.33)(0.14,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(49.77,72.93)(0.17,-0.45){1}{\line(0,-1){0.45}}
+  \multiput(49.94,72.48)(0.06,-0.48){1}{\line(0,-1){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(50,72)(0.06,0.48){1}{\line(0,1){0.48}}
+  \multiput(50.06,72.48)(0.17,0.45){1}{\line(0,1){0.45}}
+  \multiput(50.23,72.93)(0.14,0.2){2}{\line(0,1){0.2}}
+  \multiput(50.5,73.33)(0.12,0.11){3}{\line(1,0){0.12}}
+  \multiput(50.86,73.65)(0.21,0.11){2}{\line(1,0){0.21}}
+  \multiput(51.29,73.87)(0.47,0.12){1}{\line(1,0){0.47}}
+  \put(51.76,73.99){\line(1,0){0.48}}
+  \multiput(52.24,73.99)(0.47,-0.12){1}{\line(1,0){0.47}}
+  \multiput(52.71,73.87)(0.21,-0.11){2}{\line(1,0){0.21}}
+  \multiput(53.14,73.65)(0.12,-0.11){3}{\line(1,0){0.12}}
+  \multiput(53.5,73.33)(0.14,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(53.77,72.93)(0.17,-0.45){1}{\line(0,-1){0.45}}
+  \multiput(53.94,72.48)(0.06,-0.48){1}{\line(0,-1){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(42,72)(0.06,0.48){1}{\line(0,1){0.48}}
+  \multiput(42.06,72.48)(0.17,0.45){1}{\line(0,1){0.45}}
+  \multiput(42.23,72.93)(0.14,0.2){2}{\line(0,1){0.2}}
+  \multiput(42.5,73.33)(0.12,0.11){3}{\line(1,0){0.12}}
+  \multiput(42.86,73.65)(0.21,0.11){2}{\line(1,0){0.21}}
+  \multiput(43.29,73.87)(0.47,0.12){1}{\line(1,0){0.47}}
+  \put(43.76,73.99){\line(1,0){0.48}}
+  \multiput(44.24,73.99)(0.47,-0.12){1}{\line(1,0){0.47}}
+  \multiput(44.71,73.87)(0.21,-0.11){2}{\line(1,0){0.21}}
+  \multiput(45.14,73.65)(0.12,-0.11){3}{\line(1,0){0.12}}
+  \multiput(45.5,73.33)(0.14,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(45.77,72.93)(0.17,-0.45){1}{\line(0,-1){0.45}}
+  \multiput(45.94,72.48)(0.06,-0.48){1}{\line(0,-1){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(58,64)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(58.48,64.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(58.93,64.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(59.33,64.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(59.65,64.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(59.87,65.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(59.99,65.76){\line(0,1){0.48}}
+  \multiput(59.87,66.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(59.65,67.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(59.33,67.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(58.93,67.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(58.48,67.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(58,68)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(58,60)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(58.48,60.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(58.93,60.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(59.33,60.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(59.65,60.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(59.87,61.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(59.99,61.76){\line(0,1){0.48}}
+  \multiput(59.87,62.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(59.65,63.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(59.33,63.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(58.93,63.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(58.48,63.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(58,64)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(58,56)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(58.48,56.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(58.93,56.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(59.33,56.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(59.65,56.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(59.87,57.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(59.99,57.76){\line(0,1){0.48}}
+  \multiput(59.87,58.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(59.65,59.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(59.33,59.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(58.93,59.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(58.48,59.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(58,60)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \multiput(58,52)(0.48,0.06){1}{\line(1,0){0.48}}
+  \multiput(58.48,52.06)(0.45,0.17){1}{\line(1,0){0.45}}
+  \multiput(58.93,52.23)(0.2,0.14){2}{\line(1,0){0.2}}
+  \multiput(59.33,52.5)(0.11,0.12){3}{\line(0,1){0.12}}
+  \multiput(59.65,52.86)(0.11,0.21){2}{\line(0,1){0.21}}
+  \multiput(59.87,53.29)(0.12,0.47){1}{\line(0,1){0.47}}
+  \put(59.99,53.76){\line(0,1){0.48}}
+  \multiput(59.87,54.71)(0.12,-0.47){1}{\line(0,-1){0.47}}
+  \multiput(59.65,55.14)(0.11,-0.21){2}{\line(0,-1){0.21}}
+  \multiput(59.33,55.5)(0.11,-0.12){3}{\line(0,-1){0.12}}
+  \multiput(58.93,55.77)(0.2,-0.14){2}{\line(1,0){0.2}}
+  \multiput(58.48,55.94)(0.45,-0.17){1}{\line(1,0){0.45}}
+  \multiput(58,56)(0.48,-0.06){1}{\line(1,0){0.48}}
+
+  \linethickness{0.3mm}
+  \put(58,68){\line(0,1){4}}
+  \linethickness{0.3mm}
+  \put(58,48){\line(0,1){4}}
+  \put(45,78){\makebox(0,0)[cc]{$\Delta L$}}
+
+  \put(64,62){\makebox(0,0)[cc]{$\dfrac{M^2}{L_2}$}}
+
+  \put(26,60){\makebox(0,0)[cc]{$v_1$}}
+
+  \put(102,60){\makebox(0,0)[cc]{$v_2$}}
+
+  \put(65.23,30.65){\makebox(0,0)[cc]{{\bf Figura 3.8} Schema simbolico
+      di trasformatore reale}}
+\end{picture}
+
+Per un trasformatore reale abbiamo che il \emph {coefficiente di mutua
+  induzione} {\bf $M$} risulta essere molto minore del prodotto $L_1L_2$
+\[
+M^2<<L_1L_2
+\]
+
+Prendendo in esame $L_1$ abbiamo
+
+\[
+L_1=L'+\Delta L \implies \Delta L=L_1-\dfrac{M^2}{L_2}
+\]
+
+\[
+L_1 \implies L'_1L_2=M^2
+\]
+
+\[
+\left\{
+\begin{array}{l l}
+  v_1=L'_1\dfrac{d\;i_1}{dt}+M\dfrac{d\;i_2}{dt}+\Delta L\; \dfrac{d\;i_1}{dt} \\
+  v_2=L_2\dfrac{d\;i_2}{dt}+M\dfrac{d\;i_1}{dt} \\
+\end{array} \right.
+\]
+
+\chapter{Circuiti a-Dinamici Lineari}
+\section{Generatore Equivalente di Th\`evenin-Norton}
+Consideriamo un generico circuito costituito da resistori lineari e
+generatori reali come in figura.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(94,70)(15,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\put(48,64){\line(-1,0){0.12}}
+\put(48,64){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\put(48,42){\line(-1,0){0.12}}
+\put(48,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(77,62){\circle{8}}
+
+\linethickness{0.3mm}
+\put(77,52){\circle{8}}
+
+\linethickness{0.3mm}
+\put(66,62){\line(1,0){7}}
+\put(66,62){\line(-1,0){0.12}}
+\put(66,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,62){\line(1,0){7}}
+\put(88,62){\line(1,0){0.12}}
+\put(88,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,52){\line(1,0){7}}
+\put(66,52){\line(-1,0){0.12}}
+\put(66,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,52){\line(1,0){7}}
+\put(88,52){\line(1,0){0.12}}
+\put(88,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\multiput(72.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,42){\line(1,0){1.5}}
+\linethickness{0.15mm}
+\put(71,42){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,42){\line(1,0){6}}
+\put(88,42){\line(1,0){0.12}}
+\put(88,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,42){\line(1,0){6}}
+\put(66,42){\line(-1,0){0.12}}
+\put(66,42){\circle*{1.5}}
+\put(79,62){\makebox(0,0)[cc]{$+$}}
+
+\linethickness{0.3mm}
+\put(74.38,61.38){\line(0,1){1}}
+\put(44,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,42){\makebox(0,0)[cc]{$-$}}
+
+\put(46,53){\makebox(0,0)[cc]{$v$}}
+
+\linethickness{0.3mm}
+\multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
+\put(52,67){\makebox(0,0)[cc]{$i$}}
+
+\linethickness{0.3mm}
+\put(74,52){\line(1,0){6}}
+\put(80,52){\vector(1,0){0.12}}
+
+\put(72.23,25.65){\makebox(0,0)[cc]{{\bf Figura 4.1} Circuito generico
+costutito da resistori e generatori lineari}}
+\end{picture}
+
+Dobbiamo determinare la relazione caratteristica tra l'intensit\`a di
+corrente $i$ e la tensione $v$ per tutti i volori ammessi.
+Pu\`o essere effettuato su base tensione (\emph{Norton}) o su base
+corrente (\emph{Th\`evenin}).
+
+Prendiamo in esame la caratterizzazione base corrente.
+
+\subsection{Generatore Equivalente di Th\`evenin}
+Se prensiamo in esame la caratterizzazione base corrente applichiamo
+al circuito generico un generatore di corrente.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(94,70)(15,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\put(48,64){\line(-1,0){0.12}}
+\put(48,64){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\put(48,42){\line(-1,0){0.12}}
+\put(48,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(77,62){\circle{8}}
+
+\linethickness{0.3mm}
+\put(77,52){\circle{8}}
+
+\linethickness{0.3mm}
+\put(66,62){\line(1,0){7}}
+\put(66,62){\line(-1,0){0.12}}
+\put(66,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,62){\line(1,0){7}}
+\put(88,62){\line(1,0){0.12}}
+\put(88,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,52){\line(1,0){7}}
+\put(66,52){\line(-1,0){0.12}}
+\put(66,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,52){\line(1,0){7}}
+\put(88,52){\line(1,0){0.12}}
+\put(88,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\multiput(72.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,42){\line(1,0){1.5}}
+
+\linethickness{0.15mm}
+\put(71,42){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,42){\line(1,0){6}}
+\put(88,42){\line(1,0){0.12}}
+\put(88,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,42){\line(1,0){6}}
+\put(66,42){\line(-1,0){0.12}}
+\put(66,42){\circle*{1.5}}
+\put(79,62){\makebox(0,0)[cc]{$+$}}
+
+\linethickness{0.3mm}
+\put(74.38,61.38){\line(0,1){1}}
+\put(44,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,42){\makebox(0,0)[cc]{$-$}}
+
+\put(53,58){\makebox(0,0)[cc]{$v$}}
+
+\linethickness{0.3mm}
+\multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(74,52){\line(1,0){6}}
+\put(80,52){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(48,53){\circle{8}}
+
+\linethickness{0.3mm}
+\put(48,57){\line(0,1){7}}
+\linethickness{0.3mm}
+\put(48,42){\line(0,1){7}}
+\linethickness{0.3mm}
+\put(48,50){\line(0,1){6}}
+\put(48,56){\vector(0,1){0.12}}
+\put(41,53){\makebox(0,0)[cc]{$i$}}
+
+\put(72.23,25.65){\makebox(0,0)[cc]{{\bf Figura 4.2} Circuito generico
+con generatore di corrente}}
+\end{picture}
+
+Ora possiamo spegnere, all'interno del bipolo generico, i generatori
+indipendenti come in {\bf Figura 4.3}. Poi spegnamo il generatore di corrente per la
+caratterizzazione come in {\bf Figura 4.4}.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(90,70)(50,10)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\put(48,64){\line(-1,0){0.12}}
+\put(48,64){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\put(48,42){\line(-1,0){0.12}}
+\put(48,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,62){\line(1,0){16}}
+\put(66,62){\line(-1,0){0.12}}
+\put(66,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,62){\line(1,0){7}}
+\put(88,62){\line(1,0){0.12}}
+\put(88,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,52){\line(1,0){7}}
+\put(73,52){\line(1,0){0.12}}
+\put(73,52){\circle*{1.5}}
+\put(66,52){\line(-1,0){0.12}}
+\put(66,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,52){\line(1,0){7}}
+\put(88,52){\line(1,0){0.12}}
+\put(88,52){\circle*{1.5}}
+\put(81,52){\line(-1,0){0.12}}
+\put(81,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\multiput(72.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,42){\line(1,0){1.5}}
+
+\linethickness{0.15mm}
+\put(71,42){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,42){\line(1,0){6}}
+\put(88,42){\line(1,0){0.12}}
+\put(88,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,42){\line(1,0){6}}
+\put(66,42){\line(-1,0){0.12}}
+\put(66,42){\circle*{1.5}}
+\put(44,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,42){\makebox(0,0)[cc]{$-$}}
+
+\put(53,58){\makebox(0,0)[cc]{$v'$}}
+
+\linethickness{0.3mm}
+\put(48,53){\circle{8}}
+
+\linethickness{0.3mm}
+\put(48,57){\line(0,1){7}}
+\linethickness{0.3mm}
+\put(48,42){\line(0,1){7}}
+\linethickness{0.3mm}
+\put(48,50){\line(0,1){6}}
+\put(48,56){\vector(0,1){0.12}}
+\put(41,53){\makebox(0,0)[cc]{$i$}}
+
+\put(75,25){\makebox (0,0)[cc]{{\bf Figura 4.3}}}
+\end{picture}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(0,10)(-14.5,0)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\put(48,64){\line(-1,0){0.12}}
+\put(48,64){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\put(48,42){\line(-1,0){0.12}}
+\put(48,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(77,62){\circle{8}}
+
+\linethickness{0.3mm}
+\put(77,52){\circle{8}}
+
+\linethickness{0.3mm}
+\put(66,62){\line(1,0){7}}
+\put(66,62){\line(-1,0){0.12}}
+\put(66,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,62){\line(1,0){7}}
+\put(88,62){\line(1,0){0.12}}
+\put(88,62){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,52){\line(1,0){7}}
+\put(66,52){\line(-1,0){0.12}}
+\put(66,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(81,52){\line(1,0){7}}
+\put(88,52){\line(1,0){0.12}}
+\put(88,52){\circle*{1.5}}
+\linethickness{0.3mm}
+\multiput(72.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,42){\line(1,0){1.5}}
+\linethickness{0.15mm}
+\put(71,42){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,42){\line(1,0){6}}
+\put(88,42){\line(1,0){0.12}}
+\put(88,42){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(66,42){\line(1,0){6}}
+\put(66,42){\line(-1,0){0.12}}
+\put(66,42){\circle*{1.5}}
+\put(79,62){\makebox(0,0)[cc]{$+$}}
+
+\linethickness{0.3mm}
+\put(74.38,61.38){\line(0,1){1}}
+\put(44,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,42){\makebox(0,0)[cc]{$-$}}
+
+\put(46,53){\makebox(0,0)[cc]{$v''$}}
+
+\linethickness{0.3mm}
+\multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
+\put(52,67){\makebox(0,0)[cc]{$i''=0$}}
+
+\linethickness{0.3mm}
+\put(74,52){\line(1,0){6}}
+\put(80,52){\vector(1,0){0.12}}
+
+\put(74.23,25.65){\makebox(0,0)[cc]{{\bf Figura 4.4}}}
+\end{picture}
+
+Il circuito in {\bf Figura 4.3} \`e costituito da soli resistori
+lineari, circuiti aperti e corto-circuiti. Quindi pu\`o essere
+rappresentato tramite un resistore di equivalente $R_{TH}$. Quindi
+
+\[
+v'=R_{Th}i
+\]
+
+Nel circuito in {\bf Figura 4.4}, invece, le sorgenti sono quelle dei
+bipoli interne al bipolo in questione.
+Indichiamo con $E_0=v''$ la tensione a vuoto.
+Applichiamo la sovrapposizione degli effetti e abbiamo
+
+\[
+v=v'+v''
+\]
+
+Sostituendo abbiamo
+
+\[
+v=R_{Th}i+E_0
+\]
+
+\begin{definizione}
+Il comportamento ai terminali di un qualsiasi bipolo costituito da
+resistori lineari e generatori ideali \`e descrivibile attraverso un
+generatore reale di tensione con valori della resistenza equivalente e
+tensione a vuoto opportuni.
+\end{definizione}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(90.62,62.5)(15,15)
+\linethickness{0.3mm}
+\multiput(69.25,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(70.5,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(73,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(74.25,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(75.5,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(76.75,60){\line(1,0){1.25}}
+\put(71.75,62.5){\makebox(0,0)[bl]{$R_{Th}$}}
+
+\linethickness{0.15mm}
+\put(68,60){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\put(61,60){\line(1,0){8}}
+\linethickness{0.3mm}
+\put(77,60){\line(1,0){11}}
+\put(88,60){\line(1,0){0.12}}
+\put(88,60){\circle*{1.5}}
+\linethickness{0.3mm}
+\put(61,51){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(61,47){\circle{8}}
+
+\put(61,49){\makebox(0,0)[cc]{$+$}}
+
+\put(60.95,44.38){\makebox(0,0)[cc]{$-$}}
+
+\put(52,47.3){\makebox(0,0)[cc]{$E_0$}}
+\linethickness{0.3mm}
+\put(61,34){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(61,34){\line(1,0){27}}
+\put(88,34){\line(1,0){0.12}}
+\put(88,34){\circle*{1.5}}
+\put(87.5,46.88){\makebox(0,0)[cc]{$v$}}
+
+\put(91.62,60){\makebox(0,0)[cc]{$+$}}
+
+\put(91.62,34.1){\makebox(0,0)[cc]{$-$}}
+
+\put(74.62,20.1){\makebox(0,0)[cc]{{\bf Figura 4.5} Circuito
+    equivalente di Th\`evenin}}
+\end{picture}
+
+\end{document}
