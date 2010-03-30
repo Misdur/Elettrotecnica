@@ -27,8 +27,10 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \renewcommand{\arraystretch}{2}
+
 \newtheorem{definizione}{Teorema}
 \newtheorem{prop}{Propriet\`a}
+
 \usepackage{makeidx}
 \makeindex
 
@@ -106,6 +108,80 @@ Luca \textsc{Pace}
   fondamentali del programma. Tale documento NON deve assolutamente
   essere usato in sostituzione dei libri di testo.}
 \tableofcontents
+
+\chapter{I Modelli Circuitali}
+\section{Potenza ed Energia Elettrica}
+L'energia(assorbita o oregata), cos\`i come il lavoro, \`e associata a
+un intervallo di tempo. Indichiamo con $\Delta W^{(a)}$ l'energia
+assorbita dal bipolo nell'intervallo di tempo $(t,\;t+ \Delta t)$ e
+con $\Delta W^{(e)}$ quella erogata $(\Delta W^{(e)}=-\Delta
+W^{(a)})$. Possiamo allora definire a valor medio (nell'intervallo
+$(t,\;t+\Delta t)$) della potenza elettrica assorbita come:
+
+\begin{equation}\label{eq:potenzaMedia}
+<p^{(a)}>=\dfrac{\Delta W^{(a)}}{\Delta t}
+\end{equation}
+
+Sotto condiozioni non affatto restrittive $<p^{(a)}>$ tende, per
+$\Delta t \rightarrow 0$ ad un valore finito che dipende solo
+dall'istante $t$ considerato:
+
+\[
+p^{(a)}(t)=\lim_{\Delta t \to 0} \frac{\Delta W^{(a)}}{\Delta t}
+\]
+
+Questa \`e, per definizione, la potenza elettrica istantanea assorbita
+dal bipolo. Essa si misura in \emph{watt} ($W$) nel Sistema
+Internazionale; immediatamente si ottiene $1W=J/s$
+
+L'energia $\Delta W^{(a)}$ assorbita nell'intervallo $(t,\; t+\Delta
+t)$ pu\`o essere considerata come differenza tra tutta l'energia
+assorbita $W^{(a)}(t+\Delta t)$ nell'intervallo $(t_0,\; t+\Delta t)$
+dove $t_0$ \`e un'istante di tempo assegnato, meno quella gi\`a
+assorbita sino all'istante $t$, $W^{(a)}(t)$. Allora la
+\ref{eq:potenzaMedia} pu\`o essere riscritta:
+
+\[
+<p^{(a)}>=\dfrac{W^{(a)}(t+\Delta t)-W^{(a)}(t)}{\Delta t}
+\]
+
+Applicando il processo al limite per $\Delta t \rightarrow 0$, si ha:
+
+\begin{equation}\label{equ:potenzaIstantanea}
+p^{(a)}(t)=\dfrac{d\;W^{(a)}}{dt}
+\end{equation}
+
+La potenza istantanea \`e uguale alla derivata prima dell'energia
+elettrica assorbita dallo stesso nel generico intervallo
+$(t_0,t)$. Dalla \ref{equ:potenzaIstantanea} segue che l'energia $d\;
+W^{(a)}$ assorbita dal bipolo nell'intervallo elementare $(t,\;
+t+dt)$ \`e data da $dW^{(a)}=p^{(a)}(t)$. La relazione
+\ref{equ:potenzaIstantanea} pu\`o essere riformulata in forma integrale come:
+
+\[
+W^{(a)}(t)=W^{(a)}(t_0)+\int_{t_0}^{t}p^{(a)}(t)dt
+\]
+
+La potenza elettrica assorbita da un componente con due terminali \`e
+con buona approssimazione data da:
+
+\begin{equation}\label{equ:potenzaAssorbita}
+p^{(a)}(t)=v(t)i(t)
+\end{equation}
+
+dove $v$ ed $i$ sono la tensione e l'intensit\`a di corrente del
+componente con versi di riferimento scelti concordamente con la
+convenzione dell'utilizzatore. Se invece venisse adottata la
+convenzione del generatore l'espressione della potenza assorbita
+sarebbe:
+
+\[
+p^{(a)}=-v'i
+\]
+
+La relazione \ref{equ:potenzaAssorbita} vale esattamente soltanto in
+condizioni stazionarie. In condizioni lentamente variabili vale con
+buona approssimazione.
 
 %CAPITOLO 5 DEL LIBRO
 \chapter{Regime Sinusiodale}
@@ -1219,7 +1295,109 @@ $u_i$.
 
 Facendo riferimento alla seguente figura.
 
-%Prima o poi l'aggiungero`, sono da solo a fare sto lavoraccio. Maledizione.
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(99.5,58)(10,15)
+  \linethickness{0.3mm}
+  \put(35,30){\line(1,0){30}}
+  \linethickness{0.3mm}
+  \multiput(35,30)(0.12,0.2){125}{\line(0,1){0.2}}
+  \linethickness{0.3mm}
+  \multiput(50,55)(0.12,-0.2){125}{\line(0,-1){0.2}}
+  \linethickness{0.3mm}
+  \put(65,30){\line(1,0){30}}
+  \linethickness{0.3mm}
+  \multiput(80,55)(0.12,-0.2){125}{\line(0,-1){0.2}}
+  \linethickness{0.3mm}
+  \multiput(65,30)(0.12,0.2){125}{\line(0,1){0.2}}
+  \linethickness{0.3mm}
+  \put(50,55){\line(1,0){30}}
+  \linethickness{0.3mm}
+  \multiput(49,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(49,29)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(42,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(43,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(57,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(57,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \multiput(64,56)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(64,54)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(72,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(73,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \multiput(79,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(79,29)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(87,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(87,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(32.5,27.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(98,27.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(47,56.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(83.5,56.5){\circle{3}}
+  
+  \put(50,55){\circle*{1.5}}
+  \put(80,55){\circle*{1.5}}
+  \put(35,30){\circle*{1.5}}
+  \put(65,30){\circle*{1.5}}
+  \put(95,30){\circle*{1.5}}
+  
+  \put(32.5,27.5){\makebox(0,0)[cc]{$5$}}
+  
+  \put(46.9,56.5){\makebox(0,0)[cc]{$1$}}
+  
+  \put(83.51,56.5){\makebox(0,0)[cc]{$2$}}
+
+  \put(98,27.5){\makebox(0,0)[cc]{$3$}}
+  
+  \linethickness{0.3mm}
+  \put(65,27.5){\circle{3}}
+  
+  \put(64.8,27.5){\makebox(0,0)[cc]{$4$}}
+  
+  \put(40,43){\makebox(0,0)[cc]{$1$}}
+  
+  \put(64.5,57.5){\makebox(0,0)[cc]{$2$}}
+  
+  \put(90,43){\makebox(0,0)[cc]{$3$}}
+  
+  \put(79,27){\makebox(0,0)[cc]{$4$}}
+  
+  \put(75,42){\makebox(0,0)[cc]{$5$}}
+  
+  \put(60,43){\makebox(0,0)[cc]{$6$}}
+  
+  \put(49,27){\makebox(0,0)[cc]{$7$}}
+  
+  \put(52,56.8){\makebox(0,0)[cc]{$u_1$}}
+  \put(78,56.8){\makebox(0,0)[cc]{$u_2$}}
+  \put(94,27.5){\makebox(0,0)[cc]{$u_3$}}
+  \put(64.7,34){\makebox(0,0)[cc]{$u_4$}}
+  \put(37,27.5){\makebox(0,0)[cc]{$u_5$}}
+  
+  \put(64,10){\makebox(0,0)[cc]{{\bf Figura 2.7} Potenziali di nodo}}
+
+
+  
+\end{picture}
+
+\vspace{2cm}
 
 Assumiamo che sia possibile esprimere la tensione di ciascun bipolo
 del circuito in funzione dei potenziali dei due nodi nei quali il lato
@@ -1268,8 +1446,1012 @@ Quindi possiamo affermare che
 
 \begin{definizione}
   Se le tensioni di un circuito sono sempre espresse attraverso i
-  potenziali di nodo secondo la \ref{eq:potenzialiNodo}
+  potenziali di nodo secondo la \ref{eq:potenzialiNodo}, allora esse
+  verificano automaticamente la legge di Kirchhoff per le tensioni per
+  qualsiasi maglia del circuito.
 \end{definizione}
+
+\subsubsection{Applicazione del Metodo dei Potenziali di Nodo}
+
+Consideriamo il circuito in {\bf Figura 2.8}.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(91.25,73)(0,0)
+\linethickness{0.3mm}
+\multiput(16.75,52.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(16.75,52.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(16.75,50.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(16.75,50.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(16.75,47.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(16.75,47.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(18,45.25){\line(0,1){1.25}}
+\put(19.25,49.25){\makebox(0,0)[bl]{$R_1$}}
+
+\linethickness{0.15mm}
+\put(18,54){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\multiput(37,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(38.25,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(39.5,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(40.75,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(42,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(43.25,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(44.5,59){\line(1,0){1.25}}
+\put(39.5,61.5){\makebox(0,0)[bl]{$R_2$}}
+
+\linethickness{0.15mm}
+\put(35.75,59){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\put(18,54){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(18,59){\line(1,0){19}}
+\linethickness{0.3mm}
+\put(31,53){\line(0,1){6}}
+\linethickness{0.3mm}
+\put(31,50){\circle{6}}
+
+\linethickness{0.3mm}
+\put(31,41){\line(0,1){6}}
+\linethickness{0.3mm}
+\put(18,41){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(18,41){\line(1,0){13}}
+\linethickness{0.3mm}
+\put(31,59){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(41,69){\circle{6}}
+
+\linethickness{0.3mm}
+\put(31,69){\line(1,0){7}}
+\linethickness{0.3mm}
+\put(44,69){\line(1,0){7}}
+\linethickness{0.3mm}
+\put(51,59){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(45,59){\line(1,0){6}}
+\linethickness{0.3mm}
+\multiput(49.75,52.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.75,52.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.75,50.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.75,50.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.75,47.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.75,47.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(51,45.25){\line(0,1){1.25}}
+\put(52.25,49.25){\makebox(0,0)[bl]{$R_3$}}
+
+\linethickness{0.15mm}
+\put(51,54){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\put(51,54){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(51,41){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(31,41){\line(1,0){20}}
+\linethickness{0.3mm}
+\multiput(59.25,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(60.5,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(61.75,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(63,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(64.25,59)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(65.5,60.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(66.75,59){\line(1,0){1.25}}
+\put(61.75,61.5){\makebox(0,0)[bl]{$R_4$}}
+
+\linethickness{0.15mm}
+\put(58,59){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\put(51,59){\line(1,0){8}}
+\linethickness{0.3mm}
+\put(68,59){\line(1,0){7}}
+\linethickness{0.3mm}
+\put(75,50){\circle{6}}
+
+\linethickness{0.3mm}
+\put(75,53){\line(0,1){6}}
+\linethickness{0.3mm}
+\put(75,41){\line(0,1){6}}
+\linethickness{0.3mm}
+\put(51,41){\line(1,0){24}}
+\linethickness{0.3mm}
+\multiput(88.75,52.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(88.75,52.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(88.75,50.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(88.75,50.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(88.75,47.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(88.75,47.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(90,45.25){\line(0,1){1.25}}
+\put(91.25,49.25){\makebox(0,0)[bl]{$R_5$}}
+
+\linethickness{0.15mm}
+\put(90,54){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\put(75,59){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(90,54){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(90,41){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(75,41){\line(1,0){15}}
+\linethickness{0.3mm}
+\multiput(17,57)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(18,58)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49,60)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(50,57)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(51,58)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(73,60)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(73,58)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(89,58)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(90,57)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(75,48){\line(0,1){4}}
+\put(75,48){\vector(0,-1){0.12}}
+\linethickness{0.3mm}
+\put(31,48){\line(0,1){4}}
+\put(31,52){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\put(39,69){\line(1,0){4}}
+\put(39,69){\vector(-1,0){0.12}}
+\put(47,73){\makebox(0,0)[cc]{$J_2$}}
+
+\put(26,62){\makebox(0,0)[cc]{$u_1$}}
+
+\put(55,62){\makebox(0,0)[cc]{$u_2$}}
+
+\put(76,62){\makebox(0,0)[cc]{$u_3$}}
+
+\put(81,50){\makebox(0,0)[cc]{$J_3$}}
+
+\put(38,50){\makebox(0,0)[cc]{$J_1$}}
+
+\linethickness{0.3mm}
+\put(91,40.99){\line(0,1){0.03}}
+\multiput(90.99,40.96)(0.01,0.03){1}{\line(0,1){0.03}}
+\multiput(90.98,40.93)(0.01,0.03){1}{\line(0,1){0.03}}
+\multiput(90.96,40.91)(0.02,0.03){1}{\line(0,1){0.03}}
+\multiput(90.93,40.88)(0.03,0.03){1}{\line(1,0){0.03}}
+\multiput(90.9,40.85)(0.03,0.03){1}{\line(1,0){0.03}}
+\multiput(90.86,40.82)(0.04,0.03){1}{\line(1,0){0.04}}
+\multiput(90.81,40.8)(0.05,0.03){1}{\line(1,0){0.05}}
+\multiput(90.76,40.77)(0.05,0.03){1}{\line(1,0){0.05}}
+\multiput(90.69,40.74)(0.06,0.03){1}{\line(1,0){0.06}}
+\multiput(90.63,40.72)(0.07,0.03){1}{\line(1,0){0.07}}
+\multiput(90.55,40.69)(0.07,0.03){1}{\line(1,0){0.07}}
+\multiput(90.47,40.66)(0.08,0.03){1}{\line(1,0){0.08}}
+\multiput(90.38,40.64)(0.09,0.03){1}{\line(1,0){0.09}}
+\multiput(90.29,40.61)(0.09,0.03){1}{\line(1,0){0.09}}
+\multiput(90.19,40.58)(0.1,0.03){1}{\line(1,0){0.1}}
+\multiput(90.08,40.56)(0.11,0.03){1}{\line(1,0){0.11}}
+\multiput(89.97,40.53)(0.11,0.03){1}{\line(1,0){0.11}}
+\multiput(89.85,40.5)(0.12,0.03){1}{\line(1,0){0.12}}
+\multiput(89.72,40.48)(0.13,0.03){1}{\line(1,0){0.13}}
+\multiput(89.58,40.45)(0.13,0.03){1}{\line(1,0){0.13}}
+\multiput(89.44,40.43)(0.14,0.03){1}{\line(1,0){0.14}}
+\multiput(89.3,40.4)(0.15,0.03){1}{\line(1,0){0.15}}
+\multiput(89.14,40.37)(0.15,0.03){1}{\line(1,0){0.15}}
+\multiput(88.98,40.35)(0.16,0.03){1}{\line(1,0){0.16}}
+\multiput(88.82,40.32)(0.17,0.03){1}{\line(1,0){0.17}}
+\multiput(88.64,40.3)(0.17,0.03){1}{\line(1,0){0.17}}
+\multiput(88.46,40.27)(0.18,0.03){1}{\line(1,0){0.18}}
+\multiput(88.28,40.25)(0.19,0.03){1}{\line(1,0){0.19}}
+\multiput(88.09,40.22)(0.19,0.03){1}{\line(1,0){0.19}}
+\multiput(87.89,40.2)(0.2,0.02){1}{\line(1,0){0.2}}
+\multiput(87.68,40.17)(0.2,0.02){1}{\line(1,0){0.2}}
+\multiput(87.47,40.15)(0.21,0.02){1}{\line(1,0){0.21}}
+\multiput(87.26,40.12)(0.22,0.02){1}{\line(1,0){0.22}}
+\multiput(87.04,40.1)(0.22,0.02){1}{\line(1,0){0.22}}
+\multiput(86.81,40.08)(0.23,0.02){1}{\line(1,0){0.23}}
+\multiput(86.57,40.05)(0.23,0.02){1}{\line(1,0){0.23}}
+\multiput(86.33,40.03)(0.24,0.02){1}{\line(1,0){0.24}}
+\multiput(86.08,40)(0.25,0.02){1}{\line(1,0){0.25}}
+\multiput(85.83,39.98)(0.25,0.02){1}{\line(1,0){0.25}}
+\multiput(85.57,39.96)(0.26,0.02){1}{\line(1,0){0.26}}
+\multiput(85.31,39.93)(0.26,0.02){1}{\line(1,0){0.26}}
+\multiput(85.04,39.91)(0.27,0.02){1}{\line(1,0){0.27}}
+\multiput(84.76,39.89)(0.28,0.02){1}{\line(1,0){0.28}}
+\multiput(84.48,39.87)(0.28,0.02){1}{\line(1,0){0.28}}
+\multiput(84.2,39.84)(0.29,0.02){1}{\line(1,0){0.29}}
+\multiput(83.9,39.82)(0.29,0.02){1}{\line(1,0){0.29}}
+\multiput(83.61,39.8)(0.3,0.02){1}{\line(1,0){0.3}}
+\multiput(83.3,39.78)(0.3,0.02){1}{\line(1,0){0.3}}
+\multiput(82.99,39.76)(0.31,0.02){1}{\line(1,0){0.31}}
+\multiput(82.68,39.74)(0.31,0.02){1}{\line(1,0){0.31}}
+\multiput(82.36,39.72)(0.32,0.02){1}{\line(1,0){0.32}}
+\multiput(82.04,39.69)(0.32,0.02){1}{\line(1,0){0.32}}
+\multiput(81.71,39.67)(0.33,0.02){1}{\line(1,0){0.33}}
+\multiput(81.37,39.65)(0.33,0.02){1}{\line(1,0){0.33}}
+\multiput(81.03,39.63)(0.34,0.02){1}{\line(1,0){0.34}}
+\multiput(80.69,39.61)(0.34,0.02){1}{\line(1,0){0.34}}
+\multiput(80.34,39.6)(0.35,0.02){1}{\line(1,0){0.35}}
+\multiput(79.99,39.58)(0.35,0.02){1}{\line(1,0){0.35}}
+\multiput(79.63,39.56)(0.36,0.02){1}{\line(1,0){0.36}}
+\multiput(79.26,39.54)(0.36,0.02){1}{\line(1,0){0.36}}
+\multiput(78.89,39.52)(0.37,0.02){1}{\line(1,0){0.37}}
+\multiput(78.52,39.5)(0.37,0.02){1}{\line(1,0){0.37}}
+\multiput(78.14,39.48)(0.38,0.02){1}{\line(1,0){0.38}}
+\multiput(77.76,39.47)(0.38,0.02){1}{\line(1,0){0.38}}
+\multiput(77.38,39.45)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(76.99,39.43)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(76.59,39.42)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(76.19,39.4)(0.4,0.02){1}{\line(1,0){0.4}}
+\multiput(75.79,39.38)(0.4,0.02){1}{\line(1,0){0.4}}
+\multiput(75.38,39.37)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(74.97,39.35)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(74.56,39.34)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(74.14,39.32)(0.42,0.01){1}{\line(1,0){0.42}}
+\multiput(73.72,39.31)(0.42,0.01){1}{\line(1,0){0.42}}
+\multiput(73.29,39.29)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(72.86,39.28)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(72.43,39.27)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(71.99,39.25)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(71.55,39.24)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(71.11,39.23)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(70.66,39.21)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(70.21,39.2)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(69.76,39.19)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(69.31,39.18)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(68.85,39.17)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(68.39,39.16)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(67.93,39.15)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(67.46,39.14)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(66.99,39.13)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(66.52,39.12)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(66.05,39.11)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(65.58,39.1)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(65.1,39.09)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(64.62,39.08)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(64.14,39.08)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(63.66,39.07)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(63.17,39.06)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(62.69,39.06)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(62.2,39.05)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(61.71,39.04)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(61.22,39.04)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(60.73,39.03)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(60.23,39.03)(0.49,0){1}{\line(1,0){0.49}}
+\multiput(59.74,39.02)(0.49,0){1}{\line(1,0){0.49}}
+\multiput(59.24,39.02)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(58.75,39.02)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(58.25,39.01)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(57.75,39.01)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(57.25,39.01)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(56.75,39.01)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(56.25,39)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(55.75,39)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(55.25,39)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(54.75,39)(0.5,0){1}{\line(1,0){0.5}}
+\put(54.25,39){\line(1,0){0.5}}
+\put(53.75,39){\line(1,0){0.5}}
+\put(53.25,39){\line(1,0){0.5}}
+\multiput(52.75,39)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(52.25,39)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(51.75,39)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(51.25,39.01)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(50.75,39.01)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(50.25,39.01)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(49.75,39.01)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(49.25,39.02)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(48.76,39.02)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(48.26,39.02)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(47.77,39.03)(0.49,-0){1}{\line(1,0){0.49}}
+\multiput(47.27,39.03)(0.49,-0){1}{\line(1,0){0.49}}
+\multiput(46.78,39.04)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(46.29,39.04)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(45.8,39.05)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(45.31,39.06)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(44.83,39.06)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(44.34,39.07)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(43.86,39.08)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(43.38,39.08)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(42.9,39.09)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(42.42,39.1)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(41.95,39.11)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(41.48,39.12)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(41.01,39.13)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(40.54,39.14)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(40.07,39.15)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(39.61,39.16)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(39.15,39.17)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(38.69,39.18)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(38.24,39.19)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(37.79,39.2)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(37.34,39.21)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(36.89,39.23)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(36.45,39.24)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(36.01,39.25)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(35.57,39.27)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(35.14,39.28)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(34.71,39.29)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(34.28,39.31)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(33.86,39.32)(0.42,-0.01){1}{\line(1,0){0.42}}
+\multiput(33.44,39.34)(0.42,-0.01){1}{\line(1,0){0.42}}
+\multiput(33.03,39.35)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(32.62,39.37)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(32.21,39.38)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(31.81,39.4)(0.4,-0.02){1}{\line(1,0){0.4}}
+\multiput(31.41,39.42)(0.4,-0.02){1}{\line(1,0){0.4}}
+\multiput(31.01,39.43)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(30.62,39.45)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(30.24,39.47)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(29.86,39.48)(0.38,-0.02){1}{\line(1,0){0.38}}
+\multiput(29.48,39.5)(0.38,-0.02){1}{\line(1,0){0.38}}
+\multiput(29.11,39.52)(0.37,-0.02){1}{\line(1,0){0.37}}
+\multiput(28.74,39.54)(0.37,-0.02){1}{\line(1,0){0.37}}
+\multiput(28.37,39.56)(0.36,-0.02){1}{\line(1,0){0.36}}
+\multiput(28.01,39.58)(0.36,-0.02){1}{\line(1,0){0.36}}
+\multiput(27.66,39.6)(0.35,-0.02){1}{\line(1,0){0.35}}
+\multiput(27.31,39.61)(0.35,-0.02){1}{\line(1,0){0.35}}
+\multiput(26.97,39.63)(0.34,-0.02){1}{\line(1,0){0.34}}
+\multiput(26.63,39.65)(0.34,-0.02){1}{\line(1,0){0.34}}
+\multiput(26.29,39.67)(0.33,-0.02){1}{\line(1,0){0.33}}
+\multiput(25.96,39.69)(0.33,-0.02){1}{\line(1,0){0.33}}
+\multiput(25.64,39.72)(0.32,-0.02){1}{\line(1,0){0.32}}
+\multiput(25.32,39.74)(0.32,-0.02){1}{\line(1,0){0.32}}
+\multiput(25.01,39.76)(0.31,-0.02){1}{\line(1,0){0.31}}
+\multiput(24.7,39.78)(0.31,-0.02){1}{\line(1,0){0.31}}
+\multiput(24.39,39.8)(0.3,-0.02){1}{\line(1,0){0.3}}
+\multiput(24.1,39.82)(0.3,-0.02){1}{\line(1,0){0.3}}
+\multiput(23.8,39.84)(0.29,-0.02){1}{\line(1,0){0.29}}
+\multiput(23.52,39.87)(0.29,-0.02){1}{\line(1,0){0.29}}
+\multiput(23.24,39.89)(0.28,-0.02){1}{\line(1,0){0.28}}
+\multiput(22.96,39.91)(0.28,-0.02){1}{\line(1,0){0.28}}
+\multiput(22.69,39.93)(0.27,-0.02){1}{\line(1,0){0.27}}
+\multiput(22.43,39.96)(0.26,-0.02){1}{\line(1,0){0.26}}
+\multiput(22.17,39.98)(0.26,-0.02){1}{\line(1,0){0.26}}
+\multiput(21.92,40)(0.25,-0.02){1}{\line(1,0){0.25}}
+\multiput(21.67,40.03)(0.25,-0.02){1}{\line(1,0){0.25}}
+\multiput(21.43,40.05)(0.24,-0.02){1}{\line(1,0){0.24}}
+\multiput(21.19,40.08)(0.23,-0.02){1}{\line(1,0){0.23}}
+\multiput(20.96,40.1)(0.23,-0.02){1}{\line(1,0){0.23}}
+\multiput(20.74,40.12)(0.22,-0.02){1}{\line(1,0){0.22}}
+\multiput(20.53,40.15)(0.22,-0.02){1}{\line(1,0){0.22}}
+\multiput(20.32,40.17)(0.21,-0.02){1}{\line(1,0){0.21}}
+\multiput(20.11,40.2)(0.2,-0.02){1}{\line(1,0){0.2}}
+\multiput(19.91,40.22)(0.2,-0.02){1}{\line(1,0){0.2}}
+\multiput(19.72,40.25)(0.19,-0.03){1}{\line(1,0){0.19}}
+\multiput(19.54,40.27)(0.19,-0.03){1}{\line(1,0){0.19}}
+\multiput(19.36,40.3)(0.18,-0.03){1}{\line(1,0){0.18}}
+\multiput(19.18,40.32)(0.17,-0.03){1}{\line(1,0){0.17}}
+\multiput(19.02,40.35)(0.17,-0.03){1}{\line(1,0){0.17}}
+\multiput(18.86,40.37)(0.16,-0.03){1}{\line(1,0){0.16}}
+\multiput(18.7,40.4)(0.15,-0.03){1}{\line(1,0){0.15}}
+\multiput(18.56,40.43)(0.15,-0.03){1}{\line(1,0){0.15}}
+\multiput(18.42,40.45)(0.14,-0.03){1}{\line(1,0){0.14}}
+\multiput(18.28,40.48)(0.13,-0.03){1}{\line(1,0){0.13}}
+\multiput(18.15,40.5)(0.13,-0.03){1}{\line(1,0){0.13}}
+\multiput(18.03,40.53)(0.12,-0.03){1}{\line(1,0){0.12}}
+\multiput(17.92,40.56)(0.11,-0.03){1}{\line(1,0){0.11}}
+\multiput(17.81,40.58)(0.11,-0.03){1}{\line(1,0){0.11}}
+\multiput(17.71,40.61)(0.1,-0.03){1}{\line(1,0){0.1}}
+\multiput(17.62,40.64)(0.09,-0.03){1}{\line(1,0){0.09}}
+\multiput(17.53,40.66)(0.09,-0.03){1}{\line(1,0){0.09}}
+\multiput(17.45,40.69)(0.08,-0.03){1}{\line(1,0){0.08}}
+\multiput(17.37,40.72)(0.07,-0.03){1}{\line(1,0){0.07}}
+\multiput(17.31,40.74)(0.07,-0.03){1}{\line(1,0){0.07}}
+\multiput(17.24,40.77)(0.06,-0.03){1}{\line(1,0){0.06}}
+\multiput(17.19,40.8)(0.05,-0.03){1}{\line(1,0){0.05}}
+\multiput(17.14,40.82)(0.05,-0.03){1}{\line(1,0){0.05}}
+\multiput(17.1,40.85)(0.04,-0.03){1}{\line(1,0){0.04}}
+\multiput(17.07,40.88)(0.03,-0.03){1}{\line(1,0){0.03}}
+\multiput(17.04,40.91)(0.03,-0.03){1}{\line(1,0){0.03}}
+\multiput(17.02,40.93)(0.02,-0.03){1}{\line(0,-1){0.03}}
+\multiput(17.01,40.96)(0.01,-0.03){1}{\line(0,-1){0.03}}
+\multiput(17,40.99)(0.01,-0.03){1}{\line(0,-1){0.03}}
+\put(17,40.99){\line(0,1){0.03}}
+\multiput(17,41.01)(0.01,0.03){1}{\line(0,1){0.03}}
+\multiput(17.01,41.04)(0.01,0.03){1}{\line(0,1){0.03}}
+\multiput(17.02,41.07)(0.02,0.03){1}{\line(0,1){0.03}}
+\multiput(17.04,41.09)(0.03,0.03){1}{\line(1,0){0.03}}
+\multiput(17.07,41.12)(0.03,0.03){1}{\line(1,0){0.03}}
+\multiput(17.1,41.15)(0.04,0.03){1}{\line(1,0){0.04}}
+\multiput(17.14,41.18)(0.05,0.03){1}{\line(1,0){0.05}}
+\multiput(17.19,41.2)(0.05,0.03){1}{\line(1,0){0.05}}
+\multiput(17.24,41.23)(0.06,0.03){1}{\line(1,0){0.06}}
+\multiput(17.31,41.26)(0.07,0.03){1}{\line(1,0){0.07}}
+\multiput(17.37,41.28)(0.07,0.03){1}{\line(1,0){0.07}}
+\multiput(17.45,41.31)(0.08,0.03){1}{\line(1,0){0.08}}
+\multiput(17.53,41.34)(0.09,0.03){1}{\line(1,0){0.09}}
+\multiput(17.62,41.36)(0.09,0.03){1}{\line(1,0){0.09}}
+\multiput(17.71,41.39)(0.1,0.03){1}{\line(1,0){0.1}}
+\multiput(17.81,41.42)(0.11,0.03){1}{\line(1,0){0.11}}
+\multiput(17.92,41.44)(0.11,0.03){1}{\line(1,0){0.11}}
+\multiput(18.03,41.47)(0.12,0.03){1}{\line(1,0){0.12}}
+\multiput(18.15,41.5)(0.13,0.03){1}{\line(1,0){0.13}}
+\multiput(18.28,41.52)(0.13,0.03){1}{\line(1,0){0.13}}
+\multiput(18.42,41.55)(0.14,0.03){1}{\line(1,0){0.14}}
+\multiput(18.56,41.57)(0.15,0.03){1}{\line(1,0){0.15}}
+\multiput(18.7,41.6)(0.15,0.03){1}{\line(1,0){0.15}}
+\multiput(18.86,41.63)(0.16,0.03){1}{\line(1,0){0.16}}
+\multiput(19.02,41.65)(0.17,0.03){1}{\line(1,0){0.17}}
+\multiput(19.18,41.68)(0.17,0.03){1}{\line(1,0){0.17}}
+\multiput(19.36,41.7)(0.18,0.03){1}{\line(1,0){0.18}}
+\multiput(19.54,41.73)(0.19,0.03){1}{\line(1,0){0.19}}
+\multiput(19.72,41.75)(0.19,0.03){1}{\line(1,0){0.19}}
+\multiput(19.91,41.78)(0.2,0.02){1}{\line(1,0){0.2}}
+\multiput(20.11,41.8)(0.2,0.02){1}{\line(1,0){0.2}}
+\multiput(20.32,41.83)(0.21,0.02){1}{\line(1,0){0.21}}
+\multiput(20.53,41.85)(0.22,0.02){1}{\line(1,0){0.22}}
+\multiput(20.74,41.88)(0.22,0.02){1}{\line(1,0){0.22}}
+\multiput(20.96,41.9)(0.23,0.02){1}{\line(1,0){0.23}}
+\multiput(21.19,41.92)(0.23,0.02){1}{\line(1,0){0.23}}
+\multiput(21.43,41.95)(0.24,0.02){1}{\line(1,0){0.24}}
+\multiput(21.67,41.97)(0.25,0.02){1}{\line(1,0){0.25}}
+\multiput(21.92,42)(0.25,0.02){1}{\line(1,0){0.25}}
+\multiput(22.17,42.02)(0.26,0.02){1}{\line(1,0){0.26}}
+\multiput(22.43,42.04)(0.26,0.02){1}{\line(1,0){0.26}}
+\multiput(22.69,42.07)(0.27,0.02){1}{\line(1,0){0.27}}
+\multiput(22.96,42.09)(0.28,0.02){1}{\line(1,0){0.28}}
+\multiput(23.24,42.11)(0.28,0.02){1}{\line(1,0){0.28}}
+\multiput(23.52,42.13)(0.29,0.02){1}{\line(1,0){0.29}}
+\multiput(23.8,42.16)(0.29,0.02){1}{\line(1,0){0.29}}
+\multiput(24.1,42.18)(0.3,0.02){1}{\line(1,0){0.3}}
+\multiput(24.39,42.2)(0.3,0.02){1}{\line(1,0){0.3}}
+\multiput(24.7,42.22)(0.31,0.02){1}{\line(1,0){0.31}}
+\multiput(25.01,42.24)(0.31,0.02){1}{\line(1,0){0.31}}
+\multiput(25.32,42.26)(0.32,0.02){1}{\line(1,0){0.32}}
+\multiput(25.64,42.28)(0.32,0.02){1}{\line(1,0){0.32}}
+\multiput(25.96,42.31)(0.33,0.02){1}{\line(1,0){0.33}}
+\multiput(26.29,42.33)(0.33,0.02){1}{\line(1,0){0.33}}
+\multiput(26.63,42.35)(0.34,0.02){1}{\line(1,0){0.34}}
+\multiput(26.97,42.37)(0.34,0.02){1}{\line(1,0){0.34}}
+\multiput(27.31,42.39)(0.35,0.02){1}{\line(1,0){0.35}}
+\multiput(27.66,42.4)(0.35,0.02){1}{\line(1,0){0.35}}
+\multiput(28.01,42.42)(0.36,0.02){1}{\line(1,0){0.36}}
+\multiput(28.37,42.44)(0.36,0.02){1}{\line(1,0){0.36}}
+\multiput(28.74,42.46)(0.37,0.02){1}{\line(1,0){0.37}}
+\multiput(29.11,42.48)(0.37,0.02){1}{\line(1,0){0.37}}
+\multiput(29.48,42.5)(0.38,0.02){1}{\line(1,0){0.38}}
+\multiput(29.86,42.52)(0.38,0.02){1}{\line(1,0){0.38}}
+\multiput(30.24,42.53)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(30.62,42.55)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(31.01,42.57)(0.39,0.02){1}{\line(1,0){0.39}}
+\multiput(31.41,42.58)(0.4,0.02){1}{\line(1,0){0.4}}
+\multiput(31.81,42.6)(0.4,0.02){1}{\line(1,0){0.4}}
+\multiput(32.21,42.62)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(32.62,42.63)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(33.03,42.65)(0.41,0.02){1}{\line(1,0){0.41}}
+\multiput(33.44,42.66)(0.42,0.01){1}{\line(1,0){0.42}}
+\multiput(33.86,42.68)(0.42,0.01){1}{\line(1,0){0.42}}
+\multiput(34.28,42.69)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(34.71,42.71)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(35.14,42.72)(0.43,0.01){1}{\line(1,0){0.43}}
+\multiput(35.57,42.73)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(36.01,42.75)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(36.45,42.76)(0.44,0.01){1}{\line(1,0){0.44}}
+\multiput(36.89,42.77)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(37.34,42.79)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(37.79,42.8)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(38.24,42.81)(0.45,0.01){1}{\line(1,0){0.45}}
+\multiput(38.69,42.82)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(39.15,42.83)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(39.61,42.84)(0.46,0.01){1}{\line(1,0){0.46}}
+\multiput(40.07,42.85)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(40.54,42.86)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(41.01,42.87)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(41.48,42.88)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(41.95,42.89)(0.47,0.01){1}{\line(1,0){0.47}}
+\multiput(42.42,42.9)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(42.9,42.91)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(43.38,42.92)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(43.86,42.92)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(44.34,42.93)(0.48,0.01){1}{\line(1,0){0.48}}
+\multiput(44.83,42.94)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(45.31,42.94)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(45.8,42.95)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(46.29,42.96)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(46.78,42.96)(0.49,0.01){1}{\line(1,0){0.49}}
+\multiput(47.27,42.97)(0.49,0){1}{\line(1,0){0.49}}
+\multiput(47.77,42.97)(0.49,0){1}{\line(1,0){0.49}}
+\multiput(48.26,42.98)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(48.76,42.98)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(49.25,42.98)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(49.75,42.99)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(50.25,42.99)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(50.75,42.99)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(51.25,42.99)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(51.75,43)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(52.25,43)(0.5,0){1}{\line(1,0){0.5}}
+\multiput(52.75,43)(0.5,0){1}{\line(1,0){0.5}}
+\put(53.25,43){\line(1,0){0.5}}
+\put(53.75,43){\line(1,0){0.5}}
+\put(54.25,43){\line(1,0){0.5}}
+\multiput(54.75,43)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(55.25,43)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(55.75,43)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(56.25,43)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(56.75,42.99)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(57.25,42.99)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(57.75,42.99)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(58.25,42.99)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(58.75,42.98)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(59.24,42.98)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(59.74,42.98)(0.49,-0){1}{\line(1,0){0.49}}
+\multiput(60.23,42.97)(0.49,-0){1}{\line(1,0){0.49}}
+\multiput(60.73,42.97)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(61.22,42.96)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(61.71,42.96)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(62.2,42.95)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(62.69,42.94)(0.49,-0.01){1}{\line(1,0){0.49}}
+\multiput(63.17,42.94)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(63.66,42.93)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(64.14,42.92)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(64.62,42.92)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(65.1,42.91)(0.48,-0.01){1}{\line(1,0){0.48}}
+\multiput(65.58,42.9)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(66.05,42.89)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(66.52,42.88)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(66.99,42.87)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(67.46,42.86)(0.47,-0.01){1}{\line(1,0){0.47}}
+\multiput(67.93,42.85)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(68.39,42.84)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(68.85,42.83)(0.46,-0.01){1}{\line(1,0){0.46}}
+\multiput(69.31,42.82)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(69.76,42.81)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(70.21,42.8)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(70.66,42.79)(0.45,-0.01){1}{\line(1,0){0.45}}
+\multiput(71.11,42.77)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(71.55,42.76)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(71.99,42.75)(0.44,-0.01){1}{\line(1,0){0.44}}
+\multiput(72.43,42.73)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(72.86,42.72)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(73.29,42.71)(0.43,-0.01){1}{\line(1,0){0.43}}
+\multiput(73.72,42.69)(0.42,-0.01){1}{\line(1,0){0.42}}
+\multiput(74.14,42.68)(0.42,-0.01){1}{\line(1,0){0.42}}
+\multiput(74.56,42.66)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(74.97,42.65)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(75.38,42.63)(0.41,-0.02){1}{\line(1,0){0.41}}
+\multiput(75.79,42.62)(0.4,-0.02){1}{\line(1,0){0.4}}
+\multiput(76.19,42.6)(0.4,-0.02){1}{\line(1,0){0.4}}
+\multiput(76.59,42.58)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(76.99,42.57)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(77.38,42.55)(0.39,-0.02){1}{\line(1,0){0.39}}
+\multiput(77.76,42.53)(0.38,-0.02){1}{\line(1,0){0.38}}
+\multiput(78.14,42.52)(0.38,-0.02){1}{\line(1,0){0.38}}
+\multiput(78.52,42.5)(0.37,-0.02){1}{\line(1,0){0.37}}
+\multiput(78.89,42.48)(0.37,-0.02){1}{\line(1,0){0.37}}
+\multiput(79.26,42.46)(0.36,-0.02){1}{\line(1,0){0.36}}
+\multiput(79.63,42.44)(0.36,-0.02){1}{\line(1,0){0.36}}
+\multiput(79.99,42.42)(0.35,-0.02){1}{\line(1,0){0.35}}
+\multiput(80.34,42.4)(0.35,-0.02){1}{\line(1,0){0.35}}
+\multiput(80.69,42.39)(0.34,-0.02){1}{\line(1,0){0.34}}
+\multiput(81.03,42.37)(0.34,-0.02){1}{\line(1,0){0.34}}
+\multiput(81.37,42.35)(0.33,-0.02){1}{\line(1,0){0.33}}
+\multiput(81.71,42.33)(0.33,-0.02){1}{\line(1,0){0.33}}
+\multiput(82.04,42.31)(0.32,-0.02){1}{\line(1,0){0.32}}
+\multiput(82.36,42.28)(0.32,-0.02){1}{\line(1,0){0.32}}
+\multiput(82.68,42.26)(0.31,-0.02){1}{\line(1,0){0.31}}
+\multiput(82.99,42.24)(0.31,-0.02){1}{\line(1,0){0.31}}
+\multiput(83.3,42.22)(0.3,-0.02){1}{\line(1,0){0.3}}
+\multiput(83.61,42.2)(0.3,-0.02){1}{\line(1,0){0.3}}
+\multiput(83.9,42.18)(0.29,-0.02){1}{\line(1,0){0.29}}
+\multiput(84.2,42.16)(0.29,-0.02){1}{\line(1,0){0.29}}
+\multiput(84.48,42.13)(0.28,-0.02){1}{\line(1,0){0.28}}
+\multiput(84.76,42.11)(0.28,-0.02){1}{\line(1,0){0.28}}
+\multiput(85.04,42.09)(0.27,-0.02){1}{\line(1,0){0.27}}
+\multiput(85.31,42.07)(0.26,-0.02){1}{\line(1,0){0.26}}
+\multiput(85.57,42.04)(0.26,-0.02){1}{\line(1,0){0.26}}
+\multiput(85.83,42.02)(0.25,-0.02){1}{\line(1,0){0.25}}
+\multiput(86.08,42)(0.25,-0.02){1}{\line(1,0){0.25}}
+\multiput(86.33,41.97)(0.24,-0.02){1}{\line(1,0){0.24}}
+\multiput(86.57,41.95)(0.23,-0.02){1}{\line(1,0){0.23}}
+\multiput(86.81,41.92)(0.23,-0.02){1}{\line(1,0){0.23}}
+\multiput(87.04,41.9)(0.22,-0.02){1}{\line(1,0){0.22}}
+\multiput(87.26,41.88)(0.22,-0.02){1}{\line(1,0){0.22}}
+\multiput(87.47,41.85)(0.21,-0.02){1}{\line(1,0){0.21}}
+\multiput(87.68,41.83)(0.2,-0.02){1}{\line(1,0){0.2}}
+\multiput(87.89,41.8)(0.2,-0.02){1}{\line(1,0){0.2}}
+\multiput(88.09,41.78)(0.19,-0.03){1}{\line(1,0){0.19}}
+\multiput(88.28,41.75)(0.19,-0.03){1}{\line(1,0){0.19}}
+\multiput(88.46,41.73)(0.18,-0.03){1}{\line(1,0){0.18}}
+\multiput(88.64,41.7)(0.17,-0.03){1}{\line(1,0){0.17}}
+\multiput(88.82,41.68)(0.17,-0.03){1}{\line(1,0){0.17}}
+\multiput(88.98,41.65)(0.16,-0.03){1}{\line(1,0){0.16}}
+\multiput(89.14,41.63)(0.15,-0.03){1}{\line(1,0){0.15}}
+\multiput(89.3,41.6)(0.15,-0.03){1}{\line(1,0){0.15}}
+\multiput(89.44,41.57)(0.14,-0.03){1}{\line(1,0){0.14}}
+\multiput(89.58,41.55)(0.13,-0.03){1}{\line(1,0){0.13}}
+\multiput(89.72,41.52)(0.13,-0.03){1}{\line(1,0){0.13}}
+\multiput(89.85,41.5)(0.12,-0.03){1}{\line(1,0){0.12}}
+\multiput(89.97,41.47)(0.11,-0.03){1}{\line(1,0){0.11}}
+\multiput(90.08,41.44)(0.11,-0.03){1}{\line(1,0){0.11}}
+\multiput(90.19,41.42)(0.1,-0.03){1}{\line(1,0){0.1}}
+\multiput(90.29,41.39)(0.09,-0.03){1}{\line(1,0){0.09}}
+\multiput(90.38,41.36)(0.09,-0.03){1}{\line(1,0){0.09}}
+\multiput(90.47,41.34)(0.08,-0.03){1}{\line(1,0){0.08}}
+\multiput(90.55,41.31)(0.07,-0.03){1}{\line(1,0){0.07}}
+\multiput(90.63,41.28)(0.07,-0.03){1}{\line(1,0){0.07}}
+\multiput(90.69,41.26)(0.06,-0.03){1}{\line(1,0){0.06}}
+\multiput(90.76,41.23)(0.05,-0.03){1}{\line(1,0){0.05}}
+\multiput(90.81,41.2)(0.05,-0.03){1}{\line(1,0){0.05}}
+\multiput(90.86,41.18)(0.04,-0.03){1}{\line(1,0){0.04}}
+\multiput(90.9,41.15)(0.03,-0.03){1}{\line(1,0){0.03}}
+\multiput(90.93,41.12)(0.03,-0.03){1}{\line(1,0){0.03}}
+\multiput(90.96,41.09)(0.02,-0.03){1}{\line(0,-1){0.03}}
+\multiput(90.98,41.07)(0.01,-0.03){1}{\line(0,-1){0.03}}
+\multiput(90.99,41.04)(0.01,-0.03){1}{\line(0,-1){0.03}}
+
+\put(54,37){\makebox(0,0)[cc]{$u_4=0$}}
+\put(31,59){\circle*{1.5}}
+\put(51,59){\circle*{1.5}}
+\put(75,59){\circle*{1.5}}
+
+\put(56,20){\makebox(0,0)[cc]{{\bf Figura 2.8} Esempio di circuito di
+    soli resistori e generatori di corrente.}}
+\end{picture}
+
+Esso consta di $4$ nodi e $8$ lati. Abbiamo scelto di considerare il
+nodo $0$ come riferimento dei potenziali ($u_0=0$).
+In riferimento ai versi adottati per le intensit\`a di corrente dei
+resistori, le $LKC$ ai nodi 1, 2, 3 sono
+
+\[
+\left\{
+\begin{array}{l l l}
+  -i_1+i_2=J_1+J_2\\
+  -i_2-i_3+i_4=-J_2\\
+  -i_4+i_5=-J_3
+\end{array}\right.
+\]
+
+Ogni intesit\`a di corrente incognita del precedente sistema pu\`o
+essere espressa in funzione delle tensione (e quindi in funzione dei
+potenziali di nodo) mediante le equazioni caratteristiche dei
+resistori. Se adottiamo, ad esempio, la convenzione dell'utilizzatore
+abbiamo per le tensioni:
+
+\[
+\left\{
+\begin{array}{l l l l l l l l}
+  v_1=-u_1\\
+  v_{j_1}=-u_1\\
+  v_2=u_1-u_2\\
+  v_{j_2}=-u_1+u_2\\
+  v_3=-u_3\\
+  v_4=u_2-u_3\\
+  v_{j_3}=u_3\\
+  v_5=u_3 
+\end{array} \right.
+\]
+
+Utilizzando ora le equazioni caratteristiche dei singoli bipoli si
+ottengono le relazioni che esprimono le intensit\`a di corrente in
+termini di potenziali di nodo:
+
+\[
+i_1=\dfrac{-u_1}{R_1},\quad i_2=\dfrac{u_1-u_2}{R_2},\quad
+i_3=\dfrac{-u_2}{R_3},\quad i_4=\dfrac{u_2-u_3}{R_4},\quad i_5=\dfrac{u_3}{R_5} 
+\]
+
+Sostiutendo queste realzioni nelle $LKC$ si ottengono le equazioni per
+i potenziali di nodo:
+
+\[
+\dfrac{-u_1}{R_1}+\dfrac{u_2-u_1}{R_2}=J_1+J_2,\quad -\dfrac{u_2-u_1}{R_2}-
+\dfrac{-u_2}{R_3}+\dfrac{u_2-u_3}{R_4}=-J_2,\quad
+-\dfrac{u_2-u_3}{R_4}+\dfrac{u_3}{R_5}=-J_3
+\]
+
+Questo \`e un sistema di tre equazioni in tre incognite ($u_1, u_2,
+u_3$). Una volta determinati i valori dei potenziali dei nodi, le
+tensioni sui diversi bipoli possono essere espresse attraverso le
+relazioni con questi ultimi.
+
+\section{Correnti di Maglia}
+Secondo il seguente grafo, avendo preso come versi di riferimento $+$ per
+le correnti di maglia con versi di riferimento concordi con quello
+dell'intensit\`a di corrente di lato e con $-$ tutte le correnti di
+maglia che hanno versi di riferimento discordi:
+
+\[
+i_m=\sum_h(\pm) k_h
+\]
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(99.5,58)(10,15)
+  \linethickness{0.3mm}
+  \put(35,30){\line(1,0){30}}
+  \multiput(35,30)(1.03,1.72){15}{\multiput(0,0)(0.13,0.22){4}{\line(0,1){0.22}}}
+  \linethickness{0.3mm}
+  \multiput(50,55)(0.12,-0.2){125}{\line(0,-1){0.2}}
+  \linethickness{0.3mm}
+  \put(65,30){\line(1,0){30}}
+  \multiput(80,55)(1.03,-1.72){15}{\multiput(0,0)(0.13,-0.22){4}{\line(0,-1){0.22}}}
+  \linethickness{0.3mm}
+  \multiput(65,30)(0.12,0.2){125}{\line(0,1){0.2}}
+  \multiput(50,55)(1.94,0){16}{\line(1,0){0.97}}
+  \linethickness{0.3mm}
+  \multiput(49,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(49,29)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(42,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(43,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(57,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(57,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \multiput(64,56)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(64,54)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(72,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(73,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \multiput(79,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \multiput(79,29)(0.12,0.12){8}{\line(1,0){0.12}}
+  \linethickness{0.3mm}
+  \put(87,42){\line(0,1){1}}
+  \linethickness{0.3mm}
+  \put(87,43){\line(1,0){1}}
+  \linethickness{0.3mm}
+  \put(32.5,27.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(98,27.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(47,56.5){\circle{3}}
+  
+  \linethickness{0.3mm}
+  \put(83.5,56.5){\circle{3}}
+  
+  \put(50,55){\circle*{1.5}}
+  \put(80,55){\circle*{1.5}}
+  \put(35,30){\circle*{1.5}}
+  \put(65,30){\circle*{1.5}}
+  \put(95,30){\circle*{1.5}}
+  
+  \put(32.5,27.5){\makebox(0,0)[cc]{$5$}}
+  
+  \put(46.9,56.5){\makebox(0,0)[cc]{$1$}}
+  
+  \put(83.51,56.5){\makebox(0,0)[cc]{$2$}}
+
+  \put(98,27.5){\makebox(0,0)[cc]{$3$}}
+  
+  \linethickness{0.3mm}
+  \put(65,27.5){\circle{3}}
+  
+  \put(64.8,27.5){\makebox(0,0)[cc]{$4$}}
+  
+  \put(40,43){\makebox(0,0)[cc]{$1$}}
+  
+  \put(64.5,57.5){\makebox(0,0)[cc]{$2$}}
+  
+  \put(90,43){\makebox(0,0)[cc]{$3$}}
+  
+  \put(79,27){\makebox(0,0)[cc]{$4$}}
+  
+  \put(75,42){\makebox(0,0)[cc]{$5$}}
+  
+  \put(60,43){\makebox(0,0)[cc]{$6$}}
+  
+  \put(49,27){\makebox(0,0)[cc]{$7$}}
+  
+  \put(52,56.8){\makebox(0,0)[cc]{$u_1$}}
+  \put(78,56.8){\makebox(0,0)[cc]{$u_2$}}
+  \put(94,27.5){\makebox(0,0)[cc]{$u_3$}}
+  \put(64.7,34){\makebox(0,0)[cc]{$u_4$}}
+  \put(37,27.5){\makebox(0,0)[cc]{$u_5$}}
+
+  \linethickness{0.3mm}
+  \multiput(53.25,35.97)(0.13,0.19){2}{\line(0,1){0.19}}
+  \multiput(53.52,36.34)(0.1,0.2){2}{\line(0,1){0.2}}
+  \multiput(53.73,36.73)(0.15,0.42){1}{\line(0,1){0.42}}
+  \multiput(53.88,37.15)(0.09,0.43){1}{\line(0,1){0.43}}
+  \multiput(53.97,37.58)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(53.97,38.46)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(53.87,38.89)(0.1,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(53.71,39.3)(0.16,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(53.5,39.7)(0.11,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(53.23,40.07)(0.13,-0.18){2}{\line(0,-1){0.18}}
+  \multiput(52.91,40.4)(0.11,-0.11){3}{\line(0,-1){0.11}}
+  \multiput(52.54,40.7)(0.18,-0.15){2}{\line(1,0){0.18}}
+  \multiput(52.14,40.96)(0.2,-0.13){2}{\line(1,0){0.2}}
+  \multiput(51.7,41.17)(0.22,-0.11){2}{\line(1,0){0.22}}
+  \multiput(51.23,41.33)(0.47,-0.16){1}{\line(1,0){0.47}}
+  \multiput(50.75,41.44)(0.48,-0.11){1}{\line(1,0){0.48}}
+  \multiput(50.25,41.49)(0.5,-0.05){1}{\line(1,0){0.5}}
+  \put(49.75,41.49){\line(1,0){0.5}}
+  \multiput(49.25,41.44)(0.5,0.05){1}{\line(1,0){0.5}}
+  \multiput(48.77,41.33)(0.48,0.11){1}{\line(1,0){0.48}}
+  \multiput(48.3,41.17)(0.47,0.16){1}{\line(1,0){0.47}}
+  \multiput(47.86,40.96)(0.22,0.11){2}{\line(1,0){0.22}}
+  \multiput(47.46,40.7)(0.2,0.13){2}{\line(1,0){0.2}}
+  \multiput(47.09,40.4)(0.18,0.15){2}{\line(1,0){0.18}}
+  \multiput(46.77,40.07)(0.11,0.11){3}{\line(0,1){0.11}}
+  \multiput(46.5,39.7)(0.13,0.18){2}{\line(0,1){0.18}}
+  \multiput(46.29,39.3)(0.11,0.2){2}{\line(0,1){0.2}}
+  \multiput(46.13,38.89)(0.16,0.42){1}{\line(0,1){0.42}}
+  \multiput(46.03,38.46)(0.1,0.43){1}{\line(0,1){0.43}}
+  \multiput(46,38.02)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(46,38.02)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(46.03,37.58)(0.09,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(46.12,37.15)(0.15,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(46.27,36.73)(0.1,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(46.48,36.34)(0.13,-0.19){2}{\line(0,-1){0.19}}
+  \put(53.25,35.97){\vector(-3,-4){0.12}}
+  
+  \linethickness{0.3mm}
+  \multiput(83.25,35.97)(0.13,0.19){2}{\line(0,1){0.19}}
+  \multiput(83.52,36.34)(0.1,0.2){2}{\line(0,1){0.2}}
+  \multiput(83.73,36.73)(0.15,0.42){1}{\line(0,1){0.42}}
+  \multiput(83.88,37.15)(0.09,0.43){1}{\line(0,1){0.43}}
+  \multiput(83.97,37.58)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(83.97,38.46)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(83.87,38.89)(0.1,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(83.71,39.3)(0.16,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(83.5,39.7)(0.11,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(83.23,40.07)(0.13,-0.18){2}{\line(0,-1){0.18}}
+  \multiput(82.91,40.4)(0.11,-0.11){3}{\line(0,-1){0.11}}
+  \multiput(82.54,40.7)(0.18,-0.15){2}{\line(1,0){0.18}}
+  \multiput(82.14,40.96)(0.2,-0.13){2}{\line(1,0){0.2}}
+  \multiput(81.7,41.17)(0.22,-0.11){2}{\line(1,0){0.22}}
+  \multiput(81.23,41.33)(0.47,-0.16){1}{\line(1,0){0.47}}
+  \multiput(80.75,41.44)(0.48,-0.11){1}{\line(1,0){0.48}}
+  \multiput(80.25,41.49)(0.5,-0.05){1}{\line(1,0){0.5}}
+  \put(79.75,41.49){\line(1,0){0.5}}
+  \multiput(79.25,41.44)(0.5,0.05){1}{\line(1,0){0.5}}
+  \multiput(78.77,41.33)(0.48,0.11){1}{\line(1,0){0.48}}
+  \multiput(78.3,41.17)(0.47,0.16){1}{\line(1,0){0.47}}
+  \multiput(77.86,40.96)(0.22,0.11){2}{\line(1,0){0.22}}
+  \multiput(77.46,40.7)(0.2,0.13){2}{\line(1,0){0.2}}
+  \multiput(77.09,40.4)(0.18,0.15){2}{\line(1,0){0.18}}
+  \multiput(76.77,40.07)(0.11,0.11){3}{\line(0,1){0.11}}
+  \multiput(76.5,39.7)(0.13,0.18){2}{\line(0,1){0.18}}
+  \multiput(76.29,39.3)(0.11,0.2){2}{\line(0,1){0.2}}
+  \multiput(76.13,38.89)(0.16,0.42){1}{\line(0,1){0.42}}
+  \multiput(76.03,38.46)(0.1,0.43){1}{\line(0,1){0.43}}
+  \multiput(76,38.02)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(76,38.02)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(76.03,37.58)(0.09,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(76.12,37.15)(0.15,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(76.27,36.73)(0.1,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(76.48,36.34)(0.13,-0.19){2}{\line(0,-1){0.19}}
+  \put(76.75,35.97){\vector(3,-4){0.12}}
+  
+  \linethickness{0.3mm}
+  \multiput(68.51,45)(0.13,0.19){2}{\line(0,1){0.19}}
+  \multiput(68.77,45.37)(0.1,0.2){2}{\line(0,1){0.2}}
+  \multiput(68.98,45.77)(0.15,0.42){1}{\line(0,1){0.42}}
+  \multiput(69.14,46.19)(0.09,0.43){1}{\line(0,1){0.43}}
+  \multiput(69.23,46.62)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(69.22,47.49)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(69.12,47.92)(0.1,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(68.97,48.34)(0.16,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(68.75,48.73)(0.11,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(68.48,49.1)(0.13,-0.18){2}{\line(0,-1){0.18}}
+  \multiput(68.16,49.44)(0.11,-0.11){3}{\line(0,-1){0.11}}
+  \multiput(67.8,49.74)(0.18,-0.15){2}{\line(1,0){0.18}}
+  \multiput(67.39,49.99)(0.2,-0.13){2}{\line(1,0){0.2}}
+  \multiput(66.95,50.2)(0.22,-0.11){2}{\line(1,0){0.22}}
+  \multiput(66.49,50.36)(0.47,-0.16){1}{\line(1,0){0.47}}
+  \multiput(66,50.47)(0.48,-0.11){1}{\line(1,0){0.48}}
+  \multiput(65.51,50.53)(0.5,-0.05){1}{\line(1,0){0.5}}
+  \put(65,50.53){\line(1,0){0.5}}
+  \multiput(64.51,50.47)(0.5,0.05){1}{\line(1,0){0.5}}
+  \multiput(64.02,50.36)(0.48,0.11){1}{\line(1,0){0.48}}
+  \multiput(63.56,50.2)(0.47,0.16){1}{\line(1,0){0.47}}
+  \multiput(63.12,49.99)(0.22,0.11){2}{\line(1,0){0.22}}
+  \multiput(62.71,49.74)(0.2,0.13){2}{\line(1,0){0.2}}
+  \multiput(62.35,49.44)(0.18,0.15){2}{\line(1,0){0.18}}
+  \multiput(62.03,49.1)(0.11,0.11){3}{\line(0,1){0.11}}
+  \multiput(61.76,48.73)(0.13,0.18){2}{\line(0,1){0.18}}
+  \multiput(61.54,48.34)(0.11,0.2){2}{\line(0,1){0.2}}
+  \multiput(61.39,47.92)(0.16,0.42){1}{\line(0,1){0.42}}
+  \multiput(61.29,47.49)(0.1,0.43){1}{\line(0,1){0.43}}
+  \multiput(61.26,47.05)(0.03,0.44){1}{\line(0,1){0.44}}
+  \multiput(61.26,47.05)(0.03,-0.44){1}{\line(0,-1){0.44}}
+  \multiput(61.28,46.62)(0.09,-0.43){1}{\line(0,-1){0.43}}
+  \multiput(61.37,46.19)(0.15,-0.42){1}{\line(0,-1){0.42}}
+  \multiput(61.53,45.77)(0.1,-0.2){2}{\line(0,-1){0.2}}
+  \multiput(61.74,45.37)(0.13,-0.19){2}{\line(0,-1){0.19}}
+  \put(68.51,45){\vector(-3,-4){0.12}}
+  
+  \put(50,38){\makebox(0,0)[cc]{$k_1$}}
+  
+  \put(65,47){\makebox(0,0)[cc]{$k_2$}}
+  
+  \put(80,38){\makebox(0,0)[cc]{$k_3$}}
+  
+  \put(65,10){\makebox(0,0)[cc]{{\bf Figura 2.9} Un grafo, un albero
+      (tr. continuo) e correnti di maglia.}}
+  
+\end{picture}
+
+\vspace{2cm}
+
+Consideriamo il grafo orientato come in {\bf Figura 2.9}. \`E stato
+scelto un albero e sono indicate le correnti di maglia $k_1,k_2$ e
+$k_3$ associate a maglie fondamentali corrispondenti all'albero
+scelto. Le intensit\`a di corrente di lato sono espresse tramite le
+correnti di maglia nel seguente modo:
+
+\begin{equation}\label{eq:correntiDiMaglia}
+\left\{
+\begin{array}{l l l l l l l}
+  i_1=k_1\\
+  i_2=k_2\\
+  i_3=k_3\\
+  i_4=k_4\\
+  i_5=-k_2-k_3\\
+  i_6=-k_1+k_2\\
+  i_7=k_1
+\end{array} \right.
+\end{equation}
+
+\`E immediato verificare che le intensit\`a delle correnti espresse
+attraverso la \ref{eq:correntiDiMaglia} verificano la $LKC$,
+indipendentemente dai valori delle correnti di maglia. Consideriamo
+tutte le maglie fondamentali a cui un dato nodo appartiene. Per
+ciascuna di esse ci sono due e due soli lati che coincidono nel nodo
+in esame. Di conseguenza la corrente di maglia di ciascuna di queste
+maglie fondamentali compare due due sole volte nell'equazione di
+Kirchhoff per le correnti applicata al nodo in esame, una volta con il
+segno positivo ed una volta con il segno negativo. 
+Ad esempio, consideriamo l'equazione di Kirchhoff al nodo
+$\mathbf{1}$. Ad esso sono collegati i lati $1,2,6$. La corrente di
+maglia $k_1$ \`e entrante nel nodo quando contribuisce all'intensit\`a
+di corrente $i_1$ del lato $1$, mentre \`e uscente quando contribuisce
+ad $i_6$; la corrente di maglia $k_2$ \`e entrante quando contribuisce
+ad $i_6$ ed \`e uscente quando contribuisce ad $i_2$. Quindi
+l'equazione di Kirchhoff per il nodo $\mathbf{1}$:
+
+\[
+-i_1+i_2-i_6=0
+\]
+
+diventa l'identit\`a
+
+\[
+k_1-k_2+(-k_1+k_2)=0
+\]
+
 %CAPITOLO 6 DEL LIBRO
 \chapter{Doppi Bipoli}
 \section{Generatori Controllati Lineari}
@@ -1848,8 +3030,6 @@ sottili di acciaio speciale.
 
 \subsection{Mutuo Accoppiamento}
 
-%Da inserire l'immagine del mutuo accoppiamento, prima o poi lo faro`
-
 Le equazioni caratteristiche del \emph{mutuo accoppiamento} sono
 
 \[
@@ -2351,6 +3531,31 @@ L_1 \implies L'_1L_2=M^2
   v_2=L_2\dfrac{d\;i_2}{dt}+M\dfrac{d\;i_1}{dt} \\
 \end{array} \right.
 \]
+
+\section{Doppi Bipoli di Resistori Lineari}
+\subsection{Rappresentazione dei Doppi Bipoli}
+
+Un doppio bipolo a-dinamico in generale \`e descritto da due realzioni
+algebriche che legano l'intensit\`a di corrente e le tensioni alle due
+porte. Quando le realzioni sono esplicite danno origine a diverse
+rappresentazioni:
+
+\begin{enumerate}
+  \item Rappresentazione su {\textsc{\bf Base Corrente}}: le
+    intensit\`a di corrente $i_1$ e $i_2$ sono le variabili {\bf
+      indipendenti} e le tensioni $v_1$ e $v_2$ sono le variabili {\bf
+    dipendenti}
+  \item Rappresentazione su {\textsc{\bf Base Tensione}}: le tensioni
+    $v_1$ e $v_2$ sono le variabili {\bf indipendenti} e le correnti
+    $i_1$ e $i_2$ sono le variabili {\bf dipendenti}.
+  \item Rappresentazione su {\textsc{\bf Base Ibrida}}: la tensione
+    $v_1$ e $v_2$ sono le variabili {\bf indipendenti} e la corrente
+    $i_1$ e $v_1$ sono le variabili {\bf dipendenti}(o viceversa).
+  \item Rappresentazione di {\textsc{\bf Trasmissione}}:
+\end{enumerate}
+\subsection{Propriet\`a di Reciprocit\`a}
+
+
 
 \chapter{Circuiti a-Dinamici Lineari}
 \section{Generatore Equivalente di Th\`evenin-Norton}
