@@ -152,7 +152,7 @@ p^{(a)}(t)=\dfrac{d\;W^{(a)}}{dt}
 \end{equation}
 
 La potenza istantanea \`e uguale alla derivata prima dell'energia
-elettrica assorbita dallo stesso nel generico intervallo
+elettrica assorbita dallo stesso nel generico intervallo 
 $(t_0,t)$. Dalla \ref{equ:potenzaIstantanea} segue che l'energia $d\;
 W^{(a)}$ assorbita dal bipolo nell'intervallo elementare $(t,\;
 t+dt)$ \`e data da $dW^{(a)}=p^{(a)}(t)$. La relazione
@@ -1122,6 +1122,7 @@ u_r<u_o<u_q
 \]
 
 \subsection{Non Amplificazione Delle Correnti}
+\label{subsec:nonAmplC}
 Si consideri un circuito costituito da resitori strettamente passivi e
 da un solo bipolo attivo.
 \begin{definizione}
@@ -2529,11 +2530,6 @@ configurazioni.
       di un Generatore di Tensione Controllato in Tensione}}
 
 \end{picture}
-\\
-\\
-\\
-\\
-\\
 
 Le realzioni caratteristiche sono
 
@@ -3054,6 +3050,7 @@ Le equazioni caratteristiche del \emph{mutuo accoppiamento} sono
 \end{minipage}}
 
 \vspace{0.5cm}
+
 \[
 \left\{
 \begin{array}{l l}
@@ -3568,7 +3565,7 @@ Cosideriamo i circuiti come in {\bf Figura 3.9}.
 
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
-\begin{picture}(162,80)(15,15)
+\begin{picture}(162,80)(22,15)
 \linethickness{0.3mm}
 \put(20,74){\line(1,0){40}}
 \put(20,38){\line(0,1){36}}
@@ -3736,12 +3733,20 @@ Sottraendo membro a membro le due equazioni \ref{equ:reciprocitaT1} e
 v_1i''_2-v_2i'_2=0 \Longrightarrow v_1i''_1=v_2i'_2
 \]
 
+Da cui ne consegue che
+
+\[
+\dfrac{i''_1}{v_2}=\dfrac{i'_2}{v_1}
+\]
 
 \subsubsection{Seconda Forma}
 
+Consideriamo, per la seconda forma della reciprocit\`a, il circuito
+che segue.
+
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
-\begin{picture}(162,80)(15,15)
+\begin{picture}(162,80)(22,15)
 \linethickness{0.3mm}
 \put(20,74){\line(1,0){40}}
 \put(20,38){\line(0,1){36}}
@@ -3895,11 +3900,23 @@ v_1i''_2-v_2i'_2=0 \Longrightarrow v_1i''_1=v_2i'_2
     Reciprocit\`a}}
 \end{picture}
 
+\vspace{1cm}
+
+Come per la prima, la seconda forma della reciprocit\`a \`e definita
+come:
+
+\[
+\dfrac{v'_2}{i_1}=\dfrac{v''_1}{i_2}
+\]
+
+
 \subsubsection{Terza Forma}
+
+Prendiamo in considerazione il seguente circuito.
 
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
-\begin{picture}(162,80)(15,15)
+\begin{picture}(162,80)(22,15)
 \linethickness{0.3mm}
 \put(20,74){\line(1,0){40}}
 \put(20,38){\line(0,1){36}}
@@ -4044,7 +4061,30 @@ v_1i''_2-v_2i'_2=0 \Longrightarrow v_1i''_1=v_2i'_2
     Reciprocit\`a}}
 \end{picture}
 
+\vspace{1cm}
 
+La terza forma della reciprocit\`a \`e detta anche {\bf
+  antireciprocit\`a} a causa del segno.
+
+\[
+-i_1v''_1-i'_2v_2=0 \Longrightarrow i'_2v_2=-i_1v''_1 \Longrightarrow
+\dfrac{i'_2}{i_1}=-\dfrac{v''_1}{v_2}
+\]
+
+\vspace{1cm}
+\begin{comment}
+\fbox{{\bf \emph {N.B.}}\hspace{10mm}
+  \begin{minipage}[c]{94mm}
+    \emph{Questi tre risultati continuano a valere quando nel doppio
+      bipolo ci sono anche trasformatori ideali, ma non valgono quando
+    ci sono anche generatori controllati e giratori.}
+\end{minipage}}
+\end{comment}
+\vspace{1cm}
+
+I doppi bipoli costituiti da resistori lineari e generatori
+indipendenti godono della {\bf propriet\`a di non amplificazione delle
+  correnti} (\ref{subsec:nonAmplC}).
 
 \chapter{Circuiti a-Dinamici Lineari}
 \section{Generatore Equivalente di Th\`evenin-Norton}
@@ -4061,34 +4101,16 @@ generatori reali come in figura.
 \put(60,36){\line(1,0){34}}
 \linethickness{0.3mm}
 \put(48,64){\line(1,0){12}}
-\put(48,64){\line(-1,0){0.12}}
-\put(48,64){\circle*{1.5}}
 \linethickness{0.3mm}
 \put(48,42){\line(1,0){12}}
-\put(48,42){\line(-1,0){0.12}}
-\put(48,42){\circle*{1.5}}
-\linethickness{0.3mm}
-\put(77,62){\circle{8}}
-
-\linethickness{0.3mm}
-\put(77,52){\circle{8}}
-
 \linethickness{0.3mm}
 \put(66,62){\line(1,0){7}}
-\put(66,62){\line(-1,0){0.12}}
-\put(66,62){\circle*{1.5}}
 \linethickness{0.3mm}
 \put(81,62){\line(1,0){7}}
-\put(88,62){\line(1,0){0.12}}
-\put(88,62){\circle*{1.5}}
 \linethickness{0.3mm}
 \put(66,52){\line(1,0){7}}
-\put(66,52){\line(-1,0){0.12}}
-\put(66,52){\circle*{1.5}}
 \linethickness{0.3mm}
 \put(81,52){\line(1,0){7}}
-\put(88,52){\line(1,0){0.12}}
-\put(88,52){\circle*{1.5}}
 \linethickness{0.3mm}
 \multiput(72.5,42)(0.12,0.15){13}{\line(0,1){0.15}}
 \linethickness{0.3mm}
@@ -4103,39 +4125,54 @@ generatori reali come in figura.
 \multiput(80,44)(0.12,-0.15){13}{\line(0,-1){0.15}}
 \linethickness{0.3mm}
 \put(81.5,42){\line(1,0){1.5}}
+
 \linethickness{0.15mm}
 \put(71,42){\line(1,0){1.5}}
 \linethickness{0.3mm}
 \put(82,42){\line(1,0){6}}
-\put(88,42){\line(1,0){0.12}}
-\put(88,42){\circle*{1.5}}
 \linethickness{0.3mm}
 \put(66,42){\line(1,0){6}}
-\put(66,42){\line(-1,0){0.12}}
-\put(66,42){\circle*{1.5}}
 \put(79,62){\makebox(0,0)[cc]{$+$}}
-
-\linethickness{0.3mm}
-\put(74.38,61.38){\line(0,1){1}}
-\put(44,64){\makebox(0,0)[cc]{$+$}}
 
 \put(44,42){\makebox(0,0)[cc]{$-$}}
 
-\put(46,53){\makebox(0,0)[cc]{$v$}}
+\put(43,54){\makebox(0,0)[cc]{$v$}}
+
+\put(54,68){\makebox(0,0)[cc]{$i$}}
+
+\linethickness{0.3mm}
+\put(77,62){\circle{8}}
+
+\linethickness{0.3mm}
+\put(77,52){\circle{8}}
+
+\linethickness{0.3mm}
+\put(74,61.38){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(74.38,51.88){\line(1,0){5.62}}
+\put(80,51.88){\vector(1,0){0.12}}
+\put(44.5,64){\makebox(0,0)[cc]{$+$}}
 
 \linethickness{0.3mm}
 \multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
 \linethickness{0.3mm}
 \multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
-\put(52,67){\makebox(0,0)[cc]{$i$}}
 
-\linethickness{0.3mm}
-\put(74,52){\line(1,0){6}}
-\put(80,52){\vector(1,0){0.12}}
+\put(48,64){\circle*{1.5}}
+\put(48,42){\circle*{1.5}}
+\put(66,62){\circle*{1.5}}
+\put(66,52){\circle*{1.5}}
+\put(66,42){\circle*{1.5}}
+\put(88,62){\circle*{1.5}}
+\put(88,52){\circle*{1.5}}
+\put(88,42){\circle*{1.5}}
 
 \put(72.23,25.65){\makebox(0,0)[cc]{{\bf Figura 4.1} Circuito generico
 costutito da resistori e generatori lineari}}
 \end{picture}
+
+
+\vspace{1cm}
 
 Dobbiamo determinare la relazione caratteristica tra l'intensit\`a di
 corrente $i$ e la tensione $v$ per tutti i volori ammessi.
