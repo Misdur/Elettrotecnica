@@ -920,7 +920,7 @@ Abbiamo che $\widehat{p}=i'_kv''_k$
 
 \section{Propriet\`a Di Non Amplificazione}
 \subsection{Non Amplificazione delle Tensioni}
-
+\label{subsec:nonAmplT}
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
 \begin{picture}(90,69)(15,15)
@@ -3559,8 +3559,7 @@ rappresentazioni:
 Vi sono tre forme per la propriet\`a di reciprocit\`a e sono le
 seguenti.
 
-\subsubsection{Prima Forma}
-
+\subsubsection{Prima Forma}\label{subsubsec:repPrimaForma}
 Cosideriamo i circuiti come in {\bf Figura 3.9}.
 
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
@@ -3703,7 +3702,7 @@ Cosideriamo i circuiti come in {\bf Figura 3.9}.
     Reciprocit\`a}}
 \end{picture}
 
-Per il torema di {\bf Tellegen} possiamo scrivere che:
+Per il teorema di {\bf Tellegen} possiamo scrivere che:
 
 \begin{equation}\label{equ:reciprocitaT1}
 v_1i''_1+v'_2i''_2+\sum_{k=1}^{N_R} v'_ki''_k=0
@@ -3740,6 +3739,7 @@ Da cui ne consegue che
 \]
 
 \subsubsection{Seconda Forma}
+\label{subsec:reciprocita2}
 
 Consideriamo, per la seconda forma della reciprocit\`a, il circuito
 che segue.
@@ -3911,7 +3911,7 @@ come:
 
 
 \subsubsection{Terza Forma}
-
+\label{subsubsec:reciprocita3}
 Prendiamo in considerazione il seguente circuito.
 
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
@@ -4073,7 +4073,6 @@ La terza forma della reciprocit\`a \`e detta anche {\bf
 
 \vspace{1cm}
 
-
 \fbox{{\bf \emph {N.B.}}\hspace{10mm}
   \begin{minipage}[c]{94mm}
     \emph{Questi tre risultati continuano a valere quando nel doppio
@@ -4086,6 +4085,645 @@ La terza forma della reciprocit\`a \`e detta anche {\bf
 I doppi bipoli costituiti da resistori lineari e generatori
 indipendenti godono della {\bf propriet\`a di non amplificazione delle
   correnti} (\ref{subsec:nonAmplC}).
+
+\section{Matrici delle Conduttanze e delle Resistenze}
+\subsection{Matrici delle Conduttanze}
+Consideriamo il circuito in {\bf Figura 3.12} su {\bf base tensione} e
+applicando la sovrapposizione degli effetti si ha:
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(113,70)(20,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(72.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,54){\line(1,0){1.5}}
+\put(75.5,58){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(71,54){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,54){\line(1,0){6}}
+\linethickness{0.3mm}
+\put(66,54){\line(1,0){6}}
+\put(41,53){\makebox(0,0)[cc]{$v_1$}}
+
+\put(54,67){\makebox(0,0)[cc]{$i_1$}}
+
+\linethickness{0.3mm}
+\multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(48,53){\circle{6}}
+
+\linethickness{0.3mm}
+\put(48,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(48,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(101,64)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(101,64)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(106,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(106,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,42){\line(1,0){12}}
+\put(48,54){\makebox(0,0)[cc]{$+$}}
+
+\put(48,51.5){\makebox(0,0)[cc]{$-$}}
+
+\linethickness{0.3mm}
+\put(106,53){\circle{6}}
+
+\put(106,54){\makebox(0,0)[cc]{$+$}}
+
+\put(106,51.5){\makebox(0,0)[cc]{$-$}}
+
+\put(102,67){\makebox(0,0)[cc]{$i_2$}}
+
+\put(113,53){\makebox(0,0)[cc]{$v_2$}}
+
+\put(66,54){\circle*{1.5}}
+\put(88,54){\circle*{1.5}}
+
+\put(75,23){\makebox(0,0)[cc]{{\bf Figura 3.12} Circuito su base tensione}}
+\end{picture}
+
+Le equazioni caratteristiche sono
+
+\[
+\left\{
+\begin{array}{l l}
+  i_1=i'_1+i''_2\\
+  i_2=i'_2+i''_1
+\end{array}
+\right.
+\]
+
+Possiamo riscrivere
+
+\[
+\left\{
+\begin{array}{l l}
+  i_1=G_{11}v_1+G_{12}v_2\\
+  i_2=G_{21}v_1+G_{22}v_2
+\end{array}
+\right.\Longrightarrow i=Gv
+\]
+
+La seguente matrice \`e detta delle {\bf conduttanze} (la conduttanza
+si misura in \emph{siemens}).
+
+\[
+G=
+\begin{vmatrix}
+  G_{11} & G_{12}\\
+  G_{21} & G_{22}
+\end{vmatrix}
+\]
+
+\vspace{0.5cm}
+
+\[
+\begin{matrix}
+  G_{11}=\left. \dfrac{i_1}{v_1}\right|_{v_2=0} \ =\dfrac{i'_1}{v_1} &
+  \quad \quad \quad \quad \quad
+  G_{12}=\left. \dfrac{i_1}{v_2}\right|_{v_1=0} \ =\dfrac{i''_1}{v_2}\\[.5cm]
+  G_{21}=\left. \dfrac{i_2}{v_1}\right|_{v_2=0} \ =\dfrac{i'_2}{v_1} &
+  \quad \quad \quad \quad \quad
+  G_{22}=\left. \dfrac{i_2}{v_2}\right|_{v_1=0} \ =\dfrac{i''_2}{v_2}
+\end{matrix}
+\]
+
+\vspace{0.5cm}
+
+$G_{11}$ e $G_{22}$ sono dette conduttanze \emph{proprie}.
+
+$G_{12}$ e $G_{21}$ sono dette conduttanze \emph{mutue}.
+
+La potenza assorbita dal doppio bipolo \`e $p=v^Ti=v^TGv$.
+
+\subsubsection{Propriet\`a}
+\begin{itemize}
+\item $\mathbf{G_{12}=G_{21}}$: dalla {\bf prima forma della propriet\`a
+  di reciprocit\`a} (\ref{subsubsec:repPrimaForma}) sappiamo che
+  $\dfrac{i''_1}{v_2}=\dfrac{i''_2}{v_1}$ e data la definizione di
+  conduttanza mutua si ha $G_{12}=G_{21}$
+\item $\mathbf{G_{11} \geq 0}$ e $\mathbf{G_{22} \geq 0}$ (se i
+  resistori sono passivi): considerando la convenzione dell'utilizzatore se
+  $R>0$ anche $\dfrac{1}{R}>0$ quindi $G_{11} \geq 0$ e $G_{22} \geq 0$
+\item $\mathbf{G_{11} \geq |G_{21}|\ }$ e $\mathbf{G_{22} \geq
+  |G_{12}|\ }$: con la sovrapposione degli effetti ho sempre un solo
+  bipolo attivo quindi per la {\bf propriet\`a di non amplificazione
+    delle correnti} (\ref{subsec:nonAmplC}) segue che quando $v_2=0$
+  \[
+  |i'_1|\ \geq |i'_2|\
+  \]
+
+  ed essendo $G_{11}=\dfrac{i'_1}{v_1}$ e $G_{21}=\dfrac{i'_2}{v_1}$
+  segue che
+
+  \[
+  \left|\dfrac{i'_1}{v_1}\right|\ \geq \left|\dfrac{i'_2}{v_1}\right|\
+  \]
+  quindi $|G_{11}|\ \geq |G_{21}|\ $.
+  Stesse considerazioni per $v_1$ quindi $|G_{22}|\ \geq |G_{21}|\ $
+\end{itemize}
+
+\subsection{Matrici delle Resistenze}
+Consideriamo un circuito rappresentato su {\bf base corrente} come in
+{\bf Figura 3.13}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(113,70)(20,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(72.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,54){\line(1,0){1.5}}
+\put(75.5,58){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(71,54){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,54){\line(1,0){6}}
+\linethickness{0.3mm}
+\put(66,54){\line(1,0){6}}
+\put(41,54){\makebox(0,0)[cc]{$i_1$}}
+
+\put(55,53){\makebox(0,0)[cc]{$v_1$}}
+
+\linethickness{0.3mm}
+\put(48,53){\circle{6}}
+
+\linethickness{0.3mm}
+\put(48,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(48,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(106,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(106,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(106,53){\circle{6}}
+
+\put(99,53){\makebox(0,0)[cc]{$v_2$}}
+
+\put(113,53){\makebox(0,0)[cc]{$i_2$}}
+
+\linethickness{0.3mm}
+\put(48,51){\line(0,1){4}}
+\put(48,55){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\put(106,51){\line(0,1){4}}
+\put(106,55){\vector(0,1){0.12}}
+
+\put(54,64){\circle*{1.5}}
+\put(54,42){\circle*{1.5}}
+\put(66,54){\circle*{1.5}}
+\put(88,54){\circle*{1.5}}
+\put(99,42){\circle*{1.5}}
+\put(99,64){\circle*{1.5}}
+
+\put(54,61){\makebox(0,0)[cc]{$+$}}
+\put(54,44){\makebox(0,0)[cc]{$-$}}
+\put(99,61){\makebox(0,0)[cc]{$+$}}
+\put(99,44){\makebox(0,0)[cc]{$-$}}
+
+\put(75,25){\makebox(0,0)[cc]{{\bf Figura 3.13} Circuito su base corrente}}
+\end{picture}
+
+
+applicando la sovrapposizione degli effetti si ha:
+
+\[
+\left\{
+\begin{array}{l l}
+  v_1=\overbrace{R_{11}i_1}^{v'_1}+\overbrace{R_{12}i_2}^{v''_1}\\
+  v_2=\underbrace{R_{12}i_1}_{v'_2}+\underbrace{R_{22}i_2}_{v''_2}
+\end{array}\right.
+\]
+
+Abbiamo che
+
+\[
+R=
+\begin{vmatrix}
+  R_{11} & R_{12}\\
+  R_{21} & R_{22}
+\end{vmatrix}
+\]
+
+prende il nome di {\bf matrice delle resistenze} $[G^{-1}]$ e si
+misurano in \emph{ohm}.
+
+Esplicitando le realzioni abbiamo:
+\[
+\begin{matrix}
+  R_{11}=\left. \dfrac{v_1}{i_1}\right|_{i_2=0} \ =\dfrac{v'_1}{i_1} &
+  \quad \quad \quad \quad \quad
+  R_{12}=\left. \dfrac{v_1}{i_2}\right|_{i_1=0} \ =\dfrac{v''_1}{i_2}\\[.5cm]
+  R_{21}=\left. \dfrac{v_2}{i_1}\right|_{i_2=0} \ =\dfrac{v'_2}{i_1} &
+  \quad \quad \quad \quad \quad
+  R_{22}=\left. \dfrac{v_2}{i_2}\right|_{i_1=0} \ =\dfrac{v''_2}{i_2}
+\end{matrix}
+\]
+
+$R_{11}$ e $R_{22}$ sono dette resistenze \emph{proprie}.
+
+$R_{12}$ e $R_{21}$ sono dette resistenze \emph{mutue}.
+
+\vspace{0.5cm}
+La potenza assorbita dal doppio bipolo \`e $p=i^TRi$.
+
+\subsubsection{Propriet\`a}
+
+\begin{itemize}
+  \item $\mathbf{R_{12}=R_{21}}$: dalla {\bf seconda forma di
+    reciprocit\`a} (\ref{subsec:reciprocita2}) sappiamo che
+    \[
+    \dfrac{v''_2}{i_1}=\dfrac{v''_1}{i_2}
+    \]
+    e data la definizione di resistenze mutue si ha che
+    $R_{12}=R_{21}$
+  \item $\mathbf{R_{11} \geq 0 \quad R_{22}\geq 0}$: se tutti i
+    resistori sono passivi si avr\`a che $R_{11} \geq 0$ e $R_{22}\geq
+    0$.
+  \item $\mathbf{R_{11} \geq |R_{21}| \quad R_{22} \geq |R_{12}|}$:
+    questo \`e una conseguenza della {\bf legge di non amplificazione
+      delle tensioni} (\ref{subsec:nonAmplT}).
+\end{itemize}
+
+\section{Matrici Ibride e di Trasmissione}
+\subsection{Matrici Ibride}
+Consideriamo il circuito come in {\bf Figura 3.14} rappresentato su
+{\bf base ibrida}
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(113,70)(20,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(72.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,54){\line(1,0){1.5}}
+\put(75.5,58){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(71,54){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,54){\line(1,0){6}}
+\linethickness{0.3mm}
+\put(66,54){\line(1,0){6}}
+\put(41,54){\makebox(0,0)[cc]{$i_1$}}
+
+\put(55,53){\makebox(0,0)[cc]{$v_1$}}
+
+\linethickness{0.3mm}
+\put(48,53){\circle{6}}
+
+\linethickness{0.3mm}
+\put(48,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(48,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(106,56){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(106,42){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(94,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(106,53){\circle{6}}
+
+\put(113,53){\makebox(0,0)[cc]{$v_2$}}
+
+\linethickness{0.3mm}
+\put(48,51){\line(0,1){4}}
+\put(48,55){\vector(0,1){0.12}}
+\put(106,54){\makebox(0,0)[cc]{$+$}}
+
+\put(106,51.5){\makebox(0,0)[cc]{$-$}}
+
+\linethickness{0.3mm}
+\multiput(100,64)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(100,64)(0.12,-0.12){8}{\line(1,0){0.12}}
+\put(101,67){\makebox(0,0)[cc]{$i_2$}}
+
+\put(54,64){\circle*{1.5}}
+\put(54,42){\circle*{1.5}}
+
+\put(54,61){\makebox(0,0)[cc]{$+$}}
+\put(54,44){\makebox(0,0)[cc]{$-$}}
+
+\put(75,25){\makebox(0,0)[cc]{{\bf Figura 3.14} Circuito su base ibrida}}
+\end{picture}
+
+Applicando la sovrapposizione degli effetti si ha:
+
+\[
+\left\{
+\begin{array}{l l}
+  v_1=H_{11}i_1+H_{12}v_2\\
+  i_2=H_{21}i_1+H_{22}v_2
+\end{array}\right. \quad
+y=\left[
+  \begin{array}{c}
+    v_1\\
+    i_2
+  \end{array}\right]\ \quad
+x=\left[
+  \begin{array}{c}
+    i_1\\
+    v_2
+  \end{array}\right]\
+\]
+
+La seguente matrice prende il nome di {\bf matrice ibrida}
+
+\[
+H=
+\begin{vmatrix}
+  H_{11} & H_{12}\\
+  H_{21} & h_{22}
+\end{vmatrix}
+\]
+
+Espicitando i termini si ha:
+\[
+\begin{matrix}
+  H_{11}=\left. \dfrac{v_1}{i_1}\right|_{v_2=0} \ =\dfrac{v'_1}{i_1} &
+  \quad \quad \quad \quad \quad
+  H_{12}=\left. \dfrac{v_1}{v_2}\right|_{i_1=0} \ =\dfrac{v''_1}{v_2}\\[.5cm]
+  H_{21}=\left. \dfrac{i_2}{i_1}\right|_{v_2=0} \ =\dfrac{i'_2}{i_1} &
+  \quad \quad \quad \quad \quad
+  H_{22}=\left. \dfrac{i_2}{v_2}\right|_{i_1=0} \ =\dfrac{i''_2}{v_2}
+\end{matrix}
+\]
+
+Ora possiamo classificare ogni termine come segue
+
+\begin{itemize}
+\item $\mathbf H_{11}$: \`e la resistenza equivalente vista alla porta
+  $\mathbf{1}$ con $v_2$ spento. Si misura in \emph{ohm} ed \`e
+  chiamata resistenza \emph{propria}.
+\item $\mathbf H_{22}$: \`e la conduttanza equivalente alla porta
+  $\mathbf{2}$ con $i_1$ spento. Si misura in \emph{siemens} ed \`e
+  chiamata conduttanza \emph{propria}. 
+\item $\mathbf H_{12}$: \`e il guadagno in tensione quando $i_1$ \`e
+  spento. \`E adimensionale.
+\item $\mathbf H_{21}$: \`e il guadagno in corrente quando $v_2$ \`e
+  spento. \`E adimensionale.
+\end{itemize}
+
+La potenza assorbita \`e pari a $p=x^THx$
+
+\subsubsection{Propriet\`a}
+\begin{itemize}
+\item $\mathbf{H_{11} > 0 \quad H_{22} > 0}$: sono, rispettivamente,
+  una resistenza propria e una conduttanza propria perci\`o
+  $H_{11} > 0 \quad H_{22} > 0$.
+\item $|H_{21}| \leq 1 \quad |H_{12}| \leq 1$: per le {\bf propriet\`a
+  di non applificazione delle correnti (\ref{subsec:nonAmplC}) e delle
+  tensioni (\ref{subsec:nonAmplT})} abbiamo che $|i_1|\ \geq i'_2$ e
+  $|v_2|\ \leq |v''_1|\ $ quindi:
+
+  \[
+  \dfrac{|i'_2|}{|i_1|} \leq 1 \quad \text{e} \quad
+  \dfrac{|v''_1|}{|v_2|} \leq 1
+  \]
+  
+\item per la {\bf terza forma della reciprocit\`a}
+  (\ref{subsubsec:reciprocita3}) sappiamo che $\dfrac{i'_2}{i_1} =
+  -\dfrac{v''_1}{v_2}$ ne deriva quindi che $H_{21}=-H_{12}$
+\end{itemize}
+
+Non \`e necessaria la passivit\`a di tutti gli elementi per far valere
+questa propriet\`a.
+
+\subsection{Matrici di Trasmissione}
+Consideriamo il circuito in {\bf Figura 3.15} in cui $v_1$ e $i_1$ son
+espresse in funzione di $v_2$ e $i_2$.
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(110,70)(20,15)
+\linethickness{0.3mm}
+\put(60,70){\line(1,0){34}}
+\put(60,36){\line(0,1){34}}
+\put(94,36){\line(0,1){34}}
+\put(60,36){\line(1,0){34}}
+\linethickness{0.3mm}
+\put(48,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\put(48,42){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(72.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(74,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(75.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(77,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\multiput(78.5,54)(0.12,0.15){13}{\line(0,1){0.15}}
+\linethickness{0.3mm}
+\multiput(80,56)(0.12,-0.15){13}{\line(0,-1){0.15}}
+\linethickness{0.3mm}
+\put(81.5,54){\line(1,0){1.5}}
+\put(75.5,58){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(71,54){\line(1,0){1.5}}
+\linethickness{0.3mm}
+\put(82,54){\line(1,0){6}}
+\linethickness{0.3mm}
+\put(66,54){\line(1,0){6}}
+\put(47,54){\makebox(0,0)[cc]{$v_1$}}
+
+\put(54,68){\makebox(0,0)[cc]{$i_1$}}
+
+\linethickness{0.3mm}
+\multiput(53,65)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(53,63)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(94,64){\line(1,0){12}}
+\linethickness{0.3mm}
+\multiput(101,64)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(101,64)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(94,42){\line(1,0){12}}
+\put(102,67){\makebox(0,0)[cc]{$i_2$}}
+
+\put(106,54){\makebox(0,0)[cc]{$v_2$}}
+
+\put(109,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,64){\makebox(0,0)[cc]{$+$}}
+
+\put(44,42){\makebox(0,0)[cc]{$-$}}
+
+\put(109,42){\makebox(0,0)[cc]{$-$}}
+
+\put(48,64){\circle*{1.5}}
+\put(48,42){\circle*{1.5}}
+\put(66,54){\circle*{1.5}}
+\put(88,54){\circle*{1.5}}
+\put(106,64){\circle*{1.5}}
+\put(106,42){\circle*{1.5}}
+
+\put(75,25){\makebox(0,0)[cc]{{\bf Figura 3.15} Circuito con $v_1$ e
+    $i_1$ in funzione di $v_2$ e $i_2$}}
+\end{picture}
+
+Applicando la sovrapposizione degli effetti si ha:
+
+\[
+\left\{
+\begin{array}{l l}
+  v_1=T_{11}v_2+T_{12}(-i_2)\\
+  i_1=T_{21}v_2+T_{22}(-i_2)
+\end{array}\right.
+\quad y=
+\left[
+  \begin{array}{c}
+    v_1\\
+    i_1
+  \end{array}\right]\
+\quad x=
+\left[
+  \begin{array}{c}
+    v_2\\
+    -i_2
+  \end{array}\right]\ 
+\quad y=Tx
+\]
+
+La seguente matrice prende il nome di {\bf matrice di trasmissione}.
+
+\[
+\begin{vmatrix}
+  T_{11} & T_{12}\\
+  T_{21} & T_{22}
+\end{vmatrix}
+\]
+
+Esplicitando i termini abbiamo:
+\[
+\begin{matrix}
+  T_{11}=\left. \dfrac{v_1}{v_2}\right|_{i_2=0} \ =\dfrac{v'_1}{v_2} &
+  \quad \quad \quad \quad \quad
+  T_{12}=\left. \dfrac{v_1}{-i_2}\right|_{v_2=0} \ =\dfrac{v''_1}{-i_2}\\[.5cm]
+  T_{21}=\left. \dfrac{i_1}{v_2}\right|_{i_2=0} \ =\dfrac{i'_2}{v_2} &
+  \quad \quad \quad \quad \quad
+  T_{22}=\left. \dfrac{i_1}{-i_2}\right|_{v_2=0} \ =\dfrac{i''_1}{-i_2}
+\end{matrix}
+\]
+
+$T_{11}$ e $T_{22}$ sono adimensionali.
+
+$T_{12}$ \` omogenea ad una resistenza e $T_{21}$ ad una conduttanza.
+Questa \`e detta anche \emph{rappresentazione {\bf ABCD}}, utile
+nell'analisi di doppi bipoli in cascata.
+
+\subsubsection{Propriet\`a}
+
+\begin{itemize} 
+  
+\item $|T_{11}|\ \leq 1 \quad |T_{22}|\ \leq 1$: per la {\bf
+  propriet\`a di non amplificazione delle tensioni} (\ref{subsec:nonAmplT}) e delle {\bf
+  correnti} (\ref{subsec:nonAmplC}) abbiamo che
+
+  \[
+  |v_2| \leq |v'_1| \quad \text{e} \quad |i_2| \geq |i''_1|
+  \]
+
+  quindi
+
+  \[
+  \left|
+  \dfrac{v'_1}{v_2}
+  \right|\ \leq 1 \quad \text{e} \quad
+  \left|
+  \dfrac{i''_1}{-i_2}  
+  \right|\ \leq 1
+  \]
+
+  \item det$(T)=1$: si pu\`o verificare questa propriet\`a esprimendo
+    gli elementi della matrice di trasmissione in funzione degli
+    elementi della matrice delle resistenze ed imponendo la condizione $R_{12}=R_{21}$
+\end{itemize}
+
+
 
 \chapter{Circuiti a-Dinamici Lineari}
 \section{Generatore Equivalente di Th\`evenin-Norton}
