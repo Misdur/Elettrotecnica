@@ -4723,7 +4723,344 @@ nell'analisi di doppi bipoli in cascata.
     elementi della matrice delle resistenze ed imponendo la condizione $R_{12}=R_{21}$
 \end{itemize}
 
+\section{Sintesi di un Bipolo Resistivo Lineare}
+\subsection{Configurazione a ``$T$''}
+Data una mtrice delle resistenze, la configurazione pi\`u semplice di
+doppio bipolo a-dinamico Lineare avente tale matrice \`e la
+configurazione a ``$T$''.
+Dato il circuito in {\bf Figura 3.16}
 
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(99,80)(0,0)
+\linethickness{0.3mm}
+\multiput(41.5,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(42.75,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(44,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(45.25,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.5,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(47.75,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(49,76){\line(1,0){1.25}}
+\put(44,78.5){\makebox(0,0)[bl]{$R_a$}}
+
+\linethickness{0.15mm}
+\put(40.25,76){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\multiput(69.25,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(70.5,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(73,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(74.25,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(75.5,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(76.75,76){\line(1,0){1.25}}
+\put(71.75,78.5){\makebox(0,0)[bl]{$R_b$}}
+
+\linethickness{0.15mm}
+\put(68,76){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\multiput(57.75,65.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.75,65.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.75,63.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.75,63.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.75,60.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.75,60.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(59,58.25){\line(0,1){1.25}}
+\put(60.25,63.25){\makebox(0,0)[bl]{$R_c$}}
+
+\linethickness{0.15mm}
+\put(59,67){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\put(27,76){\line(1,0){14.5}}
+\linethickness{0.3mm}
+\put(50,76){\line(1,0){19}}
+\linethickness{0.3mm}
+\put(59,67){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(59,50){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(78,76){\line(1,0){16}}
+\linethickness{0.3mm}
+\put(27,50){\line(1,0){67}}
+\linethickness{0.3mm}
+\multiput(33,77)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(33,75)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(87,76)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(87,76)(0.12,-0.12){8}{\line(1,0){0.12}}
+\put(23,76){\makebox(0,0)[cc]{$+$}}
+
+\put(23,50){\makebox(0,0)[cc]{$-$}}
+
+\put(27,63){\makebox(0,0)[cc]{$v_1$}}
+
+\put(98,76){\makebox(0,0)[cc]{$+$}}
+
+\put(98,50){\makebox(0,0)[cc]{$-$}}
+
+\put(94,63){\makebox(0,0)[cc]{$v_2$}}
+
+\put(88,80){\makebox(0,0)[cc]{$i_2$}}
+
+\put(33,80){\makebox(0,0)[cc]{$i_1$}}
+
+\put(27,76){\circle*{1.5}}
+\put(27,50){\circle*{1.5}}
+\put(94,76){\circle*{1.5}}
+\put(94,50){\circle*{1.5}}
+
+\put(59,25){\makebox(0,0)[cc]{{\bf Figura 3.16} Configurazione a ``$T$''}}
+
+\end{picture}
+
+L'analisi del circuito avviene su base corrente. Quindi gli elementi
+della matrice delle resistenze del doppio bipolo sono:
+
+\[
+R_{11}=\left.
+\dfrac{v_1}{i_1}\right|_{i_2=0} \  = R_a+R_c
+\]
+
+\[
+R_{22}=\left.
+\dfrac{v_2}{i_2}\right|_{i_1=0} \ =  R_b+ R_c
+\]
+
+\[
+R_{21}=R_{12}=\left.
+\dfrac{v_1}{i_2}\right|_{i_1=0} \ =
+\left.
+\dfrac{v_2}{i_1}\right|_{i_2=0} \ = R_c
+\]
+
+Quindi ne deriva che
+
+\[
+\mathbf{R_a}=R_{11}-R_{12}, \quad \mathbf{R_b}=R_{22}-R_{12},
+\quad \mathbf{R_c}=R_{12}
+\]
+
+\begin{itemize}
+\item $R_a$ e $R_b$ hanno sempre segno positivo per la propriet\`a della
+  matrice delle resistenze. Ossia:
+  
+  \[
+  \begin{array}{l l l}
+    R_{11} \geq 0 ;\; R_{22} \geq 0 \\
+    |R_{12}| \leq R_{11};\; |R_{21}| \leq R_{22} \\
+    R_{12}=R_{21}
+  \end{array}
+  \]
+\item $R_c$ pu\`o avere qualsiasi segno. Se \`e negativo, basta
+  invertire la coppia di terminali di una delle due porte per renderlo
+  positivo.
+\end{itemize}
+
+Se la resistenza data non gode di almeno una delle propriet\`a della
+matrice delle resistenze non \`e possibile effettuaere la
+sintetizzazione a doppio bipolo a-dinamico lineare, sar\`a necessario
+utilizzare dei generatori controllati.
+
+Anche data una matrice {\bf ibrida} \`e possibile avere una
+configurazione a ``$T$''. Il legame tra i parametri ibridi ed i
+resistori della configurazione a ``$T$'' sono:
+
+\[
+H_{11}=\left.
+\dfrac{i_1}{v_1}\right|_{i_2=0} \ = (R_a+R_c)^{-1} \quad \quad
+H_{22}=\left.
+\dfrac{v_2}{i_2}\right|_{i_1=0} \ = R_b + \dfrac{R_aR_c}{R_a+R_c}
+\]
+\vspace{0.5cm}
+\[
+-H_{12}=H_{21}=
+\left.\dfrac{v_2}{v_1}\right|_{i_2=0}=
+\left.-\dfrac{v_1}{v_2}\right|_{i_1=0}=
+\dfrac{R_c}{R_a+R_c}
+\]
+
+\subsection{Configurazione a $\Pi$}
+Data una matrice delle conduttanze, la configurazione pi\`u semplice
+di doppio bipolo a-dinamico lineare avente tale matrice \`e la
+configurazione a ``$\mathbf{\Pi}$''
+
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(98,80)(5,15)
+\linethickness{0.3mm}
+\multiput(46.75,65.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.75,65.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.75,63.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.75,63.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.75,60.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(46.75,60.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(48,58.25){\line(0,1){1.25}}
+\put(49.25,63.25){\makebox(0,0)[bl]{$G_x$}}
+
+\linethickness{0.15mm}
+\put(48,67){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\put(27,76){\line(1,0){29}}
+\linethickness{0.3mm}
+\put(48,67){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(48,50){\line(0,1){8}}
+\linethickness{0.3mm}
+\put(65,76){\line(1,0){29}}
+\linethickness{0.3mm}
+\put(27,50){\line(1,0){67}}
+\linethickness{0.3mm}
+\multiput(33,77)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(33,75)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(87,76)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(87,76)(0.12,-0.12){8}{\line(1,0){0.12}}
+\put(23,76){\makebox(0,0)[cc]{$+$}}
+
+\put(23,50){\makebox(0,0)[cc]{$-$}}
+
+\put(27,63){\makebox(0,0)[cc]{$v_1$}}
+
+\put(98,76){\makebox(0,0)[cc]{$+$}}
+
+\put(98,50){\makebox(0,0)[cc]{$-$}}
+
+\put(94,63){\makebox(0,0)[cc]{$v_2$}}
+
+\put(88,80){\makebox(0,0)[cc]{$i_2$}}
+
+\put(33,80){\makebox(0,0)[cc]{$i_1$}}
+
+\linethickness{0.3mm}
+\multiput(71.75,65.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,65.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,63.25)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,63.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,60.75)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,60.75)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(73,58.25){\line(0,1){1.25}}
+\put(74.25,63.25){\makebox(0,0)[bl]{$G_z$}}
+
+\linethickness{0.15mm}
+\put(73,67){\line(0,1){1.25}}
+\linethickness{0.3mm}
+\put(73,67){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(73,50){\line(0,1){8}}
+\linethickness{0.3mm}
+\multiput(56,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(57.25,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(58.5,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(59.75,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(61,76)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(62.25,77.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(63.5,76){\line(1,0){1.25}}
+\put(58.5,78.5){\makebox(0,0)[bl]{$G_y$}}
+
+\linethickness{0.15mm}
+\put(54.75,76){\line(1,0){1.25}}
+
+\put(27,76){\circle*{1.5}}
+\put(27,50){\circle*{1.5}}
+\put(94,76){\circle*{1.5}}
+\put(94,50){\circle*{1.5}}
+
+\put(59,30){\makebox(0,0)[cc]{{\bf Figura 3.16} Configurazione a ``$\Pi$''}}
+\end{picture}
+
+L'analisi del circuito avviene su base tensione. Quindi gli elementi
+della matrice delle resistenze del doppio bipolo sono:
+
+\[
+G_{11}=\left.
+\dfrac{i_1}{v_1}\right|_{v_2=0} \  = G_x+G_y
+\]
+
+\[
+G_{22}=\left.
+\dfrac{i_2}{v_2}\right|_{v_1=0} \ =  G_y+ G_z
+\]
+
+\[
+G_{21}=G_{12}=\left.
+\dfrac{i_1}{v_2}\right|_{v_1=0} \ =
+\left.
+\dfrac{i_2}{v_1}\right|_{v_2=0} \ = -G_y
+\]
+
+Quindi ne deriva che:
+
+\[
+\mathbf{G_x}=G_{11}+G_{12}, \quad \mathbf{G_z}=G_{22}+G_{12},
+\quad \mathbf{G_y}=-G_{12}
+\]
+
+\begin{itemize}
+\item $G_x$ e $G_z$ hanno sempre segno positivo per le propriet\`a
+  delle conduttanze. Ossia:
+
+  \[
+  \begin{array}{l l l}
+    G_{11} \geq 0 ;\; G_{22} \geq 0 \\
+    |G_{12}| \leq G_{11};\; |G_{21}| \leq G_{22} \\
+    G_{12}=G_{21}
+  \end{array}
+  \]
+\item $G_{12}$ pu\`o avere qualsiasi segno. Se \`e negativo basta
+  invertire la coppia di terminali di una delle due porte per ottenere
+  $G_y$ positivo.
+\end{itemize}
+
+Se la conduttanza data non gode di almeno una delle propriet\`a della
+matrice delle conduttanze non \`e possibile la sintetizzazione a
+``$\Pi$'' ma sar\`a necessario utilizzare dei generatori controllati.
+
+Se la matrice data non \`e simmetrica si pu\`o scomporla per rendere
+almeno una parte simmetrica.
+
+Si sintetizza la parte simmetrica e l'altra la si pu\`o sintetizzare
+mettendo un generatore controllato di tensione (o corrente)
+controllato in corrente (in tensione) in serie (in parallelo) alla
+parte dove abbiamo scomposto.
 
 \chapter{Circuiti a-Dinamici Lineari}
 \section{Generatore Equivalente di Th\`evenin-Norton}
