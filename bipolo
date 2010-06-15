@@ -1,0 +1,198 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Mon Mar 15 12:06:08 CET 2010
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="42" x-max="90" y-min="39" y-max="69" auto-bounding="true">
+%<parallelogram fill-style= "none"
+%	 p3= "(90,40)"
+%	 p2= "(90,68)"
+%	 p1= "(60,68)"
+%	 right-arrow= "head"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(60,64);(60,64);(50,64);(50,64)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(60,44);(60,44);(50,44);(50,44)"
+%	 />
+%<parallelogram fill-style= "none"
+%	 p3= "(53,48)"
+%	 p2= "(53,60)"
+%	 p1= "(47,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50,64);(50,64);(50,60);(50,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50,44);(50,44);(50,48);(50,48)"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(49,65)"
+%	 p2= "(49,69)"
+%	 p1= "(45,69)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(49,39)"
+%	 p2= "(49,43)"
+%	 p1= "(45,43)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(47,67)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$1$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(47,41)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$n$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(42,54)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$v_a$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(48,64)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%+
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(48,44)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%-
+%</text>
+%<g>
+%<multicurve fill-style= "none"
+%	 points= "(68.25,52);(68.25,52);(70.5,54.62);(70.5,54.62)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(70.5,54.62);(70.5,54.62);(72.75,52);(72.75,52)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(72.75,52);(72.75,52);(75,54.62);(75,54.62)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(75,54.62);(75,54.62);(77.25,52);(77.25,52)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(77.25,52);(77.25,52);(79.5,54.62);(79.5,54.62)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79.5,54.62);(79.5,54.62);(81.75,52);(81.75,52)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(81.75,52);(81.75,52);(84,52);(84,52)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "bottom"
+%	 anchor-point= "(72.75,57.25)"
+%	 stroke-width= "0.15"
+%	 text-frame= "noframe"
+%	 text-hor-align= "left"
+%	 >
+%$R$
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(66,52);(66,52);(68.25,52);(68.25,52)"
+%	 stroke-width= "0.15"
+%	 />
+%</g>
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(82,52);(82,52);(86,52);(86,52)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(68,52);(68,52);(64,52);(64,52)"
+%	 />
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(90,69)(0,0)
+\linethickness{0.3mm}
+\put(60,68){\line(1,0){30}}
+\put(60,40){\line(0,1){28}}
+\put(90,40){\line(0,1){28}}
+\put(60,40){\line(1,0){30}}
+\linethickness{0.3mm}
+\put(50,64){\line(1,0){10}}
+\put(50,64){\vector(-1,0){0.12}}
+\linethickness{0.3mm}
+\put(50,44){\line(1,0){10}}
+\put(50,44){\vector(-1,0){0.12}}
+\linethickness{0.3mm}
+\put(47,60){\line(1,0){6}}
+\put(47,48){\line(0,1){12}}
+\put(53,48){\line(0,1){12}}
+\put(47,48){\line(1,0){6}}
+\linethickness{0.3mm}
+\put(50,60){\line(0,1){4}}
+\linethickness{0.3mm}
+\put(50,44){\line(0,1){4}}
+\linethickness{0.3mm}
+\put(47,67){\circle{4}}
+
+\linethickness{0.3mm}
+\put(47,41){\circle{4}}
+
+\put(47,67){\makebox(0,0)[cc]{$1$}}
+
+\put(47,41){\makebox(0,0)[cc]{$n$}}
+
+\put(42,54){\makebox(0,0)[cc]{$v_a$}}
+
+\put(48,64){\makebox(0,0)[cc]{+}}
+
+\put(48,44){\makebox(0,0)[cc]{-}}
+
+\linethickness{0.3mm}
+\multiput(68.25,52)(0.12,0.14){19}{\line(0,1){0.14}}
+\linethickness{0.3mm}
+\multiput(70.5,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+\linethickness{0.3mm}
+\multiput(72.75,52)(0.12,0.14){19}{\line(0,1){0.14}}
+\linethickness{0.3mm}
+\multiput(75,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+\linethickness{0.3mm}
+\multiput(77.25,52)(0.12,0.14){19}{\line(0,1){0.14}}
+\linethickness{0.3mm}
+\multiput(79.5,54.62)(0.12,-0.14){19}{\line(0,-1){0.14}}
+\linethickness{0.3mm}
+\put(81.75,52){\line(1,0){2.25}}
+\put(72.75,57.25){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(66,52){\line(1,0){2.25}}
+\linethickness{0.3mm}
+\put(82,52){\line(1,0){4}}
+\put(86,52){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(64,52){\line(1,0){4}}
+\put(64,52){\vector(-1,0){0.12}}
+\end{picture}

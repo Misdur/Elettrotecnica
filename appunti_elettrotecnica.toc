@@ -1,0 +1,65 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}I Modelli Circuitali}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Potenza ed Energia Elettrica}{4}{section.1.1}
+\contentsline {chapter}{\numberline {2}Regime Sinusiodale}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Metodo Simbolico}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Propriet\`a di Unicit\`a}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Propriet\`a di Linearit\`a}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Propriet\`a di Derivazione}{7}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Potenza ed Energia in Regime Sinusoidale}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Potenza Media}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Potenza Complessa}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Energia in Regime Sinusoidale}{9}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Propriet\`a dei Circuiti}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Grafo di un Circuito e sue Propriet\`a}{10}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Grafo, Grafo Orientato, Sottografo}{10}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Grafo Connesso}{11}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Maglia}{11}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Albero, coalbero}{11}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Grafo Planare}{12}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Anello}{12}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Insieme di Taglio}{12}{subsection.3.1.7}
+\contentsline {subsubsection}{Legge di Kirchhoff per gli Insiemi di Taglio}{12}{section*.3}
+\contentsline {section}{\numberline {3.2}Equazioni di Kirchhoff Indipendenti}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Indipendenza delle Equazioni di Kirchhoff per le Correnti}{13}{subsection.3.2.1}
+\contentsline {subsubsection}{Equazioni Indipendenti per gli Insiemi di Taglio}{14}{section*.4}
+\contentsline {subsection}{\numberline {3.2.2}Indipendenza delle Equazioni di Kirchhoff per le Tensioni}{14}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Conservazione delle Potenze Elettriche e Teorema di Tellegen}{15}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Teorema di Tellegen}{16}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Propriet\`a Di Non Amplificazione}{17}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Non Amplificazione delle Tensioni}{17}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Non Amplificazione Delle Correnti}{18}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Potenziali di Nodo}{19}{section.3.5}
+\contentsline {subsubsection}{Applicazione del Metodo dei Potenziali di Nodo}{20}{section*.5}
+\contentsline {section}{\numberline {3.6}Correnti di Maglia}{22}{section.3.6}
+\contentsline {chapter}{\numberline {4}Doppi Bipoli}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Generatori Controllati Lineari}{24}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Generatore di Tensione Controllato in Tensione}{24}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Generatore di Tensione Controllato in Corrente}{25}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Generatore di Corrente Controllato in Tensione}{26}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Generatore di Corrente Controllato in Corrente}{27}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Trasformatore}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Mutuo Accoppiamento}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Trasformatore Reale}{30}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Doppi Bipoli di Resistori Lineari}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Rappresentazione dei Doppi Bipoli}{30}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Propriet\`a di Reciprocit\`a}{31}{subsection.4.3.2}
+\contentsline {subsubsection}{Prima Forma}{31}{section*.6}
+\contentsline {subsubsection}{Seconda Forma}{32}{section*.7}
+\contentsline {subsubsection}{Terza Forma}{32}{section*.8}
+\contentsline {section}{\numberline {4.4}Matrici delle Conduttanze e delle Resistenze}{33}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Matrici delle Conduttanze}{33}{subsection.4.4.1}
+\contentsline {subsubsection}{Propriet\`a}{35}{section*.9}
+\contentsline {subsection}{\numberline {4.4.2}Matrici delle Resistenze}{35}{subsection.4.4.2}
+\contentsline {subsubsection}{Propriet\`a}{36}{section*.10}
+\contentsline {section}{\numberline {4.5}Matrici Ibride e di Trasmissione}{36}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Matrici Ibride}{36}{subsection.4.5.1}
+\contentsline {subsubsection}{Propriet\`a}{38}{section*.11}
+\contentsline {subsection}{\numberline {4.5.2}Matrici di Trasmissione}{38}{subsection.4.5.2}
+\contentsline {subsubsection}{Propriet\`a}{39}{section*.12}
+\contentsline {section}{\numberline {4.6}Sintesi di un Bipolo Resistivo Lineare}{40}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Configurazione a ``$T$''}{40}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Configurazione a $\Pi $}{41}{subsection.4.6.2}
+\contentsline {chapter}{\numberline {5}Circuiti a-Dinamici Lineari}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Generatore Equivalente di Th\`evenin-Norton}{43}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Generatore Equivalente di Th\`evenin}{43}{subsection.5.1.1}

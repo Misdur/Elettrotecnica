@@ -1,0 +1,401 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Mon Mar 15 16:57:13 CET 2010
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="23" x-max="139" y-min="19.5" y-max="77" auto-bounding="true">
+%<ellipse fill-style= "none"
+%	 p3= "(74.5,75.5)"
+%	 p2= "(74.5,76.5)"
+%	 p1= "(73.5,76.5)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(74.5,57.5)"
+%	 p2= "(74.5,58.5)"
+%	 p1= "(73.5,58.5)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(74.5,39.5)"
+%	 p2= "(74.5,40.5)"
+%	 p1= "(73.5,40.5)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(74.5,19.5)"
+%	 p2= "(74.5,20.5)"
+%	 p1= "(73.5,20.5)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,58);(65,47.5);(74,40);(74,40);(74,40);(74,40);
+%	(74,40)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,58);(87.5,48.75);(74,40);(74,40);(74,40);(74,40);
+%	(74,40)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,40);(62.5,28.75);(74,20);(74,20);(74,20);(74,20);
+%	(74,20)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,40);(86.25,26.88);(74,20);(74,20);(74,20);(74,20);
+%	(74,20)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,76);(60,68);(74,58);(74,58);(74,58);(74,58);
+%	(74,58)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,76);(85.62,63.75);(74,58);(74,58);(74,58);(74,58);
+%	(74,58)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,76);(97.5,66.25);(74,58);(74,58);(74,58);(74,58);
+%	(74,58)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,58);(46.88,40.62);(74,20);(74,20);(74,20);(74,20);
+%	(74,20)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74,20);(23,54);(74,76);(74,76);(74,76);(74,76);
+%	(74,76)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(84.38,66.38);(84.38,66.38);(83.38,67.38);(83.38,67.38)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(84.38,66.38);(84.38,66.38);(85.38,67.38);(85.38,67.38)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(70,48);(70,48);(69,49);(69,49)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(70,48);(70,48);(71,49);(71,49)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(62,41);(62,41);(61,42);(61,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(62,41);(62,41);(63,42);(63,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(80,49);(80,49);(79,50);(79,50)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(80,49);(80,49);(81,50);(81,50)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(68,66);(68,66);(67,67);(67,67)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(68,66);(68,66);(69,67);(69,67)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79,67);(79,67);(78,68);(78,68)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79,67);(79,67);(80,68);(80,68)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79.5,29.12);(79.5,29.12);(78.5,30.12);(78.5,30.12)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79.5,29.12);(79.5,29.12);(80.5,30.12);(80.5,30.12)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(68.88,29.75);(68.88,29.75);(67.88,30.75);(67.88,30.75)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(68.88,29.75);(68.88,29.75);(69.88,30.75);(69.88,30.75)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50.62,50);(50.62,50);(49.62,49);(49.62,49)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50.62,50);(50.62,50);(51.62,49);(51.62,49)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(65,64.38)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_1$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(76,68)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_2$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(87,67)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_3$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(72,48)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_5$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(82,49)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_6$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(64,41)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_4$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(46,49)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_a$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(71,30)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_7$
+%</text>
+%<text stroke-style= "dotted"
+%	 fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(82,29)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_8$
+%</text>
+%<multicurve stroke-style= "dotted"
+%	 fill-style= "none"
+%	 points= "(58,77);(75,64);(89,77);(89,77);(89,77);(89,77);
+%	(89,77)"
+%	 />
+%<multicurve stroke-style= "dotted"
+%	 fill-style= "none"
+%	 points= "(46,60);(74,45);(92,58);(92,58);(92,58);(92,58);
+%	(92,58)"
+%	 />
+%<multicurve stroke-style= "dotted"
+%	 arrow-head-length-scale= "0.5"
+%	 fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(45,42);(74,26);(95,41);(95,41);(95,41);(95,41);
+%	(95,41)"
+%	 />
+%<multicurve stroke-style= "dotted"
+%	 arrow-head-length-scale= "0.5"
+%	 fill-style= "none"
+%	 points= "(90,77);(90,77);(110,62);(110,62)"
+%	 left-arrow= "head"
+%	 />
+%<multicurve stroke-style= "dotted"
+%	 arrow-head-length-scale= "0.5"
+%	 fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(110,62);(110,62);(94,58);(94,58)"
+%	 />
+%<multicurve stroke-style= "dotted"
+%	 arrow-head-length-scale= "0.5"
+%	 fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(110,62);(110,62);(96,42);(96,42)"
+%	 />
+%<text stroke-style= "dotted"
+%	 fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(124,62)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%Insiemi di Taglio
+%</text>
+%<parallelogram stroke-style= "dotted"
+%	 fill-style= "none"
+%	 p3= "(139,59)"
+%	 p2= "(139,65)"
+%	 p1= "(110,65)"
+%	 />
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(139,77)(0,0)
+\linethickness{0.3mm}
+\put(74,76){\circle{1}}
+
+\linethickness{0.3mm}
+\put(74,58){\circle{1}}
+
+\linethickness{0.3mm}
+\put(74,40){\circle{1}}
+
+\linethickness{0.3mm}
+\put(74,20){\circle{1}}
+
+\linethickness{0.3mm}
+\qbezier(74,58)(68.09,49.98)(70.62,45.06)
+\qbezier(70.62,45.06)(73.16,40.14)(74,40)
+\qbezier(74,40)(74,40)(74,40)
+\qbezier(74,40)(74,40)(74,40)
+\linethickness{0.3mm}
+\qbezier(74,58)(82.86,50.8)(79.06,45.53)
+\qbezier(79.06,45.53)(75.27,40.26)(74,40)
+\qbezier(74,40)(74,40)(74,40)
+\qbezier(74,40)(74,40)(74,40)
+\linethickness{0.3mm}
+\qbezier(74,40)(66.45,31.37)(69.69,25.78)
+\qbezier(69.69,25.78)(72.92,20.2)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\linethickness{0.3mm}
+\qbezier(74,40)(82.04,30.14)(78.59,25.08)
+\qbezier(78.59,25.08)(75.15,20.02)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\linethickness{0.3mm}
+\qbezier(74,76)(64.81,69.62)(68.75,64)
+\qbezier(68.75,64)(72.69,58.38)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\linethickness{0.3mm}
+\qbezier(74,76)(81.63,66.84)(78.36,62.41)
+\qbezier(78.36,62.41)(75.09,57.98)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\linethickness{0.3mm}
+\qbezier(74,76)(89.42,68.48)(82.81,63.34)
+\qbezier(82.81,63.34)(76.2,58.21)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\qbezier(74,58)(74,58)(74,58)
+\linethickness{0.3mm}
+\qbezier(74,58)(56.2,44.22)(63.83,32.48)
+\qbezier(63.83,32.48)(71.46,20.75)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\qbezier(74,20)(74,20)(74,20)
+\linethickness{0.3mm}
+\qbezier(74,20)(40.53,45.81)(54.88,60.75)
+\qbezier(54.88,60.75)(69.22,75.69)(74,76)
+\qbezier(74,76)(74,76)(74,76)
+\qbezier(74,76)(74,76)(74,76)
+\linethickness{0.3mm}
+\multiput(83.38,67.38)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(84.38,66.38)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(69,49)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(70,48)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(61,42)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(62,41)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(79,50)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(80,49)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67,67)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(68,66)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(78,68)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(79,67)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(78.5,30.12)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(79.5,29.12)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(67.88,30.75)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(68.88,29.75)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49.62,49)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(50.62,50)(0.12,-0.12){8}{\line(1,0){0.12}}
+\put(65,64.38){\makebox(0,0)[cc]{$i_1$}}
+
+\put(76,68){\makebox(0,0)[cc]{$i_2$}}
+
+\put(87,67){\makebox(0,0)[cc]{$i_3$}}
+
+\put(72,48){\makebox(0,0)[cc]{$i_5$}}
+
+\put(82,49){\makebox(0,0)[cc]{$i_6$}}
+
+\put(64,41){\makebox(0,0)[cc]{$i_4$}}
+
+\put(46,49){\makebox(0,0)[cc]{$i_a$}}
+
+\put(71,30){\makebox(0,0)[cc]{$i_7$}}
+
+\put(82,29){\makebox(0,0)[cc]{$i_8$}}
+
+\linethickness{0.3mm}
+\qbezier(58,77)(71.09,68.47)(79.88,72.12)
+\qbezier(79.88,72.12)(88.66,75.78)(89,77)
+\qbezier(89,77)(89,77)(89,77)
+\qbezier(89,77)(89,77)(89,77)
+\linethickness{0.3mm}
+\qbezier(46,60)(67.25,50.03)(79.5,53.38)
+\qbezier(79.5,53.38)(91.75,56.72)(92,58)
+\qbezier(92,58)(92,58)(92,58)
+\qbezier(92,58)(92,58)(92,58)
+\linethickness{0.3mm}
+\qbezier(45,42)(67.16,31.44)(80.88,35.5)
+\qbezier(80.88,35.5)(94.59,39.56)(95,41)
+\qbezier(95,41)(95,41)(95,41)
+\qbezier(95,41)(95,41)(95,41)
+\put(95,41){\vector(0,0){0.12}}
+\linethickness{0.3mm}
+\multiput(90,77)(0.16,-0.12){125}{\line(1,0){0.16}}
+\put(90,77){\vector(-4,3){0.12}}
+\linethickness{0.3mm}
+\multiput(94,58)(0.48,0.12){33}{\line(1,0){0.48}}
+\put(94,58){\vector(-4,-1){0.12}}
+\linethickness{0.3mm}
+\multiput(96,42)(0.12,0.17){117}{\line(0,1){0.17}}
+\put(96,42){\vector(-2,-3){0.12}}
+\put(124,62){\makebox(0,0)[cc]{Insiemi di Taglio}}
+
+\linethickness{0.3mm}
+\put(110,65){\line(1,0){29}}
+\put(110,59){\line(0,1){6}}
+\put(139,59){\line(0,1){6}}
+\put(110,59){\line(1,0){29}}
+\end{picture}

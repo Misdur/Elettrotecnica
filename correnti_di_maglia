@@ -1,0 +1,470 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Fri Mar 26 13:45:45 CET 2010
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="31" x-max="99.5" y-min="26" y-max="58" auto-bounding="true">
+%<multicurve fill-style= "none"
+%	 points= "(35,30);(35,30);(65,30);(65,30)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50,55);(50,55);(65,30);(65,30)"
+%	 />
+%<multicurve stroke-dasharray= "1;1"
+%	 fill-style= "none"
+%	 points= "(35,30);(35,30);(50,55);(50,55)"
+%	 stroke-style= "dashed"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(65,30);(65,30);(95,30);(95,30)"
+%	 />
+%<multicurve stroke-dasharray= "1;1"
+%	 fill-style= "none"
+%	 points= "(80,55);(80,55);(95,30);(95,30)"
+%	 stroke-style= "dashed"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(65,30);(65,30);(80,55);(80,55)"
+%	 />
+%<multicurve stroke-dasharray= "1;1"
+%	 fill-style= "none"
+%	 points= "(50,55);(50,55);(80,55);(80,55)"
+%	 stroke-style= "dashed"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(49,31);(49,31);(50,30);(50,30)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(50,30);(50,30);(49,29);(49,29)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(43,43);(43,43);(42,43);(42,43)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(43,43);(43,43);(43,42);(43,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(57,43);(57,43);(57,42);(57,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(57,43);(57,43);(58,43);(58,43)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(64,56);(64,56);(65,55);(65,55)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(65,55);(65,55);(64,54);(64,54)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(73,43);(73,43);(72,43);(72,43)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(73,43);(73,43);(73,42);(73,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(79,31);(79,31);(80,30);(80,30)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(80,30);(80,30);(79,29);(79,29)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(87,43);(87,43);(87,42);(87,42)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(87,43);(87,43);(88,43);(88,43)"
+%	 />
+%<ellipse p3= "(34,26)"
+%	 p2= "(34,29)"
+%	 p1= "(31,29)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse p3= "(99.5,26)"
+%	 p2= "(99.5,29)"
+%	 p1= "(96.5,29)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse p3= "(48.5,55)"
+%	 p2= "(48.5,58)"
+%	 p1= "(45.5,58)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<ellipse p3= "(85,55)"
+%	 p2= "(85,58)"
+%	 p1= "(82,58)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(32,28)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$5$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(47,56)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(84,57)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$2$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(98,27)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$3$
+%</text>
+%<ellipse p3= "(66.5,26)"
+%	 p2= "(66.5,29)"
+%	 p1= "(63.5,29)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(65,27)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$3$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(40,43)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(64,57)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$2$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(90,43)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$3$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(79,27)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$4$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(75,42)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$5$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(60,43)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$6$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(49,27)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$7$
+%</text>
+%<ellipse p3= "(54,41.5)"
+%	 p2= "(54,34.5)"
+%	 p1= "(46,34.5)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "215.54"
+%	 angle-start= "-35.54"
+%	 left-arrow= "head"
+%	 />
+%<ellipse p3= "(84,41.5)"
+%	 p2= "(84,34.5)"
+%	 p1= "(76,34.5)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "215.54"
+%	 right-arrow= "head"
+%	 angle-start= "-35.54"
+%	 />
+%<ellipse p3= "(69.25,50.53)"
+%	 p2= "(69.25,43.53)"
+%	 p1= "(61.25,43.53)"
+%	 closure= "open"
+%	 fill-style= "none"
+%	 angle-end= "215.54"
+%	 angle-start= "-35.54"
+%	 left-arrow= "head"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(50,38)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$k_1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(65,47)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$k_2$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(80,38)"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$k_3$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(99.5,58)(0,0)
+\linethickness{0.3mm}
+\put(35,30){\line(1,0){30}}
+\linethickness{0.3mm}
+\multiput(50,55)(0.12,-0.2){125}{\line(0,-1){0.2}}
+\linethickness{0.3mm}
+\multiput(35,30)(1.03,1.72){15}{\multiput(0,0)(0.13,0.22){4}{\line(0,1){0.22}}}
+\linethickness{0.3mm}
+\put(65,30){\line(1,0){30}}
+\linethickness{0.3mm}
+\multiput(80,55)(1.03,-1.72){15}{\multiput(0,0)(0.13,-0.22){4}{\line(0,-1){0.22}}}
+\linethickness{0.3mm}
+\multiput(65,30)(0.12,0.2){125}{\line(0,1){0.2}}
+\linethickness{0.3mm}
+\multiput(50,55)(1.94,0){16}{\line(1,0){0.97}}
+\linethickness{0.3mm}
+\multiput(49,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(49,29)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(42,43){\line(1,0){1}}
+\linethickness{0.3mm}
+\put(43,42){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(57,42){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(57,43){\line(1,0){1}}
+\linethickness{0.3mm}
+\multiput(64,56)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(64,54)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(72,43){\line(1,0){1}}
+\linethickness{0.3mm}
+\put(73,42){\line(0,1){1}}
+\linethickness{0.3mm}
+\multiput(79,31)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(79,29)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(87,42){\line(0,1){1}}
+\linethickness{0.3mm}
+\put(87,43){\line(1,0){1}}
+\linethickness{0.3mm}
+\put(32.5,27.5){\circle{3}}
+
+\linethickness{0.3mm}
+\put(98,27.5){\circle{3}}
+
+\linethickness{0.3mm}
+\put(47,56.5){\circle{3}}
+
+\linethickness{0.3mm}
+\put(83.5,56.5){\circle{3}}
+
+\put(32,28){\makebox(0,0)[cc]{$5$}}
+
+\put(47,56){\makebox(0,0)[cc]{$1$}}
+
+\put(84,57){\makebox(0,0)[cc]{$2$}}
+
+\put(98,27){\makebox(0,0)[cc]{$3$}}
+
+\linethickness{0.3mm}
+\put(65,27.5){\circle{3}}
+
+\put(65,27){\makebox(0,0)[cc]{$3$}}
+
+\put(40,43){\makebox(0,0)[cc]{$1$}}
+
+\put(64,57){\makebox(0,0)[cc]{$2$}}
+
+\put(90,43){\makebox(0,0)[cc]{$3$}}
+
+\put(79,27){\makebox(0,0)[cc]{$4$}}
+
+\put(75,42){\makebox(0,0)[cc]{$5$}}
+
+\put(60,43){\makebox(0,0)[cc]{$6$}}
+
+\put(49,27){\makebox(0,0)[cc]{$7$}}
+
+\linethickness{0.3mm}
+\multiput(53.25,35.97)(0.13,0.19){2}{\line(0,1){0.19}}
+\multiput(53.52,36.34)(0.1,0.2){2}{\line(0,1){0.2}}
+\multiput(53.73,36.73)(0.15,0.42){1}{\line(0,1){0.42}}
+\multiput(53.88,37.15)(0.09,0.43){1}{\line(0,1){0.43}}
+\multiput(53.97,37.58)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(53.97,38.46)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(53.87,38.89)(0.1,-0.43){1}{\line(0,-1){0.43}}
+\multiput(53.71,39.3)(0.16,-0.42){1}{\line(0,-1){0.42}}
+\multiput(53.5,39.7)(0.11,-0.2){2}{\line(0,-1){0.2}}
+\multiput(53.23,40.07)(0.13,-0.18){2}{\line(0,-1){0.18}}
+\multiput(52.91,40.4)(0.11,-0.11){3}{\line(0,-1){0.11}}
+\multiput(52.54,40.7)(0.18,-0.15){2}{\line(1,0){0.18}}
+\multiput(52.14,40.96)(0.2,-0.13){2}{\line(1,0){0.2}}
+\multiput(51.7,41.17)(0.22,-0.11){2}{\line(1,0){0.22}}
+\multiput(51.23,41.33)(0.47,-0.16){1}{\line(1,0){0.47}}
+\multiput(50.75,41.44)(0.48,-0.11){1}{\line(1,0){0.48}}
+\multiput(50.25,41.49)(0.5,-0.05){1}{\line(1,0){0.5}}
+\put(49.75,41.49){\line(1,0){0.5}}
+\multiput(49.25,41.44)(0.5,0.05){1}{\line(1,0){0.5}}
+\multiput(48.77,41.33)(0.48,0.11){1}{\line(1,0){0.48}}
+\multiput(48.3,41.17)(0.47,0.16){1}{\line(1,0){0.47}}
+\multiput(47.86,40.96)(0.22,0.11){2}{\line(1,0){0.22}}
+\multiput(47.46,40.7)(0.2,0.13){2}{\line(1,0){0.2}}
+\multiput(47.09,40.4)(0.18,0.15){2}{\line(1,0){0.18}}
+\multiput(46.77,40.07)(0.11,0.11){3}{\line(0,1){0.11}}
+\multiput(46.5,39.7)(0.13,0.18){2}{\line(0,1){0.18}}
+\multiput(46.29,39.3)(0.11,0.2){2}{\line(0,1){0.2}}
+\multiput(46.13,38.89)(0.16,0.42){1}{\line(0,1){0.42}}
+\multiput(46.03,38.46)(0.1,0.43){1}{\line(0,1){0.43}}
+\multiput(46,38.02)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(46,38.02)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(46.03,37.58)(0.09,-0.43){1}{\line(0,-1){0.43}}
+\multiput(46.12,37.15)(0.15,-0.42){1}{\line(0,-1){0.42}}
+\multiput(46.27,36.73)(0.1,-0.2){2}{\line(0,-1){0.2}}
+\multiput(46.48,36.34)(0.13,-0.19){2}{\line(0,-1){0.19}}
+\put(53.25,35.97){\vector(-3,-4){0.12}}
+
+\linethickness{0.3mm}
+\multiput(83.25,35.97)(0.13,0.19){2}{\line(0,1){0.19}}
+\multiput(83.52,36.34)(0.1,0.2){2}{\line(0,1){0.2}}
+\multiput(83.73,36.73)(0.15,0.42){1}{\line(0,1){0.42}}
+\multiput(83.88,37.15)(0.09,0.43){1}{\line(0,1){0.43}}
+\multiput(83.97,37.58)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(83.97,38.46)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(83.87,38.89)(0.1,-0.43){1}{\line(0,-1){0.43}}
+\multiput(83.71,39.3)(0.16,-0.42){1}{\line(0,-1){0.42}}
+\multiput(83.5,39.7)(0.11,-0.2){2}{\line(0,-1){0.2}}
+\multiput(83.23,40.07)(0.13,-0.18){2}{\line(0,-1){0.18}}
+\multiput(82.91,40.4)(0.11,-0.11){3}{\line(0,-1){0.11}}
+\multiput(82.54,40.7)(0.18,-0.15){2}{\line(1,0){0.18}}
+\multiput(82.14,40.96)(0.2,-0.13){2}{\line(1,0){0.2}}
+\multiput(81.7,41.17)(0.22,-0.11){2}{\line(1,0){0.22}}
+\multiput(81.23,41.33)(0.47,-0.16){1}{\line(1,0){0.47}}
+\multiput(80.75,41.44)(0.48,-0.11){1}{\line(1,0){0.48}}
+\multiput(80.25,41.49)(0.5,-0.05){1}{\line(1,0){0.5}}
+\put(79.75,41.49){\line(1,0){0.5}}
+\multiput(79.25,41.44)(0.5,0.05){1}{\line(1,0){0.5}}
+\multiput(78.77,41.33)(0.48,0.11){1}{\line(1,0){0.48}}
+\multiput(78.3,41.17)(0.47,0.16){1}{\line(1,0){0.47}}
+\multiput(77.86,40.96)(0.22,0.11){2}{\line(1,0){0.22}}
+\multiput(77.46,40.7)(0.2,0.13){2}{\line(1,0){0.2}}
+\multiput(77.09,40.4)(0.18,0.15){2}{\line(1,0){0.18}}
+\multiput(76.77,40.07)(0.11,0.11){3}{\line(0,1){0.11}}
+\multiput(76.5,39.7)(0.13,0.18){2}{\line(0,1){0.18}}
+\multiput(76.29,39.3)(0.11,0.2){2}{\line(0,1){0.2}}
+\multiput(76.13,38.89)(0.16,0.42){1}{\line(0,1){0.42}}
+\multiput(76.03,38.46)(0.1,0.43){1}{\line(0,1){0.43}}
+\multiput(76,38.02)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(76,38.02)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(76.03,37.58)(0.09,-0.43){1}{\line(0,-1){0.43}}
+\multiput(76.12,37.15)(0.15,-0.42){1}{\line(0,-1){0.42}}
+\multiput(76.27,36.73)(0.1,-0.2){2}{\line(0,-1){0.2}}
+\multiput(76.48,36.34)(0.13,-0.19){2}{\line(0,-1){0.19}}
+\put(76.75,35.97){\vector(3,-4){0.12}}
+
+\linethickness{0.3mm}
+\multiput(68.51,45)(0.13,0.19){2}{\line(0,1){0.19}}
+\multiput(68.77,45.37)(0.1,0.2){2}{\line(0,1){0.2}}
+\multiput(68.98,45.77)(0.15,0.42){1}{\line(0,1){0.42}}
+\multiput(69.14,46.19)(0.09,0.43){1}{\line(0,1){0.43}}
+\multiput(69.23,46.62)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(69.22,47.49)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(69.12,47.92)(0.1,-0.43){1}{\line(0,-1){0.43}}
+\multiput(68.97,48.34)(0.16,-0.42){1}{\line(0,-1){0.42}}
+\multiput(68.75,48.73)(0.11,-0.2){2}{\line(0,-1){0.2}}
+\multiput(68.48,49.1)(0.13,-0.18){2}{\line(0,-1){0.18}}
+\multiput(68.16,49.44)(0.11,-0.11){3}{\line(0,-1){0.11}}
+\multiput(67.8,49.74)(0.18,-0.15){2}{\line(1,0){0.18}}
+\multiput(67.39,49.99)(0.2,-0.13){2}{\line(1,0){0.2}}
+\multiput(66.95,50.2)(0.22,-0.11){2}{\line(1,0){0.22}}
+\multiput(66.49,50.36)(0.47,-0.16){1}{\line(1,0){0.47}}
+\multiput(66,50.47)(0.48,-0.11){1}{\line(1,0){0.48}}
+\multiput(65.51,50.53)(0.5,-0.05){1}{\line(1,0){0.5}}
+\put(65,50.53){\line(1,0){0.5}}
+\multiput(64.51,50.47)(0.5,0.05){1}{\line(1,0){0.5}}
+\multiput(64.02,50.36)(0.48,0.11){1}{\line(1,0){0.48}}
+\multiput(63.56,50.2)(0.47,0.16){1}{\line(1,0){0.47}}
+\multiput(63.12,49.99)(0.22,0.11){2}{\line(1,0){0.22}}
+\multiput(62.71,49.74)(0.2,0.13){2}{\line(1,0){0.2}}
+\multiput(62.35,49.44)(0.18,0.15){2}{\line(1,0){0.18}}
+\multiput(62.03,49.1)(0.11,0.11){3}{\line(0,1){0.11}}
+\multiput(61.76,48.73)(0.13,0.18){2}{\line(0,1){0.18}}
+\multiput(61.54,48.34)(0.11,0.2){2}{\line(0,1){0.2}}
+\multiput(61.39,47.92)(0.16,0.42){1}{\line(0,1){0.42}}
+\multiput(61.29,47.49)(0.1,0.43){1}{\line(0,1){0.43}}
+\multiput(61.26,47.05)(0.03,0.44){1}{\line(0,1){0.44}}
+\multiput(61.26,47.05)(0.03,-0.44){1}{\line(0,-1){0.44}}
+\multiput(61.28,46.62)(0.09,-0.43){1}{\line(0,-1){0.43}}
+\multiput(61.37,46.19)(0.15,-0.42){1}{\line(0,-1){0.42}}
+\multiput(61.53,45.77)(0.1,-0.2){2}{\line(0,-1){0.2}}
+\multiput(61.74,45.37)(0.13,-0.19){2}{\line(0,-1){0.19}}
+\put(68.51,45){\vector(-3,-4){0.12}}
+
+\put(50,38){\makebox(0,0)[cc]{$k_1$}}
+
+\put(65,47){\makebox(0,0)[cc]{$k_2$}}
+
+\put(80,38){\makebox(0,0)[cc]{$k_3$}}
+
+\end{picture}

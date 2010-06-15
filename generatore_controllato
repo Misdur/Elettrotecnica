@@ -1,0 +1,194 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Tue Mar 16 15:33:56 CET 2010
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="27" x-max="112" y-min="48" y-max="83" auto-bounding="true">
+%<multicurve fill-style= "none"
+%	 left-arrow= "head"
+%	 points= "(30,80);(30,80);(60,80);(60,80)"
+%	 />
+%<multicurve fill-style= "none"
+%	 left-arrow= "head"
+%	 points= "(30,48);(30,48);(60,48);(60,48)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(78,70);(78,70);(72,64);(72,64)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(72,64);(72,64);(78,58);(78,58)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(78,58);(78,58);(84,64);(84,64)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(78,70);(78,70);(84,64);(84,64)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(78,70);(78,70);(78,80);(78,80)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(78,80);(78,80);(108,80);(108,80)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(78,48);(78,48);(108,48);(108,48)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(78,58);(78,58);(78,48);(78,48)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(27,80)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$+$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(27,48)"
+%	 left-arrow= "head"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$-$
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(43,81);(43,81);(44,80);(44,80)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(44,80);(44,80);(43,79);(43,79)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(91,80);(91,80);(92,81);(92,81)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(91,80);(91,80);(92,79);(92,79)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(27,63)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$v_1$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(108,62)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$v_2$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(111,80)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$+$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(112,48)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$-$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(92,83)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_2$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(42,83)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$i_1=0$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(84,59)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$\alpha v_1$
+%</text>
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(78,67);(78,67);(78,61);(78,61)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(60,80);(60,80);(60,48);(60,48)"
+%	 />
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(112,83)(0,0)
+\linethickness{0.3mm}
+\put(30,80){\line(1,0){30}}
+\put(30,80){\vector(-1,0){0.12}}
+\linethickness{0.3mm}
+\put(30,48){\line(1,0){30}}
+\put(30,48){\vector(-1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(72,64)(0.12,0.12){50}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(72,64)(0.12,-0.12){50}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(78,58)(0.12,0.12){50}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(78,70)(0.12,-0.12){50}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(78,70){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(78,80){\line(1,0){30}}
+\put(108,80){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(78,48){\line(1,0){30}}
+\put(108,48){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(78,48){\line(0,1){10}}
+\put(27,80){\makebox(0,0)[cc]{$+$}}
+
+\put(27,48){\makebox(0,0)[cc]{$-$}}
+
+\linethickness{0.3mm}
+\multiput(43,81)(0.12,-0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(43,79)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(91,80)(0.12,0.12){8}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(91,80)(0.12,-0.12){8}{\line(1,0){0.12}}
+\put(27,63){\makebox(0,0)[cc]{$v_1$}}
+
+\put(108,62){\makebox(0,0)[cc]{$v_2$}}
+
+\put(111,80){\makebox(0,0)[cc]{$+$}}
+
+\put(112,48){\makebox(0,0)[cc]{$-$}}
+
+\put(92,83){\makebox(0,0)[cc]{$i_2$}}
+
+\put(42,83){\makebox(0,0)[cc]{$i_1=0$}}
+
+\put(84,59){\makebox(0,0)[cc]{$\alpha v_1$}}
+
+\linethickness{0.3mm}
+\put(78,61){\line(0,1){6}}
+\put(78,61){\vector(0,-1){0.12}}
+\linethickness{0.3mm}
+\put(60,48){\line(0,1){32}}
+\end{picture}

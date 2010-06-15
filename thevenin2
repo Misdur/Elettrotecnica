@@ -1,0 +1,157 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Tue Mar 16 17:23:29 CET 2010
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="57" x-max="90.62" y-min="34" y-max="62.5" auto-bounding="true">
+%<g>
+%<multicurve fill-style= "none"
+%	 points= "(69.25,60);(69.25,60);(70.5,61.25);(70.5,61.25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(70.5,61.25);(70.5,61.25);(71.75,60);(71.75,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(71.75,60);(71.75,60);(73,61.25);(73,61.25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(73,61.25);(73,61.25);(74.25,60);(74.25,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(74.25,60);(74.25,60);(75.5,61.25);(75.5,61.25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(75.5,61.25);(75.5,61.25);(76.75,60);(76.75,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(76.75,60);(76.75,60);(78,60);(78,60)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "bottom"
+%	 stroke-width= "0.15"
+%	 anchor-point= "(71.75,62.5)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "left"
+%	 >
+%$R$
+%</text>
+%<multicurve fill-style= "none"
+%	 stroke-width= "0.15"
+%	 points= "(68,60);(68,60);(69.25,60);(69.25,60)"
+%	 />
+%</g>
+%<multicurve fill-style= "none"
+%	 points= "(69,60);(69,60);(61,60);(61,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(77,60);(77,60);(88,60);(88,60)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(61,60);(61,60);(61,51);(61,51)"
+%	 />
+%<ellipse fill-style= "none"
+%	 p3= "(65,43)"
+%	 p2= "(65,51)"
+%	 p1= "(57,51)"
+%	 closure= "open"
+%	 angle-end= "360"
+%	 angle-start= "0"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(61,49)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$+$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(60.62,44.38)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$-$
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(61,43);(61,43);(61,34);(61,34)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(61,34);(61,34);(88,34);(88,34)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(87.5,46.88)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$v$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(90.62,60)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$+$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(90.62,34.38)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$-$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(90.62,62.5)(0,0)
+\linethickness{0.3mm}
+\multiput(69.25,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(70.5,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(71.75,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(73,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(74.25,60)(0.12,0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(75.5,61.25)(0.12,-0.12){10}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(76.75,60){\line(1,0){1.25}}
+\put(71.75,62.5){\makebox(0,0)[bl]{$R$}}
+
+\linethickness{0.15mm}
+\put(68,60){\line(1,0){1.25}}
+\linethickness{0.3mm}
+\put(61,60){\line(1,0){8}}
+\linethickness{0.3mm}
+\put(77,60){\line(1,0){11}}
+\put(88,60){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(61,51){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(61,47){\circle{8}}
+
+\put(61,49){\makebox(0,0)[cc]{$+$}}
+
+\put(60.62,44.38){\makebox(0,0)[cc]{$-$}}
+
+\linethickness{0.3mm}
+\put(61,34){\line(0,1){9}}
+\linethickness{0.3mm}
+\put(61,34){\line(1,0){27}}
+\put(88,34){\vector(1,0){0.12}}
+\put(87.5,46.88){\makebox(0,0)[cc]{$v$}}
+
+\put(90.62,60){\makebox(0,0)[cc]{$+$}}
+
+\put(90.62,34.38){\makebox(0,0)[cc]{$-$}}
+
+\end{picture}
