@@ -1,7 +1,7 @@
 \select@language {italian}
 \contentsline {chapter}{\numberline {1}I Modelli Circuitali}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Potenza ed Energia Elettrica}{4}{section.1.1}
-\contentsline {chapter}{\numberline {2}Regime Sinusiodale}{6}{chapter.2}
+\contentsline {chapter}{\numberline {2}Regime Sinusoidale}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Metodo Simbolico}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Propriet\`a di Unicit\`a}{7}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Propriet\`a di Linearit\`a}{7}{subsection.2.1.2}

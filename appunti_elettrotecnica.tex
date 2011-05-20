@@ -111,7 +111,7 @@ Luca \textsc{Pace}
 
 \chapter{I Modelli Circuitali}
 \section{Potenza ed Energia Elettrica}
-L'energia(assorbita o oregata), cos\`i come il lavoro, \`e associata a
+L'energia(assorbita o erogata), cos\`i come il lavoro, \`e associata a
 un intervallo di tempo. Indichiamo con $\Delta W^{(a)}$ l'energia
 assorbita dal bipolo nell'intervallo di tempo $(t,\;t+ \Delta t)$ e
 con $\Delta W^{(e)}$ quella erogata $(\Delta W^{(e)}=-\Delta
@@ -122,7 +122,7 @@ $(t,\;t+\Delta t)$) della potenza elettrica assorbita come:
 <p^{(a)}>=\dfrac{\Delta W^{(a)}}{\Delta t}
 \end{equation}
 
-Sotto condiozioni non affatto restrittive $<p^{(a)}>$ tende, per
+Sotto condizioni non affatto restrittive $<p^{(a)}>$ tende, per
 $\Delta t \rightarrow 0$ ad un valore finito che dipende solo
 dall'istante $t$ considerato:
 
@@ -184,7 +184,7 @@ condizioni stazionarie. In condizioni lentamente variabili vale con
 buona approssimazione.
 
 %CAPITOLO 5 DEL LIBRO
-\chapter{Regime Sinusiodale}
+\chapter{Regime Sinusoidale}
 \section{Metodo Simbolico}
 Per fissata pulsazione $\omega$ ad ogni funzione sinusoidale \`e
 possibile associare un numero complesso $\bar{A}$ secondo la regola
@@ -242,7 +242,7 @@ c(t)=\Re e \{ \bar{C}e^{j\omega t} \}\; \forall\; t \Longleftrightarrow
 \]
 
 \subsection{Propriet\`a di Linearit\`a}
-Prendiamo in esame la funione sinusoidale
+Prendiamo in esame la funzione sinusoidale
 
 \[
 c(t) = k_1a(t)+k_2b(t)
@@ -299,7 +299,7 @@ Siano
 \item $i(t)=I_mcos(\omega t+\beta)$
 \end{itemize}
 
-Tenendo presente le due relazioni sopra citate,la potenza elettrica
+Tenendo presente le due relazioni sopra citate, la potenza elettrica
 istantanea assorbita da un generico bipolo del circuito \`e
 
 \[
@@ -483,7 +483,7 @@ Prendiamo in considerazione il grafo in {\bf Figura 2.1}.
     dell'intensit\`a della corrente del corrispondente bipolo.
   \item Si consideri un grafo $G(N, L)$. Il grafo $G_1(N, L)$ si dice
     sottografo di $G(N, L)$, se $N_1$ \`e un sottoinsieme di $N$,
-    $L_1$ \`e un sottoinsieme di $L$ e la realzine di incidenza tra i
+    $L_1$ \`e un sottoinsieme di $L$ e la relazione di incidenza tra i
     nodi di $N_1$ ed i lati di $L_1$ \`e la stessa relazione che si ha
     nel grafo $G(N, L)$
 \end{itemize}
@@ -546,7 +546,7 @@ Una maglia {\bf fondamentale} \`e descritta dalla seguente relazione:
 
 \begin{prop}
   Si consideri un sottografo che si ottiene aggiungendo all'albero $A$
-  un solo lato di coalbero $C$: esso contiene una e una soloa maglia,
+  un solo lato di coalbero $C$: esso contiene una e una sola maglia,
   che si ottiene eliminando tutti quei lati che non appartengono al
   percorso chiuso. Una maglia ottenuta in questo modo prende il nome
   di {\bf maglia fondamentale} del coalbero $C$.
@@ -600,7 +600,7 @@ Se il grafo \`e orientato, l'insieme di taglio si dice orientato.
 \section{Equazioni di Kirchhoff Indipendenti}
 Le equazioni circuitali sono costituite dalle equazioni di Kirchhoff e
 dalle equazioni caratteristiche degli elementi circuitali. Le
-equazioni di kirchhoff sono algebriche lineari ed omogenee. Invece le
+equazioni di Kirchhoff sono algebriche lineari ed omogenee. Invece le
 equazioni di caratteristiche possono essere, in generale, algebriche o
 differenziali, lineari o non lineari, tempo-invarianti o
 tempo-varianti, omogenee o non omogenee, a seconda della natura degli
@@ -669,11 +669,11 @@ analizzando un circuito avente un grafo come di seguito.
 
 \put(46,58){\makebox(0,0)[cc]{$1$}}
 
-\put(67,37){\makebox(0,0)[cc]{$2$}}
+\put(67,37){\makebox(0,0)[cc]{$4$}}
 
 \put(90,58){\makebox(0,0)[cc]{$3$}}
 
-\put(67,79){\makebox(0,0)[cc]{$4$}}
+\put(67,79){\makebox(0,0)[cc]{$2$}}
 
 \put(65,65){\makebox(0,0)[cc]{$5$}}
 
@@ -685,9 +685,9 @@ Applichiamo le LKC ai nodi e abbiamo:
 \[
 \begin{array}{l l l l}
 \text{{\bf nodo 1. }} i_1+i_2-i_5 = 0\\
-\text{{\bf nodo 2. }} -i_1+i_4 = 0 \\
+\text{{\bf nodo 2. }} -i_2+i_4 = 0 \\
 \text{{\bf nodo 3. }} -i_3-i_4+i_5 = 0\\
-\text{{\bf nodo 4. }} i_2+i_3=0
+\text{{\bf nodo 4. }} -i_2+i_3=0
 \end{array}
 \]
 
@@ -719,12 +719,12 @@ modo.
 \end{prop}
 
 \subsubsection{Equazioni Indipendenti per gli Insiemi di Taglio}
-Fissato un albero, un insieme ti taglio fondamentale contiene un unico
+Fissato un albero, un insieme di taglio fondamentale contiene un unico
 lato dell'albero assieme ad alcuni lati di coalbero. Scrivendo le
 equazioni di Kirchhoff per gli insiemi di taglio fondamentali
 associati ad un qualisiasi albero si perviene ad un insieme di
 equazioni che sono coerentemente indipendenti fra loro inquanto
-ciascuna contiene (in esclusiva) l'intensi\`a cirrente relativa ad un
+ciascuna contiene (in esclusiva) l'intensi\`a corrente relativa ad un
 lato dell'albero. Essendo proprio $n-1$ il numero dei lati
 dell'albero, abbiamo cos\`i costruito un insieme di $n-1$ equazioni
 per gli insieme di taglio indipendenti. Siccome gli altri insiemi di
@@ -744,9 +744,9 @@ tensioni al circuito in {\bf Figura 2.2}:
 
 \[
 \begin{array}{l l l}
-  \mathbf{M_1}\longrightarrow -v_1+v_2+v_3+v_4=0\\
-  \mathbf{M_2}\longrightarrow v_3+v_4-v_5=0\\
-  \mathbf{M_3}\longrightarrow -v_1+v_2+v_5=0  
+  \mathbf{M_1}\longrightarrow -v_1+v_2+v_3-v_4=0\\
+  \mathbf{M_2}\longrightarrow v_3+v_55555=0\\
+  \mathbf{M_3}\longrightarrow -v_1+v_5-v_4=0  
 \end{array}  
 \]
 
@@ -841,7 +841,7 @@ possiamo scrivere
 \sum_{k=1}^{l}v_ki_k=0
 \]
 
-1
+
 \subsection{Teorema di Tellegen}
 
 La sommatoria delle potenze virtuali assorbite da ciascun lato del
@@ -1106,7 +1106,7 @@ i_q>0 \quad i_r<0
 \]
 
 \[
-p_p=v_qi_q>0 \quad p_r=v_ri_r>0
+p_q=v_qi_q>0 \quad p_r=v_ri_r>0
 \]
 
 Applichiamo il metodo dei potenziali nodali
@@ -1123,7 +1123,7 @@ u_r<u_o<u_q
 
 \subsection{Non Amplificazione Delle Correnti}
 \label{subsec:nonAmplC}
-Si consideri un circuito costituito da resitori strettamente passivi e
+Si consideri un circuito costituito da resistori strettamente passivi e
 da un solo bipolo attivo.
 \begin{definizione}
   L'intensit\`a di corrente del generico bipolo strettamente passivo
@@ -1436,7 +1436,7 @@ Esprimendola attraverso i potenziali di nodo abbiamo:
 Sostituendo nella $LKT$ abbiamo:
 
 \[
-(u_5-u_1)+(u_1-u_2)+(u-3-u_2)+(u_4-u_3)+(u_5-u_4)=0
+(u_5-u_1)+(u_1-u_2)+(u_3-u_2)+(u_4-u_3)+(u_5-u_4)=0
 \]
 
 Questa equazione \`e sempre verificata, indipendentemente da valori
@@ -2419,10 +2419,10 @@ correnti di maglia nel seguente modo:
   i_1=k_1\\
   i_2=k_2\\
   i_3=k_3\\
-  i_4=k_4\\
+  i_4=k_3\\
   i_5=-k_2-k_3\\
   i_6=-k_1+k_2\\
-  i_7=k_1
+  i_7=-k_1
 \end{array} \right.
 \end{equation}
 
@@ -2450,7 +2450,7 @@ l'equazione di Kirchhoff per il nodo $\mathbf{1}$:
 diventa l'identit\`a
 
 \[
-k_1-k_2+(-k_1+k_2)=0
+-k_1+k_2-(-k_1+k_2)=0
 \]
 
 %CAPITOLO 6 DEL LIBRO
@@ -2637,7 +2637,7 @@ Le realzioni caratteristiche sono
 \[
 \begin{array}{l l}
   v_1=0\\
-  v_2=\gamma v_1
+  v_2=r i_1
 \end{array}
 \]
 
@@ -2654,7 +2654,7 @@ tensione.
 \right)=
 \begin{pmatrix}
   0 & 0\\
-  \gamma & 0
+  r & 0
 \end{pmatrix}
 \left(
 \begin{array}{c}
@@ -2818,7 +2818,7 @@ corrente.
   
   \put(42,83){\makebox(0,0)[cc]{$i_1$}}
   
-  \put(84,59){\makebox(0,0)[cc]{$\beta v_1$}}
+  \put(84,59){\makebox(0,0)[cc]{$\beta i_1$}}
   
   \linethickness{0.3mm}
   \put(78,61){\line(0,1){6}}
@@ -3154,8 +3154,8 @@ questo modo
 
   \put(87,75){\makebox(0,0)[cc]{$i_2$}}
 
-  \put(70.23,30.65){\makebox(0,0)[cc]{{\bf Figura 3.6} Trasformatore
-      ideale con doppio bipolo generico sul primario}}
+  \put(70.23,30.65){\makebox(0,0)[cc]{{\bf Figura 3.6} Rappresentazione simbolica
+    di trasformatore ideale con rapporto di accoppiamento}}
 \end{picture}
 
 Continuando ad agire con delle semplici manipolazioni algebriche
@@ -3534,7 +3534,7 @@ L_1 \implies L'_1L_2=M^2
 
 Un doppio bipolo a-dinamico in generale \`e descritto da due realzioni
 algebriche che legano l'intensit\`a di corrente e le tensioni alle due
-porte. Quando le realzioni sono esplicite danno origine a diverse
+porte. Quando le relazioni sono esplicite danno origine a diverse
 rappresentazioni:
 
 \begin{itemize}
@@ -3560,7 +3560,7 @@ Vi sono tre forme per la propriet\`a di reciprocit\`a e sono le
 seguenti.
 
 \subsubsection{Prima Forma}\label{subsubsec:repPrimaForma}
-Cosideriamo i circuiti come in {\bf Figura 3.9}.
+Consinderiamo i circuiti come in {\bf Figura 3.9}.
 
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
@@ -3718,7 +3718,7 @@ doppio bipolo.
 \`E immediato verificare che i termini $v'_2i''_2$ e $v''_1i'_1$ sono
 nulli.
 
-Considerand che nella relazione caratteristica del $k-esimo$ resistore
+Considerando che nella relazione caratteristica del $k-esimo$ resistore
 si ha che:
 
 \[
@@ -3729,7 +3729,7 @@ Sottraendo membro a membro le due equazioni \ref{equ:reciprocitaT1} e
 \ref{equ:reciprocitaT2} restano i termini:
 
 \[
-v_1i''_2-v_2i'_2=0 \Longrightarrow v_1i''_1=v_2i'_2
+v_1i''_1-v_2i'_2=0 \Longrightarrow v_1i''_1=v_2i'_2
 \]
 
 Da cui ne consegue che

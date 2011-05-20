@@ -1,6 +1,5 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.6.7)  15 JUN 2010 09:44
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.6.7)  20 MAY 2011 12:11
 entering extended mode
- restricted \write18 enabled.
  %&-line parsing enabled.
 **appunti_elettrotecnica.tex
 (./appunti_elettrotecnica.tex
@@ -654,9 +653,9 @@ blic/amsfonts/cm/cmsy5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
 s/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/latxfont/l
 circle1.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/latxfont/line
 10.pfb>
-Output written on appunti_elettrotecnica.pdf (46 pages, 585461 bytes).
+Output written on appunti_elettrotecnica.pdf (46 pages, 584658 bytes).
 PDF statistics:
- 1074 PDF objects out of 1200 (max. 8388607)
+ 1072 PDF objects out of 1200 (max. 8388607)
  132 named destinations out of 1000 (max. 500000)
  438 words of extra memory for PDF output out of 10000 (max. 10000000)
 
