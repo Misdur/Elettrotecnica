@@ -4178,8 +4178,8 @@ Le equazioni caratteristiche sono
 \[
 \left\{
 \begin{array}{l l}
-  i_1=i'_1+i''_2\\
-  i_2=i'_2+i''_1
+  i_1=i'_1+i''_1\\
+  i_2=i'_2+i''_2
 \end{array}
 \right.
 \]
@@ -4231,7 +4231,7 @@ La potenza assorbita dal doppio bipolo \`e $p=v^Ti=v^TGv$.
 \begin{itemize}
 \item $\mathbf{G_{12}=G_{21}}$: dalla {\bf prima forma della propriet\`a
   di reciprocit\`a} (\ref{subsubsec:repPrimaForma}) sappiamo che
-  $\dfrac{i''_1}{v_2}=\dfrac{i''_2}{v_1}$ e data la definizione di
+  $\dfrac{i''_1}{v_2}=\dfrac{i'_2}{v_1}$ e data la definizione di
   conduttanza mutua si ha $G_{12}=G_{21}$
 \item $\mathbf{G_{11} \geq 0}$ e $\mathbf{G_{22} \geq 0}$ (se i
   resistori sono passivi): considerando la convenzione dell'utilizzatore se
@@ -4347,7 +4347,7 @@ applicando la sovrapposizione degli effetti si ha:
 \left\{
 \begin{array}{l l}
   v_1=\overbrace{R_{11}i_1}^{v'_1}+\overbrace{R_{12}i_2}^{v''_1}\\
-  v_2=\underbrace{R_{12}i_1}_{v'_2}+\underbrace{R_{22}i_2}_{v''_2}
+  v_2=\underbrace{R_{21}i_1}_{v'_2}+\underbrace{R_{22}i_2}_{v''_2}
 \end{array}\right.
 \]
 
@@ -4364,7 +4364,7 @@ R=
 prende il nome di {\bf matrice delle resistenze} $[G^{-1}]$ e si
 misurano in \emph{ohm}.
 
-Esplicitando le realzioni abbiamo:
+Esplicitando le relazioni abbiamo:
 \[
 \begin{matrix}
   R_{11}=\left. \dfrac{v_1}{i_1}\right|_{i_2=0} \ =\dfrac{v'_1}{i_1} &
@@ -4389,7 +4389,7 @@ La potenza assorbita dal doppio bipolo \`e $p=i^TRi$.
   \item $\mathbf{R_{12}=R_{21}}$: dalla {\bf seconda forma di
     reciprocit\`a} (\ref{subsec:reciprocita2}) sappiamo che
     \[
-    \dfrac{v''_2}{i_1}=\dfrac{v''_1}{i_2}
+    \dfrac{v'_2}{i_1}=\dfrac{v''_1}{i_2}
     \]
     e data la definizione di resistenze mutue si ha che
     $R_{12}=R_{21}$
