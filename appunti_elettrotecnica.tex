@@ -155,7 +155,7 @@ La potenza istantanea \`e uguale alla derivata prima dell'energia
 elettrica assorbita dallo stesso nel generico intervallo 
 $(t_0,t)$. Dalla \ref{equ:potenzaIstantanea} segue che l'energia $d\;
 W^{(a)}$ assorbita dal bipolo nell'intervallo elementare $(t,\;
-t+dt)$ \`e data da $dW^{(a)}=p^{(a)}(t)$. La relazione
+t+\Delta t)$ \`e data da $dW^{(a)}=p^{(a)}(t)$. La relazione
 \ref{equ:potenzaIstantanea} pu\`o essere riformulata in forma integrale come:
 
 \[
@@ -253,7 +253,7 @@ t + \alpha)$ e \\$b(t) = B_mcos(\omega t + \beta)$ dove $k_1$ e $k_2$
 sono costanti reali.
 Il fasore $\bar{C}$ rappresentativo della funzione sinusoidale $c(t)$
 \`e uguale alla stessa combinazione lineare dei fasori $\bar{A} =
-A_me^{j\omega}$ e $\bar{B} = B_me^{j\beta}$ rappresentazioni delle
+A_me^{j\alpha}$ e $\bar{B} = B_me^{j\beta}$ rappresentazioni delle
 funzioni sinusoidali $a(t)$ e $b(t)$.
 
 \[
@@ -280,7 +280,7 @@ con pulsazione $\omega$ \`e
 A_m cos\left(\omega t+\alpha+ \dfrac{\pi}{2}\right)
 \]
 
-Sia $\bar{A} = A_me^{j\omega}$ il fasore rappresentativo della
+Sia $\bar{A} = A_me^{j\alpha}$ il fasore rappresentativo della
 funzione sinusoidale $a(t)$, allora il fasore rappresentativo della
 derivata prima di $a(t)$, che indicheremo con $D_a$, \`e dato da $D_a
 = \omega A_m e^{j \left(\alpha+ \frac{\pi}{2}\right)} = j\omega
@@ -363,15 +363,125 @@ Abbiamo
 Q=\dfrac{1}{2}V_mI_m sin (\alpha-\beta)
 \]
 
+\subsection{Caratterizzazione della Potenza Complessa}
+
+\subsubsection{Resistore}
+Per il resistore (convenzione dell'utilizzatore) sappiamo:
+
+\[
+V_m=RI_m \quad \alpha = \beta; 
+\]
+
+se $R>0$ : l'impedenza $\dot Z = R$ del resistore \`e \emph{reale}, la sua 
+fase \`e nulla. In definitiva, il \emph{fasore della tensione di un resitore
+\`e in fase con il fasore dell'intensit\`a di corrente}\@.
+Siccome $\alpha-\beta = 0$ la potenza complessa assorbita da un resistore passivo
+ha parte reale maggiore di zero e la parte immaginaria nulla; quindi la potenza
+reattiva di un resistore \`e sempre nulla. La potenza complessa quindi pu\`o essere
+espressa come 
+
+\[
+P = \dfrac{V_mI_m}{2}=\dfrac{RI^2_m}{2}
+\] 
+
+\subsubsection{Induttore}
+L'impedenza dell'induttore \`e puramente immaginaria e pu\`o essere espressa come
+
+\[
+\dot Z_L = jX_L
+\]
+
+dove:
+
+\[
+X_L=\omega L
+\] 
+
+\`e la cosiddetta \emph{reattanza} dell'induttore. La reattanza di un induttore ($L>0$)
+\`e positiva. Allora la relazione caratteristica dell'induttore si ha
+
+\[
+V_m=X_LI_m, \quad \alpha=\beta+\dfrac{\pi}{2}
+\]
+
+\emph{Il fasore rappresentativo della tensione di un induttore (passivo) \`e in anticipo di 
+$\frac{\pi}{2}$ rispetto a quello dell'intensit\`a di corrente.}
+
+La parte reale della potenza complessa \`e sempre uguale a zero poich\`e 
+$\alpha-\beta=\frac{\pi}{2}$. Di conseguenza la potenza media assorbita dall'induttore 
+\`e sempre nulla. La potenza reattiva assorbita \`e positiva e vale:
+
+\[
+Q_L=\dfrac{V_mI_m}{2}=\dfrac{X_LI^2_m}{2}=\dfrac{V^2_m}{2X_L}
+\]
+
+Si ossevi che $Q_L=\left(\frac{1}{2}LI^2\right) \omega$ dove $\frac{1}{2}LI^2$ 
+\`e il valore massimo dell'energia immagazzinata dall'induttore.
+La potenza istantanea immagazzina dall'induttore \`e data da:
+
+\[
+p(t)=\dfrac{d}{dt}\left(\dfrac{1}{2}Li^2\right)=Q_Lcos\left[2\left(\omega+\beta+\dfrac{\pi}{4}\right)\right] 
+\]
+
+Essa \`e una funzione periodica $\frac{T}{2}$ che oscilla tra i valori $-Q_L$ e $Q_L$
+
+\subsubsection{Condensatore}
+
+L'impedenza del condensatore, cos\`i come quella dell'induttore, \`e puramente
+immaginaria e pu\`o essere espressa come:
+
+\[
+\dot Z_C=jX_C
+\]
+
+dove:
+
+\[
+X_C=-\dfrac{1}{\omega C}
+\]
+
+\`e la cosiddetta reattanza del condensatore. La reattanza di un condensatore
+passivo $(C>0)$ \`e sempre negativa. Allora la relazione caratteristica del 
+condensatore \`e:
+
+\[
+V_m=|X_C|I_m , \quad \alpha=\beta - \dfrac{\pi}{2}
+\]
+
+La reattanza del condensatore \`e inversamente proporzionale alla pulsazione.
+
+\emph{Il fasore rappresentativo della tensione di un condensatore \`e 
+in ritardo di $\frac{\pi}{2}$ rispetto a quello dell'intensit\`a di corrente.}
+
+Anche per il condensatore la parte reale della potenza complessa assorbita
+\`e sempre nulla perch\`e $\alpha-\beta=-\frac{\pi}{2}$. Di conseguenza, 
+cos\`i come per l'induttore, la potenza media assorbita dal condensatore 
+\`e uguale a zero. La potenza reattiva assorbita \`e \emph{negativa} e vale:
+
+\[
+Q_C=-\dfrac{V_mI_m}{2}=-\dfrac{X_CI^2_m}{2}=-\dfrac{V^2_m}{2X_C}
+\]
+
+Si osservi che $|Q_C|=\left(\frac{1}{2}CV^2_M\right)\omega$, dove $\frac{1}{2}CV^2_m$
+\`e il valore massimo dell'energia immagazzinata dal condensatore. 
+La potenza instantanea assorbita dal condensatore \`e:
+
+\[
+p(t)=\dfrac{d}{dt}\left(\dfrac{1}{2}Cv^2\right)=|Q_C|cos\left[\left(\omega t + \alpha+ \dfrac{\pi}{4} \right)\right]
+\]
+
+Essa, come per l'induttore, \`e una funzione sinusoidale con periodo $\frac{T}{2}$ 
+che oscilla tra valori $-|Q_C|$ e $|Q_C|$.
+
+
 \subsection{Energia in Regime Sinusoidale}
 L'energia assorbita dal bipolo in regime sinusoidale nell'intevallo $[0,
   \widehat {t}]$ \`e data da
 
 \[
-\omega (0, \widehat t)=\int_0^{\widehat t} p(\tau)d(\tau)=(nT)P+
-\int_{nT}^{nT+\Delta t} pt(\tau)d(\tau)
+W (0, \widehat t)=\int_0^{\widehat t} p(\tau)d(\tau)=(nT)P+
+\int_{nT}^{nT+\Delta t} p(\tau)d(\tau)
 \]
-
 
 $n$ \`e un numero intero tale che $\widehat{t}=nT+\Delta t$ con $\Delta t<
 T$. $n$ \`e il numero di periodi $T$ contenuti nell'intervallo $[0,
@@ -996,7 +1106,7 @@ Si consideri un circuito costituito da resistori strettamente passivi
 (i resistori possono essere anche non lineari) e un solo bipolo
 attivo.
 \begin{definizione}
-  La tensione del genrico bipolo strettamente passivo non pu\`o
+  La tensione del generico bipolo strettamente passivo non pu\`o
   superare, in valore assoluto, quella dell'unico bipolo attivo.
 \end{definizione}
 
@@ -3514,7 +3624,7 @@ M^2<<L_1L_2
 Prendendo in esame $L_1$ abbiamo
 
 \[
-L_1=L'+\Delta L \implies \Delta L=L_1-\dfrac{M^2}{L_2}
+L_1=L'_1+\Delta L \implies \Delta L=L_1-\dfrac{M^2}{L_2}
 \]
 
 \[
