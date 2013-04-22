@@ -1,19 +1,6 @@
-# Makefile to compile latex files
-CC = pdflatex
-FILE = appunti_elettrotecnica
-DATE=$(shell date -u +%Y%m%d)
+appunti_elettrotecnica.pdf: appunti_elettrotecnica.tex
 
-all:	pdf
-pdf:
-	$(CC) $(FILE).tex
-show:
-	nohup evince $(FILE).pdf &
+		pdflatex appunti_elettrotecnica
+	    pdflatex appunti_elettrotecnica
 
-clean:	
-	rm *.aux
-#	rm *.dvi
-#	rm *.toc
-	rm *.log
-	rm *.out
-#	rm *.nav
-#	rm *.snm
+		rm -f *.aux *.log *.out *.idx *.toc
